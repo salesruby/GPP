@@ -1,0 +1,155 @@
+.user-initials{
+    text-align: center;
+    padding: 40px 0px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#initials {
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    padding: 10%;
+    display: inline-block;
+    background: #6610f2;
+    font-weight: bold;
+    font-size: 250%;
+    color: #fff;
+    text-align: center;
+}
+
+
+#initials-small {
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    padding: 5%;
+    display: inline-block;
+    background: #6610f2;
+    font-weight: bold;
+    font-size: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.settings-form, .alert-message{
+    margin-top: 30px;
+}
+
+.error{
+    color: red;
+}
+
+#contacts-table a, #clients-table a{
+    padding: 10px;
+}
+
+
+.profile-panel{
+    border: thin solid #dddddd;
+    margin-bottom: 30px;
+}
+
+.profile-panel-heading{
+    border-bottom: thin solid #dddddd;
+    padding: 12px 12px 12px 12px;
+    margin: 0px;
+    color: white;
+    background: #6610f2;
+}
+
+.profile-panel-body{
+    padding-top: 0px;
+    padding-left: 12px;
+    margin: 0px;
+    min-height: 150px;
+}
+
+.profile-panel-body a {
+    font-size: small;
+}
+
+.profile-panel-footer{
+    display: flex;
+    justify-content: flex-end;
+    border-top: thin solid #dddddd;
+    padding: 12px 12px 12px 12px;
+    margin: 0px;
+    color: white;
+    /*background: #6610f2;*/
+}
+
+.profile-panel-footer button{
+    margin: 0px 5px 0px 5px;
+}
+
+
+#order-response-form span{
+    color: #888888;
+    font-size: small;
+}
+
+#order-response-form input{
+    margin: 10px 0px;
+}
+
+.orders-table .view-order{
+    padding: 10px !important;
+}
+
+.error{
+    color: red !important;
+}
+
+/*small screen cards*/
+
+.sale-box-inner {
+    border: 1px solid #eeeeee;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor:pointer;
+    margin-bottom: 30px;
+}
+.sale-box-head {
+    background: #6610f2;
+    padding: 15px 5px;
+}
+.sale-box-head h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+    line-height: 28px;
+    font-weight: 700;
+}
+.sale-box-desc {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+    color: #808080;
+}
+.sale-box-desc strong {
+    display: block;
+    color: #1d1d1d;
+    font-size: 18px;
+}
+.sale-box-desc li {
+    margin-top: 15px;
+}
+
+
+
+/*Media Query*/
+
+@media screen and (max-width: 480px) {
+    .big-screen {
+        display : none;
+    }
+}
+
+
+@media screen and (min-width: 480px){
+    .small-screen {
+        display : none;
+    }
+}
