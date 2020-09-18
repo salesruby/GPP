@@ -59,6 +59,7 @@
                 mso-hide: all;
                 visibility: hidden;
                 width: 0;">
+                <!-- Sales Ruby Header Text  -->
             </span>
 
                 <table
@@ -113,27 +114,23 @@
                                             margin-right: auto;
                                             padding: 0 0 10px;
                                             display: block;"
-                                            >
-                                            Bring your imaginations to life...
+                                            >Your search for quality stops right here
                                         </p>
                                         <h4 style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: bold;
                             margin: 0;
-                            margin-bottom: 15px;">Mail Subject - {{$data['subject']}}</h4>
+                            margin-bottom: 15px;">Invoice for your order</h4>
                                         <p style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: normal;
                             margin: 0;
-                            margin-bottom: 15px;">{{$data['message']}}</p>
-                                        <p
-                                            style="font-family: Verdana;
+                            margin-bottom: 15px;">{{$data['name']}},</p>
+                                        <p style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: normal;
-                            margin: 0; margin-bottom: 15px;"
-                                        >
-                                            This message was sent by {{$data['name']}}  with email <a href="{{$data['email']}}">{{$data['email']}}</a>
-                                        </p>
+                            margin: 0;
+                            margin-bottom: 15px;">{{$data['description']}}</p>
                                     </td>
                                 </tr>
                             </table>

@@ -5,7 +5,6 @@ namespace App\Http\View\Composers;
 use App\Contact;
 use App\Order;
 use App\Role;
-use App\Service;
 use Carbon\Carbon;
 use Illuminate\View\View;
 

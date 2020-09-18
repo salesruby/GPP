@@ -69,6 +69,7 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
+
 .background-text .mantra{
     font-size: 20px;
     font-weight: bold;
@@ -165,15 +166,33 @@
     }
 }
 
+/*BLOG*/
+
+.inner img{
+    width: 100%;
+}
+
+.inner .info{
+    display: flex !important;
+    flex-flow: column wrap !important;
+    height: 252px;
+}
+
+
+/*About us*/
+
+#aboutus video{
+    width: 100%;
+}
 
 #our-clients {
-    width: 1030px !important;
+    /*width: 1030px !important;*/
     float: none !important;
 }
 
 .our-clients {
     height: 100px;
-    /*overflow: hidden;*/
+    overflow: hidden;
     position: relative;
 }
 

@@ -2,98 +2,7 @@
 @section('main')
     <!--Main index : Begin-->
     <main class="main index">
-        <!--Home slider : Begin-->
-        {{--        <section class="home-slidershow">--}}
-        {{--            <div class="slide-show">--}}
-        {{--                <div class="vt-slideshow">--}}
-        {{--                    <ul>--}}
-        {{--                        <li class="slide1" data-transition="random">--}}
-        {{--                            <img src="{{asset('template/images/slider/home/bg_slider_1.png')}}" alt=""/>--}}
-        {{--                            <video src="{{asset('template/images/slider/home/bg_slider_1.mp4')}}"></video>--}}
-        {{--                            <video controls>--}}
-        {{--                                <source src="{{asset('template/images/slider/home/bg_slider_1.mp4')}}" type="video/mp4">--}}
-        {{--                            </video>--}}
-        {{--                            <div style=" display: flex;--}}
-        {{--                            flex-flow: column wrap;--}}
-        {{--                            align-content: center;--}}
-        {{--                            justify-content: center;--}}
-        {{--                            /*height:598px;*/--}}
-        {{--    color: #000000;--}}
-        {{--    font-weight: bold;">--}}
-        {{--                                <h4 style="font-size: 30px; text-align: center;">Welcome to</h4>--}}
-        {{--                                <div style="text-align: center;">--}}
-        {{--                                    <div style="font-size: 50px;">Global Plus Publishing</div>--}}
-        {{--                                    <small style="font-size: 20px">Your search for quality ends here...</small>--}}
-        {{--                                </div>--}}
-        {{--                                <div style="font-size: 25px; padding-top: 20px; font-weight: normal; ">Exceptional Printing | Detailed Planning | Proof-Reading | Light Packaging</div>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfr" data-x="right" data-hoffset="-56" data-y="170" data-start="800"--}}
-        {{--                                 data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Clients</span> & Growth</span>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfb" data-x="right" data-hoffset="-15" data-y="225" data-start="800"--}}
-        {{--                                 data-speed="2000" data-endspeed="300"--}}
-        {{--                            >--}}
-        {{--								<span class="style2">--}}
-        {{--                                    We value all business relationship as a life partnership.<br>--}}
-        {{--                                    At GPP are committed to providing quality <br>--}}
-        {{--                                    services to ensure that our clients succeed in their <br>--}}
-        {{--                                    corporation and personal projects. <br>--}}
-        {{--                                    Our client means success to us.<br>--}}
-        {{--								</span>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfr" data-x="right" data-hoffset="-315" data-y="375"--}}
-        {{--                                 data-start="1300" data-speed="2000" data-easing="easeInOutQuint" data-endspeed="300"><a--}}
-        {{--                                    class="btn-sn" href="#">buy now</a></div>--}}
-        {{--                        </li>--}}
-        {{--                        <li class="slide2" data-transition="random"><img--}}
-        {{--                                src="{{asset('template/images/slider/home/bg_slider_2.png')}}" alt=""/>--}}
-        {{--                            <div class="tp-caption lfr" data-x="left" data-hoffset="" data-y="170" data-start="800"--}}
-        {{--                                 data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Capability</span> & Capacity</span>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfb" data-x="left" data-hoffset="" data-y="225" data-start="800"--}}
-        {{--                                 data-speed="2000" data-endspeed="300">--}}
-        {{--								<span class="style2">--}}
-        {{--									Our press is ranked amongst the best in africa.<br>--}}
-        {{--									With a combined press capacity of 203,000 impressions per <br>--}}
-        {{--									hour we can print 24 million books annually.<br>--}}
-        {{--								</span>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfr" data-x="left" data-y="367" data-start="1300" data-speed="2000"--}}
-        {{--                                 data-easing="easeInOutQuint" data-endspeed="300"><a class="btn-sn" href="#">buy now</a>--}}
-        {{--                            </div>--}}
-        {{--                        </li>--}}
-        {{--                        <li class="slide3" data-transition="random"><img--}}
-        {{--                                src="{{asset('template/images/slider/home/bg_slider_3.png')}}" alt=""/>--}}
-        {{--                            <div class="tp-caption lft" data-x="left" data-hoffset="" data-y="170" data-start="800"--}}
-        {{--                                 data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Experience</span> & Support</span>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfb" data-x="left" data-hoffset="" data-y="225" data-start="800"--}}
-        {{--                                 data-speed="2000" data-endspeed="300">--}}
-        {{--								<span class="style2">--}}
-        {{--									At GPP you are guaranteed an experience that is more than<br>--}}
-        {{--                                    print. Beyond prints, we provide consulting services, <br>--}}
-        {{--                                    helping you choose the best materials, finishing and job<br>--}}
-        {{--									planning to complement your ideas and bring out the best<br>--}}
-        {{--									of what you want to achieve within your budget and<br>--}}
-        {{--                                    time frame.--}}
-        {{--								</span>--}}
-        {{--                            </div>--}}
-        {{--                            <div class="tp-caption lfl" data-x="left" data-hoffset="" data-y="365" data-start="1300"--}}
-        {{--                                 data-speed="2000" data-easing="easeInOutQuint" data-endspeed="300"><a class="btn-sn"--}}
-        {{--                                                                                                       href="#">buy--}}
-        {{--                                    now</a></div>--}}
-        {{--                        </li>--}}
-        {{--                    </ul>--}}
-        {{--                </div>--}}
-        {{--            </div>--}}
-        {{--        </section>--}}
-
-
         <section id="background-section">
-{{--            <video id="background-video" autoplay--}}
-{{--                   muted loop>--}}
-{{--                <source src="{{asset('template/images/slider/home/bg_slider_1.mp4')}}" type="video/mp4">--}}
-{{--            </video>--}}
             <div id="background-video"></div>
             <div class="background-text">
                 <h4>Welcome to</h4>
@@ -101,9 +10,6 @@
                     <div class="name">Global Plus Publishing</div>
                     <small class="mantra pull-right">Bring your imaginations to life...</small>
                 </div>
-                {{--                <div class="service-brief">--}}
-                {{--                    Exceptional Printing | Detailed Planning | Proof-Reading | Light Packaging--}}
-                {{--                </div>--}}
             </div>
         </section>
         <!--Home ours service : Begin -->
@@ -199,7 +105,7 @@
                             <span class="tr-line"></span>
                             <p>Bright inks. Thick Paper. Precise cuts. We believe that quality printing matters. That
                                 quality printing matters.</p>
-                            <a href="#" class="btn-readmore" title="Quality Printing">Read more</a>
+{{--                            <a href="#" class="btn-readmore" title="Quality Printing">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-time-delivery">
@@ -208,7 +114,7 @@
                             <h3>Timely Delivery</h3>
                             <span class="tr-line"></span>
                             <p>No printer is faster. Order today by 8:00pm EST and you can even get it tomorrow.</p>
-                            <a href="#" class="btn-readmore" title="Timely Delivery">Read more</a>
+{{--                            <a href="#" class="btn-readmore" title="Timely Delivery">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-minded">
@@ -220,7 +126,7 @@
                                 On a monthly basis we make 500 Thousand bindings, 5 Million stitches, and over 20
                                 Million impressions.
                             </p>
-                            <a href="#" class="btn-readmore" title="Capability">Read more</a>
+{{--                            <a href="#" class="btn-readmore" title="Capability">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-money">
@@ -232,7 +138,7 @@
                                 Most sellers work with buyers to quickly resolve issues, but if a solution isn't
                                 reached, we can help.
                             </p>
-                            <a href="#" class="btn-readmore" title="Eco-Minded">Read more</a>
+{{--                            <a href="#" class="btn-readmore" title="Eco-Minded">Read more</a>--}}
                         </div>
                     </div>
                 </div>
@@ -255,249 +161,51 @@
                         <div class="slider">
                             <div class="slider-inner">
                                 <div class="wrap-item">
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
-                                        <div class="inner">
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/1.png')}}" alt="blog-01"/>
-                                            </a>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
+                                    @isset($blogs)
+                                        @foreach($blogs as $key => $blog)
+                                            @if(($key++ % 2) > 0)
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
+                                                    <div class="inner">
+                                                        <img src="{{asset('store/'.$blog->attachment)}}"
+                                                             alt="blog-{{$blog->id}}"/>
+                                                        <div class="info">
+                                                            <div class="title">
+                                                                <a href="{{route('blogs.show', $hashIds->encode($blog->id))}}">{{$blog->title}}</a>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <p>
+                                                                    {{$blog->summary}}
+                                                                </p>
+                                                            </div>
+                                                            <a href="{{route('blogs.show', $hashIds->encode($blog->id))}}"
+                                                               class="read-more">Read more</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Bright inks. Thick Paper. Precise cuts. We believe that quality
-                                                        printing matters. That
-                                                        quality printing matters.
-                                                    </p>
+                                            @else
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
+                                                    <div class="inner">
+                                                        <div class="info">
+                                                            <div class="title">
+                                                                <a href="{{route('blogs.show', $hashIds->encode($blog->id))}}">{{$blog->title}}</a>
+                                                            </div>
+                                                            <div class="sub-title">
+                                                                <p>
+                                                                    {{$blog->summary}}
+                                                                </p>
+                                                            </div>
+                                                            <a href="{{route('blogs.show', $hashIds->encode($blog->id))}}"
+                                                               class="read-more">Read more</a>
+                                                        </div>
+
+                                                        <img src="{{asset('store/'.$blog->attachment)}}"
+                                                             alt="blog-01"/>
+
+                                                    </div>
                                                 </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
-                                        <div class="inner">
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Bright inks. Thick Paper. Precise cuts. We believe that quality
-                                                        printing matters. That
-                                                        quality printing matters.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/2.png')}}" alt="blog-01"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
-                                        <div class="inner">
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/3.png')}}" alt="blog-01"/>
-                                            </a>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Bright inks. Thick Paper. Precise cuts. We believe that quality
-                                                        printing matters. That
-                                                        quality printing matters.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
-                                        <div class="inner">
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Bright inks. Thick Paper. Precise cuts. We believe that quality
-                                                        printing matters. That
-                                                        quality printing matters.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/4.png')}}" alt="blog-01"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap-item">
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
-                                        <div class="inner">
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/1.png')}}" alt="blog-01"/>
-                                            </a>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
-                                        <div class="inner">
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/2.png')}}" alt="blog-01"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
-                                        <div class="inner">
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/3.png')}}" alt="blog-01"/>
-                                            </a>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
-                                        <div class="inner">
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/4.png')}}" alt="blog-01"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrap-item">
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
-                                        <div class="inner">
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/1.png')}}" alt="blog-01"/>
-                                            </a>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
-                                        <div class="inner">
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/2.png')}}" alt="blog-01"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
-                                        <div class="inner">
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/3.png')}}" alt="blog-01"/>
-                                            </a>
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                    </p>
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item item-even">
-                                        <div class="inner">
-                                            <div class="info">
-                                                <div class="title">
-                                                    <a href="#">Happy Holidays Photo Cards</a>
-                                                </div>
-                                                <div class="sub-title">
-                                                    <p>
-                                                        Choose options that you want for your prints.We will make you
-                                                        happy with your
-                                                        choices.
-                                                </div>
-                                                <a href="#" class="read-more">Read more</a>
-                                            </div>
-                                            <a class="image" href="#">
-                                                <img src="{{asset('template/images/blog/4.png')}}" alt="blog-01"/>
-                                            </a>
-                                        </div>
-                                    </div>
+                                            @endif
+                                        @endforeach
+                                    @endisset
                                 </div>
                             </div>
                         </div>
@@ -841,7 +549,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row" style="display: flex; flex-flow: row wrap;">
                     <div id="our-clients">
                         <div class="our-clients">
                             <div class="inner">
@@ -919,22 +627,22 @@
         });
 
 
-                $(document).ready(function(){
-                    $('.background-text  .mantra').hide().fadeIn(5000);
-        {{--            // $(window).scroll(function() {--}}
-        {{--            //     var hT = $('.our-service').offset().top,--}}
-        {{--            //         hH = $('.our-service').outerHeight(),--}}
-        {{--            //         wH = $(window).height(),--}}
-        {{--            //         wS = $(this).scrollTop();--}}
-        {{--            //     if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){--}}
-        {{--            //         $('#registration_modal').modal()--}}
-        {{--            //     }--}}
-        {{--            // });--}}
+        $(document).ready(function () {
+            $('.background-text  .mantra').hide().fadeIn(5000);
+            {{--            // $(window).scroll(function() {--}}
+            {{--            //     var hT = $('.our-service').offset().top,--}}
+            {{--            //         hH = $('.our-service').outerHeight(),--}}
+            {{--            //         wH = $(window).height(),--}}
+            {{--            //         wS = $(this).scrollTop();--}}
+            {{--            //     if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){--}}
+            {{--            //         $('#registration_modal').modal()--}}
+            {{--            //     }--}}
+            {{--            // });--}}
 
-        {{--            $('.our-service').on('mouseenter', function(){--}}
-        {{--                $('#registration_modal').modal('show')--}}
-        {{--            });--}}
+            {{--            $('.our-service').on('mouseenter', function(){--}}
+            {{--                $('#registration_modal').modal('show')--}}
+            {{--            });--}}
 
-                })
+        })
     </script>
 @endsection

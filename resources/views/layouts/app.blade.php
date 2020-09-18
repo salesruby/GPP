@@ -14,7 +14,7 @@
     <!-- endinject -->
     <!-- plugin css for this page -->
     <link rel="stylesheet" href="{{asset('dashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
-<!-- End plugin css for this page -->
+    <!-- End plugin css for this page -->
     <link rel="stylesheet" href="{{asset('dashboard/css/sweetalert2.min.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap-4.4.1-dist/css/bootstrap.min.css')}}">
     <!-- inject:css -->
@@ -113,28 +113,42 @@
                         <span class="menu-title">Contacts</span>
                     </a>
                 </li>
-                @can('view-users')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('clients.index')}}">
-                            <i class="mdi mdi-account-circle menu-icon"></i>
-                            <span class="menu-title">Clients</span>
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('orders.index')}}">
-                            <i class="mdi mdi-cart menu-icon"></i>
-                            <span class="menu-title">Orders</span>
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('services.index')}}">
+                        <i class="mdi mdi-toolbox menu-icon"></i>
+                        <span class="menu-title">Services</span>
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('users.index')}}">
-                            <i class="mdi mdi-account-multiple menu-icon"></i>
-                            <span class="menu-title">Users</span>
-                        </a>
-                    </li>
-                @endcan
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('clients.index')}}">
+                        <i class="mdi mdi-account-circle menu-icon"></i>
+                        <span class="menu-title">Clients</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('orders.index')}}">
+                        <i class="mdi mdi-cart menu-icon"></i>
+                        <span class="menu-title">Orders</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('users.index')}}">
+                        <i class="mdi mdi-account-multiple menu-icon"></i>
+                        <span class="menu-title">Users</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('blogs.index')}}">
+                        <i class="mdi mdi-blogger menu-icon"></i>
+                        <span class="menu-title">Blog Post</span>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- partial -->

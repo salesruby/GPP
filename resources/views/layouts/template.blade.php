@@ -90,7 +90,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-8 visible-md visible-lg">
+                <div class="col-lg-8 col-md-10 visible-md visible-lg">
                     <nav id="main-menu" class="main-menu clearfix" >
                         <ul>
                             <li class="level0 parent col1 all-product hd-pd {{(request()->is('/'))?'active':''}}">
@@ -127,8 +127,11 @@
                                 <a href="{{route('login')}}">Login</a>
                             </li>
 
-                            <li class="level0 hd-pd" title="Login">
+                            <li class="level0 hd-pd" title="Register">
                                 <a href="{{route('register')}}">Register</a>
+                            </li>
+                            <li class="level0 hd-pd" title="Request for Quote">
+                                <a href="{{route('quote.create')}}">Request for Quote</a>
                             </li>
                         </ul>
                     </nav>
@@ -328,8 +331,12 @@
             <a href="{{route('login')}}">Login</a>
         </li>
 
-        <li class="level0 hd-pd" title="Login">
+        <li class="level0 hd-pd" title="Register">
             <a href="{{route('register')}}">Register</a>
+        </li>
+
+        <li class="level0 hd-pd" title="Request for Quote">
+            <a href="{{route('quote.create')}}">Request for Quote</a>
         </li>
     </ul>
 </nav>
