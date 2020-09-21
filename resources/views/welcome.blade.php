@@ -1,5 +1,6 @@
 @extends('layouts.template')
 @section('main')
+
     <!--Main index : Begin-->
     <main class="main index">
         <section id="background-section">
@@ -27,67 +28,67 @@
                     <div class="or-service-w">
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                             <div class="or-image">
-                                <a href="#">
+                                <a href="{{url('/our-services#service_publication')}}">
                                     <img src="{{asset('template/images/our_service/1.png')}}" alt="service-01"/>
                                 </a>
                             </div>
                             <div class="or-title">
-                                <a href="#">Printing</a>
+                                <a href="{{url('/our-services#service_publication')}}">Books, Publication & Dairies</a>
                             </div>
-                            <div class="or-text">
+                            <div class="text">
                                 <p>
-                                    let us design your next print project!
+                                    Educational, Textbooks, Year Books, Notepads
                                 </p>
                             </div>
-                            <a href="#" class="btn-readmore order-now">Order now</a>
+                            <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                             <div class="or-image">
-                                <a href="#">
+                                <a href="{{url('/our-services#service_commercial')}}">
                                     <img src="{{asset('template/images/our_service/2.png')}}" alt="service-02"/>
                                 </a>
                             </div>
                             <div class="or-title">
-                                <a href="#">Planning</a>
+                                <a href="{{url('/our-services#service_commercial')}}">Commercial Products</a>
                             </div>
-                            <div class="or-text">
+                            <div class="text">
                                 <p>
-                                    Delivery, we can hand it all for you!
+                                    Flyers, Letterheads, Brand Collaterals, Calendars, Corporate Gifts
                                 </p>
                             </div>
-                            <a href="#" class="btn-readmore order-now">Order now</a>
+                            <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                             <div class="or-image">
-                                <a href="#">
+                                <a href="{{url('/our-services#service_finishing')}}">
                                     <img src="{{asset('template/images/our_service/3.png')}}" alt="service-03"/>
                                 </a>
                             </div>
                             <div class="or-title">
-                                <a href="#">Proof-reading</a>
+                                <a href="{{url('/our-services#service_finishing')}}">Specialized Finishing</a>
                             </div>
-                            <div class="or-text">
+                            <div class="text">
                                 <p>
-                                    we'll bring all your creative ideas to life!
+                                    Binding, Saddle Stitching, Embossing, Lamination, Foiling
                                 </p>
                             </div>
-                            <a href="#" class="btn-readmore order-now">Order now</a>
+                            <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                             <div class="or-image">
-                                <a href="#">
+                                <a href="{{url('/our-services#service_packaging')}}">
                                     <img src="{{asset('template/images/our_service/4.png')}}" alt="service-04"/>
                                 </a>
                             </div>
                             <div class="or-title">
-                                <a href="#">Light Packaging</a>
+                                <a href="{{url('/our-services#service_packaging')}}">Light Packaging</a>
                             </div>
-                            <div class="or-text">
+                            <div class="text">
                                 <p>
-                                    we'll if your file is ready to print!
+                                    Paper bags packaging, Box pack customization
                                 </p>
                             </div>
-                            <a href="#" class="btn-readmore order-now">Order now</a>
+                            <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
                         </div>
                     </div>
                 </div>
@@ -105,7 +106,7 @@
                             <span class="tr-line"></span>
                             <p>Bright inks. Thick Paper. Precise cuts. We believe that quality printing matters. That
                                 quality printing matters.</p>
-{{--                            <a href="#" class="btn-readmore" title="Quality Printing">Read more</a>--}}
+                            {{--                            <a href="#" class="btn-readmore" title="Quality Printing">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-time-delivery">
@@ -114,7 +115,7 @@
                             <h3>Timely Delivery</h3>
                             <span class="tr-line"></span>
                             <p>No printer is faster. Order today by 8:00pm EST and you can even get it tomorrow.</p>
-{{--                            <a href="#" class="btn-readmore" title="Timely Delivery">Read more</a>--}}
+                            {{--                            <a href="#" class="btn-readmore" title="Timely Delivery">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-minded">
@@ -126,7 +127,7 @@
                                 On a monthly basis we make 500 Thousand bindings, 5 Million stitches, and over 20
                                 Million impressions.
                             </p>
-{{--                            <a href="#" class="btn-readmore" title="Capability">Read more</a>--}}
+                            {{--                            <a href="#" class="btn-readmore" title="Capability">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-money">
@@ -138,7 +139,7 @@
                                 Most sellers work with buyers to quickly resolve issues, but if a solution isn't
                                 reached, we can help.
                             </p>
-{{--                            <a href="#" class="btn-readmore" title="Eco-Minded">Read more</a>--}}
+                            {{--                            <a href="#" class="btn-readmore" title="Eco-Minded">Read more</a>--}}
                         </div>
                     </div>
                 </div>
@@ -147,26 +148,26 @@
         <!--Home Trust : End-->
 
         <!--Home blog : Begin -->
-        <section class="home-blog">
-            <div class="container">
-                <div class="row">
-                    <div class="block-title-w">
-                        <h2 class="block-title" style="color: black !important;">recent blog post</h2>
-                        <span class="icon-title">
+        @if(isset($blogs) && !$blogs->isEmpty())
+            <section class="home-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="block-title-w">
+                            <h2 class="block-title" style="color: black !important;">recent blog post</h2>
+                            <span class="icon-title">
 							<span></span>
 							<i class="fa fa-star"></i>
 						</span>
-                    </div>
-                    <div class="blog-content-w" id="blog-content-w">
-                        <div class="slider">
-                            <div class="slider-inner">
-                                <div class="wrap-item">
-                                    @isset($blogs)
+                        </div>
+                        <div class="blog-content-w" id="blog-content-w">
+                            <div class="slider">
+                                <div class="slider-inner">
+                                    <div class="wrap-item">
                                         @foreach($blogs as $key => $blog)
                                             @if(($key++ % 2) > 0)
                                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
                                                     <div class="inner">
-                                                        <img src="{{asset('store/'.$blog->attachment)}}"
+                                                        <img src="/new/gpp/public/store/{{$blog->attachment}}"
                                                              alt="blog-{{$blog->id}}"/>
                                                         <div class="info">
                                                             <div class="title">
@@ -198,22 +199,22 @@
                                                                class="read-more">Read more</a>
                                                         </div>
 
-                                                        <img src="{{asset('store/'.$blog->attachment)}}"
+                                                        <img src="/new/gpp/public/store/{{$blog->attachment}}"
                                                              alt="blog-01"/>
 
                                                     </div>
                                                 </div>
                                             @endif
                                         @endforeach
-                                    @endisset
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--Home make print : Begin -->
+            </section>
+    @endif
+    <!--Home make print : Begin -->
         <section class="home-make-print">
             <div class="container">
                 <div class="row">
@@ -289,7 +290,7 @@
                 <div class="row">
                     <div class="block-title-w">
                         <h2 class="block-title">our capabilities</h2>
-                        <span class="sub-title">Content not available</span>
+{{--                        <span class="sub-title"></span>--}}
                         <span class="icon-title">
 							<span></span>
 							<i class="fa fa-star"></i>
@@ -353,135 +354,7 @@
             </div>
         </section>
 
-        <!--Home out recent : Begin -->
-    {{--        <section class="home-out-recent">--}}
-    {{--            <div class="container">--}}
-    {{--                <div class="row">--}}
-    {{--                    <div class="block-title-w">--}}
-    {{--                        <h2 class="block-title">OUR RECENT WORKS</h2>--}}
-    {{--                        <span class="icon-title">--}}
-    {{--							<span></span>--}}
-    {{--							<i class="fa fa-star"></i>--}}
-    {{--						</span>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="tab-content">--}}
-    {{--                        <div class="tab-pane active" id="tab11">--}}
-    {{--                            <div class="col-md-4 col-sm-6 col-xs-6 block-recent">--}}
-    {{--                                <div class="w-block-recent">--}}
-    {{--                                    <div class="image-recent">--}}
-    {{--                                        <a href="#">--}}
-    {{--                                            <img src="{{asset('template/images/our_service/5.png')}}" alt="service-05"/>--}}
-    {{--                                        </a>--}}
-    {{--                                    </div>--}}
-    {{--                                    <div class="info-recent">--}}
-    {{--                                        <h2 class="title">Postcards</h2>--}}
-    {{--                                        <div class="text-recent">--}}
-    {{--                                            <p>--}}
-    {{--                                                Welcome to Global Plus Publishing, this content is yet to be filled--}}
-    {{--                                            </p>--}}
-    {{--                                        </div>--}}
-    {{--                                        <a href="#" class="read-more">read more</a>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="col-md-4 col-sm-6 col-xs-6 block-recent">--}}
-    {{--                                <div class="w-block-recent">--}}
-    {{--                                    <div class="image-recent">--}}
-    {{--                                        <a href="#">--}}
-    {{--                                            <img src="{{asset('template/images/our_service/6.png')}}" alt="service-06"/>--}}
-    {{--                                        </a>--}}
-    {{--                                    </div>--}}
-    {{--                                    <div class="info-recent">--}}
-    {{--                                        <h2 class="title">Postcards</h2>--}}
-    {{--                                        <div class="text-recent">--}}
-    {{--                                            <p>--}}
-    {{--                                                Welcome to Global Plus Publishing, this content is yet to be filled--}}
-    {{--                                            </p>--}}
-    {{--                                        </div>--}}
-    {{--                                        <a href="#" class="read-more">read more</a>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="col-md-4 col-sm-6 col-xs-6 block-recent">--}}
-    {{--                                <div class="w-block-recent">--}}
-    {{--                                    <div class="image-recent">--}}
-    {{--                                        <a href="#">--}}
-    {{--                                            <img src="{{asset('template/images/our_service/7.png')}}" alt="service-07"/>--}}
-    {{--                                        </a>--}}
-    {{--                                    </div>--}}
-    {{--                                    <div class="info-recent">--}}
-    {{--                                        <h2 class="title">Postcards</h2>--}}
-    {{--                                        <div class="text-recent">--}}
-    {{--                                            <p>--}}
-    {{--                                                Welcome to Global Plus Publishing, this content is yet to be filled--}}
-    {{--                                            </p>--}}
-    {{--                                        </div>--}}
-    {{--                                        <a href="#" class="read-more">read more</a>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="col-md-4 col-sm-6 col-xs-6 block-recent">--}}
-    {{--                                <div class="w-block-recent">--}}
-    {{--                                    <div class="image-recent">--}}
-    {{--                                        <a href="#">--}}
-    {{--                                            <img src="{{asset('template/images/our_service/8.png')}}" alt="service-08"/>--}}
-    {{--                                        </a>--}}
-    {{--                                    </div>--}}
-    {{--                                    <div class="info-recent">--}}
-    {{--                                        <h2 class="title">Postcards</h2>--}}
-    {{--                                        <div class="text-recent">--}}
-    {{--                                            <p>--}}
-    {{--                                                Welcome to Global Plus Publishing, this content is yet to be filled--}}
-    {{--                                            </p>--}}
-    {{--                                        </div>--}}
-    {{--                                        <a href="#" class="read-more">read more</a>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="col-md-4 col-sm-6 col-xs-6 block-recent">--}}
-    {{--                                <div class="w-block-recent">--}}
-    {{--                                    <div class="image-recent">--}}
-    {{--                                        <a href="#">--}}
-    {{--                                            <img src="{{asset('template/images/our_service/9.png')}}" alt="service-09"/>--}}
-    {{--                                        </a>--}}
-    {{--                                    </div>--}}
-    {{--                                    <div class="info-recent">--}}
-    {{--                                        <h2 class="title">Postcards</h2>--}}
-    {{--                                        <div class="text-recent">--}}
-    {{--                                            <p>--}}
-    {{--                                                Welcome to Global Plus Publishing, this content is yet to be filled--}}
-    {{--                                            </p>--}}
-    {{--                                        </div>--}}
-    {{--                                        <a href="#" class="read-more">read more</a>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="col-md-4 col-sm-6 col-xs-6 block-recent">--}}
-    {{--                                <div class="w-block-recent">--}}
-    {{--                                    <div class="image-recent">--}}
-    {{--                                        <a href="#">--}}
-    {{--                                            <img src="{{asset('template/images/our_service/10.png')}}"--}}
-    {{--                                                 alt="service-10"/>--}}
-    {{--                                        </a>--}}
-    {{--                                    </div>--}}
-    {{--                                    <div class="info-recent">--}}
-    {{--                                        <h2 class="title">Postcards</h2>--}}
-    {{--                                        <div class="text-recent">--}}
-    {{--                                            <p>--}}
-    {{--                                                Welcome to Global Plus Publishing, this content is yet to be filled--}}
-    {{--                                            </p>--}}
-    {{--                                        </div>--}}
-    {{--                                        <a href="#" class="read-more">read more</a>--}}
-    {{--                                    </div>--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </section>--}}
-
-    <!--Home Testimonials : Begin -->
+        <!--Home Testimonials : Begin -->
         <section class="home-testimonial">
             <div class="container">
                 <div class="row">
@@ -626,23 +499,17 @@
             $('#background-video').load("{{url('/video')}}");
         });
 
-
         $(document).ready(function () {
             $('.background-text  .mantra').hide().fadeIn(5000);
-            {{--            // $(window).scroll(function() {--}}
-            {{--            //     var hT = $('.our-service').offset().top,--}}
-            {{--            //         hH = $('.our-service').outerHeight(),--}}
-            {{--            //         wH = $(window).height(),--}}
-            {{--            //         wS = $(this).scrollTop();--}}
-            {{--            //     if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){--}}
-            {{--            //         $('#registration_modal').modal()--}}
-            {{--            //     }--}}
-            {{--            // });--}}
-
-            {{--            $('.our-service').on('mouseenter', function(){--}}
-            {{--                $('#registration_modal').modal('show')--}}
-            {{--            });--}}
-
+            // $(window).scroll(function () {
+            //     var hT = $('.our-service').offset().top,
+            //         hH = $('.our-service').outerHeight(),
+            //         wH = $(window).height(),
+            //         wS = $(this).scrollTop();
+            //     if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
+            //         alert('Test 123456');
+            //     }
+            // });
         })
     </script>
 @endsection

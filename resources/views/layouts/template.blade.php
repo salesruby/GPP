@@ -21,64 +21,7 @@
 <body>
 <!--Header: Begin-->
 <header>
-    <!--Top Header: Begin-->
-{{--    <section id="top-header" class="clearfix">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="top-links col-lg-7 col-md-6 col-sm-5 col-xs-6">--}}
-{{--                    <ul>--}}
-{{--                        <li class="visible-md visible-lg">--}}
-{{--                            <a href="{{route('home')}}" title="Dashboard">--}}
-{{--                                <i class="fa fa-lock"></i>--}}
-{{--                                <!-- Account -->--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a href="{{route('login')}}" title="Login">--}}
-{{--                                <i class="fa fa-user"></i>--}}
-{{--                                <!-- Login -->--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="hidden-xs">--}}
-{{--                            <a href="{{route('register')}}" title="Register">--}}
-{{--                                <i class="fa fa-pencil"></i>--}}
-{{--                                <!-- Sign Up -->--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="hidden-xs">--}}
-{{--                            <a href="https://web.facebook.com/globalpluspub">--}}
-{{--                                <i class="fa fa-facebook"></i>--}}
-{{--                                <!-- Connect with facebook -->--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="hidden-xs">--}}
-{{--                            <a href="https://twitter.com/GlobalPlusPub">--}}
-{{--                                <i class="fa fa-twitter"></i>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="hidden-xs">--}}
-{{--                            <a href="https://www.instagram.com/globalpluspub/">--}}
-{{--                                <i class="fa fa-instagram"></i>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="hidden-xs">--}}
-{{--                            <a href="https://www.linkedin.com/company/global-plus-publishing">--}}
-{{--                                <i class="fa fa-linkedin"></i>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--                <div class="top-header-right f-right col-lg-5 col-md-6 col-sm-7 col-xs-6">--}}
-
-{{--                    <div class="pull-right header-contact">--}}
-{{--                        <div><i class="fa fa-phone"></i> +234 812 713 8282</div>--}}
-{{--                        <div><i class="fa fa-envelope"></i>clientservice@globalplusonline.com</div>--}}
-{{--                    </div>--}}
-
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section><!--Top Header: End-->--}}
+    @include('layouts.social_links')
     <!--Main Header: Begin-->
     <section class="main-header" >
         <div class="container" >
@@ -94,25 +37,31 @@
                     <nav id="main-menu" class="main-menu clearfix" >
                         <ul>
                             <li class="level0 parent col1 all-product hd-pd {{(request()->is('/'))?'active':''}}">
-                                <a href="{{route('welcome')}}"><span>Home</span></a>
+                                <a href="{{route('welcome')}}">Home</a>
                             </li>
                             <li class="level0 parent col1 hd-pd">
                                 <a href="javascript:void(0)" title="Services">
-                                    <span>Services</span>
+                                    Services
                                     <i class="fa fa-chevron-down"></i>
                                 </a>
                                 <ul class="level0">
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="category_grid.html" title="Printing">Printing</a>
+                                        <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publication</a>
                                     </li>
                                     <li class="level1 nav-1-6 item">
-                                        <a href="category_grid.html" title="Planning">Planning</a>
+                                        <a href="{{url('/our-services#service_periodical')}}" title="Periodicals">Periodicals</a>
                                     </li>
                                     <li class="level1 nav-1-8 item">
-                                        <a href="category_grid.html" title="Proof-reading">Proof-reading</a>
+                                        <a href="{{url('/our-services#service_commerial')}}" title="Commercial Products">Commercial Products</a>
                                     </li>
                                     <li class="level1 nav-1-9 last item">
-                                        <a href="category_grid.html" title="Light Packaging">Light Packaging</a>
+                                        <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential Printing</a>
+                                    </li>
+                                    <li class="level1 nav-1-1 first item">
+                                        <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
+                                    </li>
+                                    <li class="level1 nav-1-1 first item">
+                                        <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
                                     </li>
                                 </ul>
                             </li>
@@ -122,16 +71,22 @@
                             <li class="level0 hd-pd {{(request()->is('about-us'))?'active':''}}" title="About Us">
                                 <a href="{{route('about-us')}}">About Us</a>
                             </li>
-
-                            <li class="level0 hd-pd" title="Login">
-                                <a href="{{route('login')}}">Login</a>
+                            <li class="level0 hd-pd" title="Contact Us">
+                                <a href="{{route('contact-us')}}">Contact Us</a>
+                            </li>
+                            <li class="level0 hd-pd" title="Shop">
+                                <a href="#">Shop</a>
                             </li>
 
-                            <li class="level0 hd-pd" title="Register">
-                                <a href="{{route('register')}}">Register</a>
-                            </li>
-                            <li class="level0 hd-pd" title="Request for Quote">
-                                <a href="{{route('quote.create')}}">Request for Quote</a>
+{{--                            <li class="level0 hd-pd" title="Login">--}}
+{{--                                <a href="{{route('login')}}">Login</a>--}}
+{{--                            </li>--}}
+
+{{--                            <li class="level0 hd-pd" title="Register">--}}
+{{--                                <a href="{{route('register')}}">Register</a>--}}
+{{--                            </li>--}}
+                            <li class="level0 hd-pd"  title="Request for Quote">
+                                <a  href="{{route('quote.create')}}"><button class="btn" id="request-quote-btn">Request for Quote</button></a>
                             </li>
                         </ul>
                     </nav>
@@ -200,7 +155,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/GlobalPlusPub" title="Twiter">
+                                <a href="https://twitter.com/globalplus_pub" title="Twiter">
                                     <i class="fa fa-twitter"></i>
                                 </a>
                             </li>
@@ -227,15 +182,15 @@
                             <li>
                                 <a href="{{route('about-us')}}" title="About us">About</a>
                             </li>
-                            <li>
-                                <a href="#" title="Afiliates">Afiliates</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Terms of Service">Terms of Service</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Privacy Policy">Privacy Policy</a>
-                            </li>
+{{--                            <li>--}}
+{{--                                <a href="#" title="Afiliates">Afiliates</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#" title="Terms of Service">Terms of Service</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#" title="Privacy Policy">Privacy Policy</a>--}}
+{{--                            </li>--}}
                         </ul>
                     </div>
                 </div>
@@ -246,12 +201,12 @@
                             <li>
                                 <a href="{{route('login')}}" title="My Account">My Account</a>
                             </li>
-                            <li>
-                                <a href="#" title="FAQ">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Design Service">Design Services</a>
-                            </li>
+{{--                            <li>--}}
+{{--                                <a href="#" title="FAQ">FAQ</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#" title="Design Service">Design Services</a>--}}
+{{--                            </li>--}}
                             <li>
                                 <a href="{{route('contact-us')}}" title="Contact Us">Contact Us</a>
                             </li>
@@ -298,25 +253,31 @@
     </div>
     <ul class="cate_list">
         <li class="level0 parent col1 all-product hd-pd {{(request()->is('/'))?'active':''}}">
-            <a href="{{route('welcome')}}"><span>Home</span></a>
+            <a href="{{route('welcome')}}">Home</a>
         </li>
         <li class="level0 parent col1 hd-pd">
             <a href="javascript:void(0)" title="Services">
-                <span>Services</span>
+                Services
                 <i class="fa fa-chevron-down"></i>
             </a>
             <ul class="level0">
                 <li class="level1 nav-1-1 first item">
-                    <a href="category_grid.html" title="Printing">Printing</a>
+                    <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publication</a>
                 </li>
                 <li class="level1 nav-1-6 item">
-                    <a href="category_grid.html" title="Planning">Planning</a>
+                    <a href="{{url('/our-services#service_periodical')}}" title="Periodicals">Periodicals</a>
                 </li>
                 <li class="level1 nav-1-8 item">
-                    <a href="category_grid.html" title="Proof-reading">Proof-reading</a>
+                    <a href="{{url('/our-services#service_commerial')}}" title="Commercial Products">Commercial Products</a>
                 </li>
                 <li class="level1 nav-1-9 last item">
-                    <a href="category_grid.html" title="Light Packaging">Light Packaging</a>
+                    <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential Printing</a>
+                </li>
+                <li class="level1 nav-1-1 first item">
+                    <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
+                </li>
+                <li class="level1 nav-1-1 first item">
+                    <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
                 </li>
             </ul>
         </li>
@@ -327,13 +288,21 @@
             <a href="{{route('about-us')}}">About Us</a>
         </li>
 
-        <li class="level0 hd-pd" title="Login">
-            <a href="{{route('login')}}">Login</a>
+        <li class="level0 hd-pd" title="Contact Us">
+            <a href="{{route('contact-us')}}">Contact Us</a>
         </li>
 
-        <li class="level0 hd-pd" title="Register">
-            <a href="{{route('register')}}">Register</a>
+        <li class="level0 hd-pd" title="Shop">
+            <a href="#">Shop</a>
         </li>
+
+{{--        <li class="level0 hd-pd" title="Login">--}}
+{{--            <a href="{{route('login')}}">Login</a>--}}
+{{--        </li>--}}
+
+{{--        <li class="level0 hd-pd" title="Register">--}}
+{{--            <a href="{{route('register')}}">Register</a>--}}
+{{--        </li>--}}
 
         <li class="level0 hd-pd" title="Request for Quote">
             <a href="{{route('quote.create')}}">Request for Quote</a>
@@ -345,7 +314,7 @@
 <script type="text/javascript" src="{{asset('template/js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('template/js/owl.carousel.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('template/js/Chart.js')}}"></script>
-<script type="text/javascript" src="{{asset('template/js/doughnutit.js')}}"></script>
+{{--<script type="text/javascript" src="{{asset('template/js/doughnutit.js')}}"></script>--}}
 <!--   <script type="text/javascript" src="js/jquery.subscribe-better.js"></script> -->
 <script type="text/javascript" src="{{asset('template/js/slideshow/jquery.themepunch.revolution.js')}}"></script>
 <script type="text/javascript" src="{{asset('template/js/slideshow/jquery.themepunch.plugins.min.js')}}"></script>

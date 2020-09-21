@@ -39,9 +39,6 @@
                                 </li>
                             @endcan
                         </ul>
-                        @if($message = Session::get('success'))
-                            <div class="alert alert-success alert-message">{{$message}}</div>
-                        @endif
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="service-list" role="tabpanel"
                                  aria-labelledby="service-list-tab">

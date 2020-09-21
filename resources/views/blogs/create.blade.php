@@ -34,6 +34,7 @@
                                            class="form-control" name="title"
                                            value="{{ old('title') }}" required autocomplete="title" autofocus
                                            placeholder="Title">
+                                    <p class="text-muted">*Note: Title should not be more than 23 Characters</p>
                                 </div>
                                 <div class="form-group">
                                     <input type="text"
@@ -41,10 +42,11 @@
                                            name="summary"
                                            value="{{ old('summary') }}" required autocomplete="summary"
                                            placeholder="Post Summary">
+                                    <p class="text-muted">*Note: Summary should not be more than 105 Characters</p>
                                 </div>
 
                                 <div class="form-group">
-                                        <textarea aria-required="true" required class="form-control" rows="10"
+                                        <textarea aria-required="true" required class="form-control" id="summernote" rows="10"
                                                   cols="70%"
                                                   name="content" aria-invalid="true" placeholder="Enter Content*"
                                                   value="{{old('content')}}"></textarea>
@@ -63,4 +65,13 @@
             </div>
         </div>
     </div>
+@endsection
+
+
+@section('script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#summernote').summernote();
+        })
+    </script>
 @endsection

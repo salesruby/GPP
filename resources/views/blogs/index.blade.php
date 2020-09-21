@@ -51,12 +51,12 @@
                                                 <a href="{{route('blogs.edit', $hashIds->encode($blog->id))}}"
                                                    class="edit-blog"><i
                                                         class="mdi mdi-pen"></i></a>
-                                                <form style="display: inline;"
-                                                      action="{{route('blogs.destroy', $blog->id )}}">
+                                                    <form style="display: inline;"
+                                                          action="{{route('blogs.destroy')}}">
                                                     @csrf
                                                     @method('DELETE')
                                                     <input type="hidden" value="{{$blog->id}}" name="id">
-                                                    <button type="button" id="delete-button" class="btn"><i
+                                                    <button type="button" class="delete-button btn"><i
                                                             class="mdi mdi-delete" style="color: #0e4cfd;"></i>
                                                     </button>
                                                 </form>
@@ -78,6 +78,24 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#blog-table').dataTable();
+
+            $('.delete-button').on('click', function () {
+                // window.alert("hello")
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You want to delete this blog?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, Delete!'
+                }).then((result) => {
+                    if (result.value) {
+                        var form = $(this).parents('form:first');
+                        form.submit();
+                    }
+                })
+            })
         })
     </script>
 @endsection

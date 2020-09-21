@@ -15,6 +15,7 @@
     <!-- plugin css for this page -->
     <link rel="stylesheet" href="{{asset('dashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
     <!-- End plugin css for this page -->
+    <link rel="stylesheet" href="{{asset('dashboard/vendors/summernote/summernote.min.css')}}">
     <link rel="stylesheet" href="{{asset('dashboard/css/sweetalert2.min.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap-4.4.1-dist/css/bootstrap.min.css')}}">
     <!-- inject:css -->
@@ -129,6 +130,13 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('quote.index')}}">
+                        <i class="mdi mdi-cart-arrow-right menu-icon"></i>
+                        <span class="menu-title">Quotes Request</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('orders.index')}}">
                         <i class="mdi mdi-cart menu-icon"></i>
                         <span class="menu-title">Orders</span>
@@ -170,6 +178,7 @@
 <!-- container-scroller -->
 
 <!-- plugins:js -->
+<script src="{{asset('dashboard/vendors/jquery-3.5.1.min.js')}}"></script>
 <script src="{{asset('dashboard/vendors/base/vendor.bundle.base.js')}}"></script>
 <!-- endinject -->
 <!-- Plugin js for this page-->
@@ -190,6 +199,7 @@
 <script src="{{asset('dashboard/js/dataTables.bootstrap4.js')}}"></script>
 <script src="{{asset('dashboard/js/sweetalert2.min.js')}}"></script>
 <script src="{{asset('bootstrap-4.4.1-dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('dashboard/vendors/summernote/summernote.min.js')}}"></script>
 <!-- GetButton.io widget -->
 <!-- End custom js for this page-->
 @yield('script')

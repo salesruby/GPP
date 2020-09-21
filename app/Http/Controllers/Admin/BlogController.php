@@ -88,13 +88,11 @@ class BlogController extends Controller
     }
 
     /**
-     * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-//        $hashIds = new Hashids('gpp', 10);
-        $service = Blog::findOrFail(self::$hashIds->decode($id)[0]);
+        $service = Blog::findOrFail($request->id);
         $service->delete();
         return redirect()->route('services.index')->with('success', 'Blog deleted successfully');
     }

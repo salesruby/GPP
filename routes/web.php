@@ -29,9 +29,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact-us', 'PageController@contact')->name('contact-us');
 Route::resource('contacts', 'ContactController');
 Route::get('/about-us', 'PageController@about')->name('about-us');
+Route::get('/our-services', 'PageController@service')->name('our-services');
 Route::get('/setup', 'SetupController@index');
 Route::get('blogs/show/{id}', 'Admin\BlogController@show')->name('blogs.show');
 Route::get('quote/create', 'Admin\QuoteController@create')->name('quote.create');
+Route::post('quote/store', 'Admin\QuoteController@store')->name('quote.store');
 
 
 Route::group(['middleware' => ['auth','admin'], 'prefix'=>'admin', 'namespace' =>'Admin'], function (){
@@ -48,7 +50,7 @@ Route::group(['middleware' => ['auth','admin'], 'prefix'=>'admin', 'namespace' =
 
     Route::get('blogs', 'BlogController@index')->name('blogs.index');
     Route::get('blogs/create', 'BlogController@create')->name('blogs.create');
-    Route::get('blogs/destroy/{id}', 'BlogController@destroy')->name('blogs.destroy');
+    Route::get('blogs/destroy', 'BlogController@destroy')->name('blogs.destroy');
     Route::get('blogs/edit/{id}', 'BlogController@edit')->name('blogs.edit');
     Route::post('blogs/store', 'BlogController@store')->name('blogs.store');
     Route::put('blogs/update/{id}', 'BlogController@update')->name('blogs.update');
@@ -56,10 +58,8 @@ Route::group(['middleware' => ['auth','admin'], 'prefix'=>'admin', 'namespace' =
 
     Route::get('quote', 'QuoteController@index')->name('quote.index');
     Route::get('quote/destroy/{id}', 'QuoteController@destroy')->name('quote.destroy');
-    Route::get('quote/edit/{id}', 'QuoteController@edit')->name('quote.edit');
-    Route::post('quote/store', 'QuoteController@store')->name('quote.store');
-    Route::put('quote/update/{id}', 'QuoteController@update')->name('quote.update');
     Route::get('quote/show/{id}', 'QuoteController@show')->name('quote.show');
+    Route::post('quote/respond', 'QuoteController@respondToQuote')->name('quote.respond');
 
 
 });

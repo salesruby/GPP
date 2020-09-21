@@ -59,7 +59,6 @@
                 mso-hide: all;
                 visibility: hidden;
                 width: 0;">
-                <!-- Sales Ruby Header Text  -->
             </span>
 
                 <table
@@ -114,7 +113,7 @@
                                             margin-right: auto;
                                             padding: 0 0 10px;
                                             display: block;"
-                                            >Your search for quality stops right here
+                                            >Bring your imaginations to life...
                                         </p>
                                         <h4 style="font-family: Verdana;
                             font-size: 14px;

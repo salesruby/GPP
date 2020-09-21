@@ -6,17 +6,17 @@
                 <div class="d-flex justify-content-between flex-wrap">
                     <div class="d-flex align-items-end flex-wrap">
                         <div class="mr-md-3 mr-xl-5">
-                            <h2>{{$order->user->name}}'s order</h2>
-                            <p class="mb-md-0">Order placed
-                                on {{\Carbon\Carbon::parse($order->created_at)->addHour()->format('M d Y H:i')}}.</p>
+                            <h2>{{$quote->name}}'s quote</h2>
+                            <p class="mb-md-0">Quote sent
+                                on {{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('M d Y H:i')}}.</p>
                         </div>
                         <div class="d-flex">
                             <i class="mdi mdi-home text-muted hover-cursor"></i>
                             <p class="text-muted mb-0 hover-cursor crumbs">
                                 <a href="{{route('home')}}">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</a>
-                                <a href="{{route('orders.index')}}">&nbsp;Order List&nbsp;/&nbsp;</a>
+                                <a href="{{route('quote.index')}}">&nbsp;Quote /&nbsp;</a>
                             </p>
-                            <p class="text-primary mb-0 hover-cursor">{{$order->user->name}}'s order</p>
+                            <p class="text-primary mb-0 hover-cursor">{{$quote->name}}'s quote</p>
                         </div>
                     </div>
                     @include('layouts.quick-links')
@@ -34,19 +34,19 @@
                                 <div class="profile-panel-heading card-title" style="color:#ffffff;">Order</div>
                             </div>
                             <div class="profile-panel-body">
-                                <p>{{$order->description}}</p>
+                                <p>{{$quote->description}}</p>
                             </div>
                             <div class="profile-panel-footer">
-                                @if($order->attachment !== null)
-                                    <a href="/store/{{$order->attachment}}" download type="button"
+                                @if($quote->attachment !== null)
+                                    <a href="/new/gpp/public/store/{{$quote->attachment}}" download type="button"
                                        class="btn btn-secondary" data-dismiss="modal">Download File</a>
                                 @endif
                                 <button type="button" class="btn btn-primary reply-btn" data-dismiss="modal"
-                                        data-id="{{$order->id}}">Reply
+                                        data-id="{{$quote->id}}">Reply
                                 </button>
                             </div>
                         </div>
-                        @foreach($order->response as $response)
+                        @foreach($quote->response as $response)
                             <div class="profile-panel">
                                 <div>
                                     <div class="profile-panel-heading card-title" style="color:#ffffff;">Response</div>
@@ -56,7 +56,7 @@
                                 </div>
                                 @if($response->attachment !== null)
                                     <div class="profile-panel-footer">
-                                        <a href="/store/{{$response->attachment}}" download type="button"
+                                        <a href="/new/gpp/public/store/{{$response->attachment}}" download type="button"
                                            class="btn btn-secondary">Download File</a>
                                     </div>
                                 @endif
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    @include('order.order-response')
+    @include('quote.response')
 @endsection
 @section('script')
     <script type="text/javascript">
@@ -100,13 +100,13 @@
 
 
             $('.reply-btn').on('click', function () {
-                $('#order-response-modal').modal();
-                var orderId = $(this).attr('data-id');
-                $('#order-response-form').on('submit', function (event) {
+                $('#quote-response-modal').modal();
+                var quoteId = $(this).attr('data-id');
+                $('#quote-response-form').on('submit', function (event) {
                     event.preventDefault();
                     $.ajax({
                         type: 'POST',
-                        url: '/admin/orders/respond',
+                        url: '/admin/quote/respond',
                         data: new FormData(this),
                         cache: false,
                         contentType: false,
@@ -116,19 +116,19 @@
                         },
                         success: function (response) {
                             var redirectTo = failed = function () {
-                                $('#order-response-modal').modal('toggle');
-                                window.location = '/admin/orders/' + orderId;
+                                $('#quote-response-modal').modal('toggle');
+                                window.location = '/admin/quote/show/' + quoteId;
                             }
 
                             var failed = function () {
-                                $('#order-response-modal').modal('toggle');
-                                window.location = '/admin/orders/' + orderId;
+                                $('#quote-response-modal').modal('toggle');
+                                window.location = '/admin/quote/show/' + quoteId;
                             }
                             sweetAlert(response, redirectTo, failed)
                         },
                         error: function (error) {
                             if (error.responseJSON.errors.hasOwnProperty('attachment')) {
-                                $('#order-response-form span').addClass('error').text('File Size must not be more than 2Mb');
+                                $('#quote-response-form span').addClass('error').text('File Size must not be more than 2Mb');
                             }
                         }
                     })

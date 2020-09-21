@@ -3,83 +3,80 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\QuoteRequest;
+use App\Http\Requests\QuoteResponseRequest;
+use App\Mail\QuoteResponseMail;
+use App\Quote;
+use App\QuoteResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class QuoteController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        $quotes = Quote::all();
+        return view('quote.index', compact('quotes'))
+            ->with('i', (\request()->input('page', 1)-1)*10);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        //
+        return view('quote.create');
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param QuoteRequest $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(QuoteRequest $request)
     {
-        //
+        $input = $request->validated();
+        if (isset($input['attachment'])){
+            $attachmentName = time().'.'.$input['attachment']->extension();
+            $input['attachment']->move(public_path('store'), $attachmentName);
+            $input['attachment'] = $attachmentName;
+        }
+        Quote::create($input);
+        return redirect()->back()->with('success', 'An invoice on your Quote will be generated and sent immediately');
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
     {
-        //
+        $quote = Quote::find($id);
+        return view('quote.show', compact('quote'));
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param QuoteResponseRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function respondToQuote(QuoteResponseRequest $request){
+            $input = $request->validated();
+            $quote = Quote::find($input['quote_id']);
+            $email = Mail::to($quote->email);
+            $email->send( new QuoteResponseMail($input+['name'=>$quote->name]));
+            if (isset($input['attachment'])){
+                $attachmentName = time().'.'.$input['attachment']->extension();
+                $input['attachment']->move(public_path('store'), $attachmentName);
+                $input['attachment'] = $attachmentName;
+            }
+            QuoteResponse::create($input);
+            $result = Quote::where('id', $input['quote_id'])->update(['status' => 1]);
+            $message = ['success' => 'Response sent successfully'];
+            if(!$result){
+                $message = ['error' => 'Unable to send response'];
+            }
+            return response()->json($message);
     }
 }

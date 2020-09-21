@@ -25,7 +25,7 @@
         <section id="aboutus" class="pr-main">
             <div class="container">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <img src="{{asset('store/'.$blog->attachment)}}">
+                    <img src="/new/gpp/public/store/{{$quote->attachment}}">
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="top"><h2><span>{{$blog->title}}</span></h2>
@@ -37,9 +37,9 @@
                         <h2>
                             <span>Summary</span>
                         </h2>
-                        <p>
+                        <div style="line-height: 2em;">
                             {{$blog->summary}}
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

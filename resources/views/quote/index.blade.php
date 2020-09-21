@@ -6,13 +6,13 @@
                 <div class="d-flex justify-content-between flex-wrap">
                     <div class="d-flex align-items-end flex-wrap">
                         <div class="mr-md-3 mr-xl-5">
-                            <h2>Client Orders,</h2>
-                            <p class="mb-md-0">Orders from clients for service.</p>
+                            <h2>Quote Request,</h2>
+                            <p class="mb-md-0">Quote Request from site visitors.</p>
                         </div>
                         <div class="d-flex">
                             <i class="mdi mdi-home text-muted hover-cursor"></i>
                             <a href="{{route('home')}}" class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</a>
-                            <p class="text-primary mb-0 hover-cursor">Orders</p>
+                            <p class="text-primary mb-0 hover-cursor">Quote</p>
                         </div>
                     </div>
                     @include('layouts.quick-links')
@@ -25,32 +25,32 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Orders</h4>
+                        <h4 class="card-title">Quotes</h4>
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover orders-table">
+                            <table class="table table-striped table-hover quotes-table">
                                 <thead>
                                 <tr>
                                     <th>S/N</th>
                                     <th>Client Name</th>
-                                    <th>Order</th>
+                                    <th>Quote</th>
                                     <th>Attachment</th>
                                     <th>Placement Date</th>
                                     <th>Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($orders as $order)
+                                @foreach($quotes as $quote)
                                     <tr>
                                         <td>{{++$i}}</td>
-                                        <td>{{$order->user->name}}</td>
-                                        <td><a class="btn btn-primary view-order"
-                                               href="{{route('orders.show', $order->id)}}">View
-                                                Order</a></td>
-                                        <td><a class="btn btn-link" href="/store/{{$order->attachment}}" download>Download
+                                        <td>{{$quote->name}}</td>
+                                        <td><a class="btn btn-primary view-quote" style="padding: 10px;"
+                                               href="{{route('quote.show', $quote->id)}}">View
+                                                Quote</a></td>
+                                        <td><a class="btn btn-link" href="/new/gpp/public/store/{{$quote->attachment}}" download>Download
                                                 File</a></td>
-                                        <td>{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('M d Y H:i')}}</td>
+                                        <td>{{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('M d Y H:i')}}</td>
                                         <td>
-                                            {!!(!$order->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}
+                                            {!!(!$quote->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}
                                         </td>
                                     </tr>
                                 @endforeach
@@ -69,24 +69,24 @@
                 <div class="card">
                     <div class="card-body">
                         <div>
-                            @foreach( $orders as $order)
+                            @foreach( $quotes as $quote)
                                 <div class="col-md-3 sale-box wow fadeInUp" data-wow-iteration="1">
                                     <div class="sale-box-inner">
                                         <div class="sale-box-head">
-                                            <h4>{{$order->user->name}}</h4>
+                                            <h4>{{$quote->name}}</h4>
                                         </div>
                                         <ul class="sale-box-desc">
                                             <li>
-                                                <strong><a class="btn btn-primary view-order"
-                                                           href="{{route('orders.show', $order->id)}}">View
-                                                        Order</a></strong>
-                                                <span>{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('d M Y H:i')}}</span>
+                                                <strong><a class="btn btn-primary view-quote" style="padding: 10px;"
+                                                           href="{{route('quote.show', $quote->id)}}">View
+                                                        Quote</a></strong>
+                                                <span>{{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('d M Y H:i')}}</span>
                                             </li>
                                             <li>
-                                                <strong><a class="btn btn-link" href="/store/{{$order->attachment}}"
+                                                <strong><a class="btn btn-link" href="/new/gpp/public/store/{{$quote->attachment}}"
                                                            download>Download
                                                         File</a></strong>
-                                                <span>{!!(!$order->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}</span>
+                                                <span>{!!(!$quote->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -102,7 +102,7 @@
 @section('script')
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.orders-table').dataTable();
+            $('.quotes-table').dataTable();
         })
     </script>
 @endsection

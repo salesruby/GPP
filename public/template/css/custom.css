@@ -1,11 +1,11 @@
 /**{*/
 /*    font-family:"Raleway sans-serif";*/
 /*}*/
-.active a{
+.active a {
     color: #65d5f7;
 }
 
-.header-contact{
+.header-contact {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -14,15 +14,15 @@
     font-weight: bold;
 }
 
-.header-contact div{
+.header-contact div {
     padding-right: 10px;
 }
 
-.header-contact i{
+.header-contact i {
     padding-right: 5px;
 }
 
-#background-section{
+#background-section {
     display: flex;
     padding: 0;
     margin-bottom: 20px;
@@ -30,7 +30,7 @@
     height: 598px;
 }
 
-#background-video{
+#background-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +41,7 @@
     object-fit: fill;
 }
 
-.background-text{
+.background-text {
     display: flex;
     flex: 1;
     flex-flow: column wrap;
@@ -57,32 +57,33 @@
     padding-top: 50px;
 }
 
-.background-text h4{
+.background-text h4 {
     color: #25bce9;
     font-size: 40px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
 }
-.background-text .name{
+
+.background-text .name {
     font-size: 90px;
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
 }
 
 
-.background-text .mantra{
+.background-text .mantra {
     font-size: 20px;
     font-weight: bold;
     text-shadow: 2px 2px 2px #000000;
 }
 
-.background-text .service-brief{
+.background-text .service-brief {
     font-size: 25px;
     padding-top: 20px;
     font-weight: bold;
 }
 
-.cap-circle{
+.cap-circle {
     width: 176px;
     height: 176px;
     border-radius: 50%;
@@ -92,34 +93,34 @@
     margin: 0 auto;
 }
 
-.circle-one{
+.circle-one {
     background-color: #fd5b4e;
     color: #fd5b4e;
     font-size: 30px;
 }
 
 
-.circle-two{
+.circle-two {
     background-color: #ffa63e;
     color: #ffa63e;
     font-size: 30px;
 }
 
 
-.circle-three{
+.circle-three {
     background-color: #25bce9;
     color: #25bce9;
     font-size: 30px;
 }
 
 
-.circle-four{
+.circle-four {
     background-color: green;
     color: green;
     font-size: 30px;
 }
 
-.cap-outter-circle{
+.cap-outter-circle {
     width: 156px;
     height: 156px;
     border-radius: 50%;
@@ -130,7 +131,7 @@
 
 }
 
-.cap-inner-circle{
+.cap-inner-circle {
     width: 116px;
     height: 116px;
     border-radius: 50%;
@@ -142,24 +143,25 @@
 
 
 @media screen and (max-width: 768px) {
-    .background-text h4{
-        color: #ffffff;
+    .background-text h4 {
+        color: #25bce9;
         font-size: 35px;
         font-weight: bold;
         text-align: center;
     }
-    .background-text .name{
+
+    .background-text .name {
         font-size: 50px;
         text-align: center;
     }
 
-    .background-text .matra{
+    .background-text .matra {
         font-size: 25px;
         font-weight: normal;
     }
 
-    .background-text .service-brief{
-        font-size:25px ;
+    .background-text .service-brief {
+        font-size: 25px;
         font-weight: bold;
         padding-top: 40px;
         text-align: center;
@@ -168,20 +170,134 @@
 
 /*BLOG*/
 
-.inner img{
+.inner img {
     width: 100%;
 }
 
-.inner .info{
+.inner .info {
     display: flex !important;
     flex-flow: column wrap !important;
     height: 252px;
 }
 
 
+/*quote*/
+
+.acc-dashboard.wishlist-custom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#wishlist form {
+    border-bottom: 1px solid #ececec;
+    padding: 35px 0 35px 20px;
+}
+
+#wishlist img {
+    border: 1px solid #d6d6d6;
+    margin: 0 20px 20px 20px;
+    vertical-align: top;
+    display: flex;
+}
+
+
+#wishlist h4 {
+    font-size: 16px;
+    color: #444444;
+    margin-bottom: 14px;
+    margin-top: -3px;
+}
+
+#wishlist h4:hover {
+    color: #25bce9;
+}
+
+#wishlist textarea {
+    margin-top: 20px;
+    max-width: 100%;
+    width: 98%;
+}
+
+.wishlist-custom .info {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 10px;
+    max-width: 100%;
+    width: 98%;
+    justify-content: space-between;
+}
+
+.wishlist-custom .info input {
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .wishlist-custom .info input {
+        width: 100%;
+    }
+
+    #wishlist img {
+        margin: 0 0px 20px 0px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .wishlist-custom .addcart {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wishlist-custom .info input {
+        width: 100%;
+    }
+
+    #wishlist img {
+        margin: 0 0px 20px 0px;
+    }
+}
+
+
+#wishlist p {
+    color: #777777;
+    font-size: 12px;
+}
+
+#wishlist textarea, #wishlist input {
+    border: 1px solid #ececec;
+    padding: 5px;
+}
+
+
+#wishlist button {
+    border: 0;
+    font-size: 12px;
+    color: #444444;
+    text-transform: uppercase;
+    background: #d0d0d0;
+    border-bottom: 2px solid #666666;
+    padding: 9px 20px 8px 40px;
+    float: right;
+    margin-right: 10px;
+}
+
+#wishlist button.addcart {
+    background: url(../images/icons/ic-addtocart.png) no-repeat 15px 11px #d0d0d0;
+}
+
+#wishlist button.addcart:hover {
+    background: url(../images/icons/ic-addtocarthover.png) no-repeat 15px 11px #fbc443;
+}
+
+.wishlist-custom .submit-quote {
+    margin-top: 20px;
+}
+
 /*About us*/
 
-#aboutus video{
+.pr-main video {
     width: 100%;
 }
 
@@ -204,25 +320,36 @@
     line-height: 50px;
     text-align: center;
     /* Starting position */
-    -moz-transform:translateX(100%);
-    -webkit-transform:translateX(100%);
-    transform:translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
     /* Apply animation to this element */
     -moz-animation: scroll-left 45s linear infinite;
     -webkit-animation: scroll-left 45s linear infinite;
     animation: scroll-left 45s linear infinite;
 }
+
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left {
-    0%   { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
 }
+
 @-webkit-keyframes scroll-left {
-    0%   { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
 }
+
 @keyframes scroll-left {
-    0%   {
+    0% {
         -moz-transform: translateX(100%); /* Browser bug fix */
         -webkit-transform: translateX(100%); /* Browser bug fix */
         transform: translateX(100%);
@@ -234,63 +361,99 @@
     }
 }
 
-.our-clients-list{
+.our-clients-list {
     display: flex;
     margin-top: 20px;
 }
 
-.our-clients-list .list-item{
+.our-clients-list .list-item {
     padding: 10px;
 }
 
-.our-clients-list .list-item img{
+.our-clients-list .list-item img {
     min-width: 165px;
     height: 115px;
 }
 
-.home-testimonial .image img{
+.home-testimonial .image img {
     border-radius: 79px;
 }
 
 @media screen and (max-width: 480px) {
-    .background-text h4{
-        color: #ffffff;
+    .background-text h4 {
+        color: #25bce9;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
     }
-    .background-text .name{
+
+    .background-text .name {
         font-size: 30px;
         text-align: center;
     }
 
-    .background-text .matra{
+    .background-text .matra {
         font-size: 15px;
         font-weight: normal;
     }
 
-    .background-text .service-brief{
-        font-size:15px ;
+    .background-text .service-brief {
+        font-size: 15px;
         font-weight: bold;
         padding-top: 40px;
         text-align: center;
     }
 }
 
+/*social links*/
+.social_links {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    z-index: 10;
+    /*background-color: #25bce9;*/
+    background-color: #eeeeee;
+}
+
+.social_links li {
+    padding: 10px;
+}
 
 
-/*@media(min-aspect-ratio: 16/9) {*/
-/*    #background-video{*/
-/*        width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-/*}*/
+/*service description*/
+
+.or-service-w .text p, .block-capabititie .decs p {
+    margin-top: 3px;
+    color: #888;
+}
 
 
-/*@media(max-aspect-ratio: 16/9) {*/
-/*    #background-video{*/
-/*        width: auto;*/
-/*        height: 100%;*/
-/*    }*/
-/*}*/
+/*ABOUT US*/
 
+#aboutus .container .top p {
+    line-height: 2em;
+}
+
+
+#aboutus .container {
+    margin-top: 30px;
+}
+
+@media (max-width: 425px) {
+    #aboutus .top {
+        margin-top: 20px;
+    }
+}
+
+/* Request quote btn*/
+#request-quote-btn {
+    text-transform: uppercase;
+    background: #25bce9;
+    color: #fff;
+}
+
+#request-quote-btn:hover{
+    color: #25bce9;
+    background: #fff;
+    outline: none;
+}
