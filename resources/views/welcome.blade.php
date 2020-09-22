@@ -23,7 +23,7 @@
 							<span></span>
 							<i class="fa fa-star"></i>
 						</span>
-                        <span class="sub-title">Choose the design path that is right before upload file</span>
+                        <span class="sub-title">Choose the design and we willl bring your imagination to reality</span>
                     </div>
                     <div class="or-service-w">
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 block-trust trust-col-quantity">
-                        <div class="tr-icon"><i class="fa fa-thumbs-up"></i></div>
+                        <div class="tr-icon tr-icon1"><i class="fa fa-thumbs-up"></i></div>
                         <div class="tr-text">
                             <h3>Quality Printing</h3>
                             <span class="tr-line"></span>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-time-delivery">
-                        <div class="tr-icon"><i class="fa fa-paper-plane"></i></div>
+                        <div class="tr-icon tr-icon2"><i class="fa fa-paper-plane"></i></div>
                         <div class="tr-text">
                             <h3>Timely Delivery</h3>
                             <span class="tr-line"></span>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-minded">
-                        <div class="tr-icon"><i class="fa fa-leaf"></i></div>
+                        <div class="tr-icon tr-icon3"><i class="fa fa-leaf"></i></div>
                         <div class="tr-text">
                             <h3>Capability</h3>
                             <span class="tr-line"></span>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-money">
-                        <div class="tr-icon"><i class="fa fa-money"></i></div>
+                        <div class="tr-icon tr-icon4"><i class="fa fa-money"></i></div>
                         <div class="tr-text">
                             <h3>Value Guaranteed</h3>
                             <span class="tr-line"></span>
@@ -239,8 +239,8 @@
                                     <span>01</span>
                                 </div>
                                 <div class="print-txt">
-                                    <p>Choose options that you want for your prints.We will make you happy with your
-                                        choices.</p>
+                                    <p>Start a new printing order based on your options and preferences. Orders can be
+                                        placed in person or <a href="{{route('quote.create')}}">click here</a></p>
                                 </div>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                                     <span>02</span>
                                 </div>
                                 <div class="print-txt">
-                                    <p>Upload your finished design here and we'll print it for you with your choices</p>
+                                    <p>Upload print design (Corel draw, Adobe illustrator or Adobe Photoshop).</p>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +273,7 @@
                                     <span>03</span>
                                 </div>
                                 <div class="print-txt">
-                                    <p>Checkout and finish your order very easy with one step checkout extension.</p>
+                                    <p>Enter delivery options and finish the order.</p>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                 <div class="row">
                     <div class="block-title-w">
                         <h2 class="block-title">our capabilities</h2>
-{{--                        <span class="sub-title"></span>--}}
+                        {{--                        <span class="sub-title"></span>--}}
                         <span class="icon-title">
 							<span></span>
 							<i class="fa fa-star"></i>

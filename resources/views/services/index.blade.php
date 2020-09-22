@@ -86,7 +86,7 @@
                             <div class="tab-pane fade show" id="create-service" role="tabpanel"
                                  aria-labelledby="create-service-tab">
                                 <form id="add-user-form" class="settings-form" method="POST"
-                                      action="{{ route('services.store') }}">
+                                      action="{{ route('services.store') }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <input id="name" type="text"
@@ -103,7 +103,7 @@
                                         <input id="description" type="text"
                                                class="form-control @error('email') is-invalid @enderror"
                                                name="description"
-                                               value="{{ old('description') }}" required autocomplete="description"
+                                               value="{{ old('description')}}" required autocomplete="description"
                                                placeholder="Service description">
 
                                         @error('description')
@@ -124,6 +124,12 @@
                                     </span>
                                         @enderror
                                     </div>
+
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" name="attachment" value="{{ old('attachment')}}" required> <br/>
+                                        <p class="text-danger">*Note: Image should not be more than 96Kb, and its dimension 264 * 269</p>
+                                    </div>
+
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                     <button type="reset" class="btn btn-light">Cancel</button>
                                 </form>
@@ -139,38 +145,6 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#service-table').dataTable();
-            $('#add-service-form').validate({
-                rules: {
-                    name: {
-                        required: true,
-                        minlength: 2
-                    },
-                    description: {
-                        required: true,
-                        minlength: 3
-                    },
-                    price: {
-                        required: true,
-                        minlength: 1
-                    }
-
-                },
-                messages: {
-                    name: {
-                        required: 'Service name is required',
-                        minlength: 'Service name should be at least 2 characters long'
-                    },
-                    description: {
-                        required: "Service description is required",
-                        minlength: "Service description should be at least 3 characters long"
-                    },
-                    price: {
-                        required: 'Service price is required',
-                        minlength: 'Price must be upto 1 character long'
-                    }
-                }
-            })
-
             $('.settings-form #delete-button').on('click', function () {
                 Swal.fire({
                     title: 'Are you sure?',

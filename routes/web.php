@@ -34,9 +34,15 @@ Route::get('/setup', 'SetupController@index');
 Route::get('blogs/show/{id}', 'Admin\BlogController@show')->name('blogs.show');
 Route::get('quote/create', 'Admin\QuoteController@create')->name('quote.create');
 Route::post('quote/store', 'Admin\QuoteController@store')->name('quote.store');
+Route::get('/shop', 'Admin\ServiceController@displayServices')->name('shop');
+Route::get('/shop/item/{id}', 'Admin\ServiceController@show')->name('shop.show-item');
+Route::get('/shop/pay-info/{id}', 'Admin\ServiceController@payInfo')->name('pay.info');
+// Laravel 5.1.17 and above
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 
-Route::group(['middleware' => ['auth','admin'], 'prefix'=>'admin', 'namespace' =>'Admin'], function (){
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('users/delete', 'UserController@destroy')->name('users.delete');
     Route::resource('users', 'UserController');
     Route::post('orders/respond', 'OrderController@respondToOrder')->name('orders.respond');
@@ -46,7 +52,7 @@ Route::group(['middleware' => ['auth','admin'], 'prefix'=>'admin', 'namespace' =
     Route::get('services/delete', 'ServiceController@destroy')->name('services.delete');
     Route::get('services/edit/{id}', 'ServiceController@edit')->name('services.edit');
     Route::post('services/store', 'ServiceController@store')->name('services.store');
-    Route::post('services/update/{id}', 'ServiceController@update')->name('services.update');
+    Route::put('services/update/{id}', 'ServiceController@update')->name('services.update');
 
     Route::get('blogs', 'BlogController@index')->name('blogs.index');
     Route::get('blogs/create', 'BlogController@create')->name('blogs.create');
@@ -64,11 +70,11 @@ Route::group(['middleware' => ['auth','admin'], 'prefix'=>'admin', 'namespace' =
 
 });
 
-Route::group(['middleware' => ['auth','admin'], 'prefix' =>'admin'], function (){
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
     Route::resource('clients', 'ClientController');
 });
 
-Route::group(['middleware' => ['auth','client'], 'prefix'=>'client'], function (){
+Route::group(['middleware' => ['auth', 'client'], 'prefix' => 'client'], function () {
     Route::get('account', 'ClientController@account')->name('client.account');
     Route::get('address', 'ClientController@address')->name('client.address');
     Route::post('account/update', 'ClientController@updateAccount')->name('client.account.update');

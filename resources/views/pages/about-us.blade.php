@@ -84,8 +84,8 @@
                             <h3>Joy Adeosun</h3>
                             <h4>Head of Human Resources</h4>
                             <p>
-{{--                                His wealth of experience in the Print and Publishing Industry spans over many years. He--}}
-{{--                                has served as Chief Executive Officer of several Print Publications.--}}
+                                A Chartered Human Resources Practitioner, joined the Group in 2014. A member of the
+                                Chartered Institute of Personal Management of Nigeria
                             </p>
                         </div>
                     </div>
@@ -95,9 +95,9 @@
                             <h3>Hakeem Oyinloye</h3>
                             <h4>Head Finance</h4>
                             <p>
-{{--                                An astute entrepreneur, a prolific business leader and visionary strategist with apt--}}
-{{--                                experience in--}}
-{{--                                product development and business expansion.--}}
+                                {{--                                An astute entrepreneur, a prolific business leader and visionary strategist with apt--}}
+                                {{--                                experience in--}}
+                                {{--                                product development and business expansion.--}}
                             </p>
                         </div>
                     </div>

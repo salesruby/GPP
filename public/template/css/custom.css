@@ -192,6 +192,8 @@
 #wishlist form {
     border-bottom: 1px solid #ececec;
     padding: 35px 0 35px 20px;
+    width: 95%;
+    margin: auto;
 }
 
 #wishlist img {
@@ -230,6 +232,12 @@
 
 .wishlist-custom .info input {
     margin-top: 5px;
+}
+
+.wishlist-custom .info div{
+    display: flex;
+    flex-flow:column wrap;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -312,8 +320,9 @@
     position: relative;
 }
 
-.our-clients .inner {
-    position: absolute;
+/*.our-clients .inner {*/
+    /*position: absolute;*/
+.our-clients{
     width: 100%;
     height: 100%;
     margin: 0;
@@ -456,4 +465,58 @@
     color: #25bce9;
     background: #fff;
     outline: none;
+}
+
+
+/*tr-icon*/
+
+.tr-icon1{
+    background: cyan;
+}
+
+.tr-icon2{
+    background: magenta;
+}
+
+.tr-icon3{
+    background: yellow;
+}
+
+.tr-icon4{
+    background: black;
+}
+
+
+/*SHOP*/
+
+.our-shop .container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px 0;
+}
+
+/*HOW WE MAKE DESIGN EASY*/
+.print-txt{
+    min-height: 80px;
+}
+
+@media(max-width: 768px) {
+    .print-txt{
+        min-height: 120px;
+    }
+}
+
+
+.print-txt a{
+    color: #25bce9;
+}
+
+.print-txt a:hover{
+    color: red;
+}
+
+
+/*validation error*/
+.error{
+    color: red;
 }

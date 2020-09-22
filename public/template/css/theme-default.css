@@ -1444,7 +1444,7 @@ section.trust-w{
   -webkit-border-radius: 50%;
   text-align: center;
   vertical-align: 50%;
-  background:#25bce9;
+  /*background:#25bce9;*/
   border: 8px solid transparent;
   transition: all 0.3s ease-out 0s;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -2211,8 +2211,7 @@ a.order-now{
 * Home Testimonials
 */
 .home-testimonial{
-	/*background:url(../images/testimonials/bg_testimonal.jpg) no-repeat fixed;*/
-    background: #eee;
+	background:url(../images/testimonials/bg_testimonal.svg) no-repeat fixed;
 	background-position: 50% 0;
     min-height:485px;
 }

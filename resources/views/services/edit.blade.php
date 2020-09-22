@@ -28,9 +28,10 @@
                         <h4>Edit Service</h4>
                         <div class="tab-content">
                             <div>
-                                <form id="add-user-form" class="settings-form" method="POST"
+                                <form id="add-user-form" class="settings-form" method="POST" enctype="multipart/form-data"
                                       action="{{ route('services.update', $service->id) }}">
                                     @csrf
+                                    @method('PUT')
                                     <div class="form-group">
                                         <input id="name" type="text"
                                                class="form-control @error('name') is-invalid @enderror" name="name"
@@ -67,6 +68,10 @@
                                     </span>
                                         @enderror
                                     </div>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" name="attachment" value="{{$service->attachment}}"> <br/>
+                                        <p class="text-danger">*Note: Image should not be more than 96Kb, and its dimension 264 * 269</p>
+                                    </div>
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                     <button type="reset" class="btn btn-light">Cancel</button>
                                 </form>
@@ -82,37 +87,6 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#service-table').dataTable();
-            $('#add-service-form').validate({
-                rules: {
-                    name: {
-                        required: true,
-                        minlength: 2
-                    },
-                    description: {
-                        required: true,
-                        minlength: 3
-                    },
-                    price: {
-                        required: true,
-                        minlength: 1
-                    }
-
-                },
-                messages: {
-                    name: {
-                        required: 'Service name is required',
-                        minlength: 'Service name should be at least 2 characters long'
-                    },
-                    description: {
-                        required: "Service description is required",
-                        minlength: "Service description should be at least 3 characters long"
-                    },
-                    price: {
-                        required: 'Service price is required',
-                        minlength: 'Price must be upto 1 character long'
-                    }
-                }
-            })
         })
     </script>
 @endsection

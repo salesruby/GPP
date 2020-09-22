@@ -360,8 +360,7 @@
 		background-size:cover;
 	}
 	.home-testimonial{
-		/*background:url(../images/testimonials/bg_testimonal.jpg) scroll center center;*/
-        background: #eee;
+		background:url(../images/testimonials/bg_testimonal.svg) scroll center center;
 		background-size:cover;
 	}
 	.home-blog .item{

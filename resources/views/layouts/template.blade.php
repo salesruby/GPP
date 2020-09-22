@@ -7,11 +7,11 @@
     <meta name="description" content="Global Plus Publishing">
     <meta name="author" content="GPP">
     <!--Add css lib-->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo:500,300,700,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:500,300,700,400' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:500,300,700,400' rel='stylesheet'
           type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{asset('template/css/style-main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('template/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('dashboard/css/sweetalert2.min.css')}}">
@@ -65,9 +65,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level0 hd-pd">
-                                <a href="#" title="Gallery">Gallery</a>
-                            </li>
                             <li class="level0 hd-pd {{(request()->is('about-us'))?'active':''}}" title="About Us">
                                 <a href="{{route('about-us')}}">About Us</a>
                             </li>
@@ -75,7 +72,7 @@
                                 <a href="{{route('contact-us')}}">Contact Us</a>
                             </li>
                             <li class="level0 hd-pd" title="Shop">
-                                <a href="#">Shop</a>
+                                <a href="{{route('shop')}}">Shop</a>
                             </li>
 
 {{--                            <li class="level0 hd-pd" title="Login">--}}
@@ -96,22 +93,6 @@
 							<i class="fa fa-bars"></i>
 						</span>
                 </div>
-{{--                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 headerCS">--}}
-{{--                    <div class="search-w SC-w hd-pd ">--}}
-{{--							<span class="search-icon dropdowSCIcon">--}}
-{{--								<i class="fa fa-search"></i>--}}
-{{--							</span>--}}
-{{--                        <div class="search-safari">--}}
-{{--                            <div class="search-form dropdowSCContent">--}}
-{{--                                <form method="POST" action="#">--}}
-{{--                                    <input type="text" name="search" placeholder="Search"/>--}}
-{{--                                    <input type="submit" name="search" value="Search">--}}
-{{--                                    <i class="fa fa-search"></i>--}}
-{{--                                </form>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
         </div>
     </section>
@@ -281,9 +262,6 @@
                 </li>
             </ul>
         </li>
-        <li class="level0 hd-pd">
-            <a href="#" title="Gallery">Gallery</a>
-        </li>
         <li class="level0 hd-pd {{(request()->is('about-us'))?'active':''}}" title="About Us">
             <a href="{{route('about-us')}}">About Us</a>
         </li>
@@ -293,7 +271,7 @@
         </li>
 
         <li class="level0 hd-pd" title="Shop">
-            <a href="#">Shop</a>
+            <a href="{{route('shop')}}">Shop</a>
         </li>
 
 {{--        <li class="level0 hd-pd" title="Login">--}}
@@ -320,6 +298,7 @@
 <script type="text/javascript" src="{{asset('template/js/slideshow/jquery.themepunch.plugins.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('template/js/theme-home.js')}}"></script>
 <script type="text/javascript" src="{{asset('dashboard/js/sweetalert2.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/jquery.validator.js')}}"></script>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
