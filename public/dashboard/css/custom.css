@@ -138,6 +138,11 @@
 }
 
 
+/*Quote Table*/
+#quote-table tr td{
+    padding: 5px;
+}
+
 
 /*Media Query*/
 

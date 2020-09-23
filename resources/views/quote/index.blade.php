@@ -33,7 +33,7 @@
                                     <th>S/N</th>
                                     <th>Client Name</th>
                                     <th>Quote</th>
-                                    <th>Attachment</th>
+                                    <th>Email</th>
                                     <th>Placement Date</th>
                                     <th>Status</th>
                                 </tr>
@@ -46,8 +46,7 @@
                                         <td><a class="btn btn-primary view-quote" style="padding: 10px;"
                                                href="{{route('quote.show', $quote->id)}}">View
                                                 Quote</a></td>
-                                        <td><a class="btn btn-link" href="/new/gpp/public/store/{{$quote->attachment}}" download>Download
-                                                File</a></td>
+                                        <td>{{$quote->email}}</td>
                                         <td>{{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('M d Y H:i')}}</td>
                                         <td>
                                             {!!(!$quote->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}
@@ -77,15 +76,13 @@
                                         </div>
                                         <ul class="sale-box-desc">
                                             <li>
-                                                <strong><a class="btn btn-primary view-quote" style="padding: 10px;"
+                                                <strong>{{$quote->email}}</strong>
+                                                <span><a class="btn btn-primary view-quote" style="padding: 10px;"
                                                            href="{{route('quote.show', $quote->id)}}">View
-                                                        Quote</a></strong>
-                                                <span>{{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('d M Y H:i')}}</span>
+                                                        Quote</a></span>
                                             </li>
                                             <li>
-                                                <strong><a class="btn btn-link" href="/new/gpp/public/store/{{$quote->attachment}}"
-                                                           download>Download
-                                                        File</a></strong>
+                                                <span>Created on {{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('d M Y H:i')}}</span>
                                                 <span>{!!(!$quote->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}</span>
                                             </li>
                                         </ul>

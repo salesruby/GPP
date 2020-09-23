@@ -38,11 +38,6 @@ class QuoteController extends Controller
     public function store(QuoteRequest $request)
     {
         $input = $request->validated();
-        if (isset($input['attachment'])){
-            $attachmentName = time().'.'.$input['attachment']->extension();
-            $input['attachment']->move(public_path('store'), $attachmentName);
-            $input['attachment'] = $attachmentName;
-        }
         Quote::create($input);
         return redirect()->back()->with('success', 'An invoice on your Quote will be generated and sent immediately');
     }
@@ -62,21 +57,21 @@ class QuoteController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function respondToQuote(QuoteResponseRequest $request){
-            $input = $request->validated();
-            $quote = Quote::find($input['quote_id']);
-            $email = Mail::to($quote->email);
-            $email->send( new QuoteResponseMail($input+['name'=>$quote->name]));
-            if (isset($input['attachment'])){
-                $attachmentName = time().'.'.$input['attachment']->extension();
-                $input['attachment']->move(public_path('store'), $attachmentName);
-                $input['attachment'] = $attachmentName;
-            }
-            QuoteResponse::create($input);
-            $result = Quote::where('id', $input['quote_id'])->update(['status' => 1]);
-            $message = ['success' => 'Response sent successfully'];
-            if(!$result){
-                $message = ['error' => 'Unable to send response'];
-            }
-            return response()->json($message);
+        $input = $request->validated();
+        $quote = Quote::find($input['quote_id']);
+        $email = Mail::to($quote->email);
+        $email->send( new QuoteResponseMail($input+['name'=>$quote->name]));
+        if (isset($input['attachment'])){
+            $attachmentName = time().'.'.$input['attachment']->extension();
+            $input['attachment']->move(public_path('store'), $attachmentName);
+            $input['attachment'] = $attachmentName;
+        }
+        QuoteResponse::create($input);
+        $result = Quote::where('id', $input['quote_id'])->update(['status' => 1]);
+        $message = ['success' => 'Response sent successfully'];
+        if(!$result){
+            $message = ['error' => 'Unable to send response'];
+        }
+        return response()->json($message);
     }
 }

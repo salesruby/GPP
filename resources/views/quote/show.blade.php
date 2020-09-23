@@ -34,7 +34,96 @@
                                 <div class="profile-panel-heading card-title" style="color:#ffffff;">Order</div>
                             </div>
                             <div class="profile-panel-body">
-                                <p>{{$quote->description}}</p>
+                                <div class="table-responsive">
+                                    <table class="table-striped table-bordered" id="quote-table">
+                                        <thead>
+                                        <th>Field</th>
+                                        <th>Request</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Number of Cover Page</td>
+                                            <td>{{$quote->num_of_cover_page}} </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Text Page</td>
+                                            <td>{{$quote->num_of_text_page}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cover type</td>
+                                            <td> {{$quote->cover_type}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Trim size</td>
+                                            <td>{{$quote->trim_size}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quantity</td>
+                                            <td>{{$quote->qtty}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colour option cover</td>
+                                            <td>{{$quote->colour_option_cover}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colour option inner</td>
+                                            <td> {{$quote->colour_option_inner}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colour option insert</td>
+                                            <td> {{$quote->colour_option_insert}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paper stock cover</td>
+                                            <td> {{$quote->paper_stock_cover}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paper stock inner</td>
+                                            <td> {{$quote->paper_stock_inner}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paper stock insert</td>
+                                            <td>{{$quote->paper_stock_insert}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paper stock text</td>
+                                            <td> {{$quote->paper_stock_text}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cover finishing</td>
+                                            <td> {{$quote->cover_finishing}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Complete job finishing</td>
+                                            <td>{{$quote->complete_job_finishing}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>packaging</td>
+                                            <td>{{$quote->packaging}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Other packaging</td>
+                                            <td>{{$quote->other_packaging}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Special instruction</td>
+                                            <td> {{$quote->special_instruction}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delivery instruction</td>
+                                            <td>{{$quote->delivery_instruction}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date</td>
+                                            <td> {{$quote->date}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Awareness</td>
+                                            <td>{{$quote->awareness}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="profile-panel-footer">
                                 @if($quote->attachment !== null)
@@ -52,7 +141,7 @@
                                     <div class="profile-panel-heading card-title" style="color:#ffffff;">Response</div>
                                 </div>
                                 <div class="profile-panel-body">
-                                    <p>{{$response->description}}</p>
+                                    <p>{{$response->qtty}}</p>
                                 </div>
                                 @if($response->attachment !== null)
                                     <div class="profile-panel-footer">

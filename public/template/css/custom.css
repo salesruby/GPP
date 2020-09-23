@@ -181,13 +181,14 @@
 }
 
 
-/*quote*/
+/*quote - Initial*/
 
 .acc-dashboard.wishlist-custom {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
+
 
 #wishlist form {
     border-bottom: 1px solid #ececec;
@@ -234,9 +235,9 @@
     margin-top: 5px;
 }
 
-.wishlist-custom .info div{
+.wishlist-custom .info div {
     display: flex;
-    flex-flow:column wrap;
+    flex-flow: column wrap;
     width: 100%;
 }
 
@@ -303,6 +304,75 @@
     margin-top: 20px;
 }
 
+.wishlist-custom {
+    padding: 0;
+    margin: 30px 0;
+}
+
+/*New quote form*/
+
+.wishlist-custom .quote-info{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.quote-section{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    border: thin solid #eee !important;
+}
+
+.quote-section h5{
+    font-weight: bold;
+    color: #fff;
+    background-color:#25bce9;
+    padding: 10px 0;
+}
+
+.quote-section h6{
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.quote-section div{
+    padding: 1px 10px;
+}
+
+.quote-section label{
+    /*padding-right: 5px;*/
+    font-weight: normal;
+}
+
+.wishlist-custom form input[type="text"], .wishlist-custom form input[type="number"], .wishlist-custom form input[type="email"], .wishlist-custom form input[type="date"] {
+    width: 47.5%;
+    margin: 5px auto 0 auto;
+}
+
+/*.wishlist-custom select option{*/
+/*    border: thin solid #eee !important; */
+/*}*/
+
+
+.project-details-sub,  .finishing-info-sub, .other-information-sub{
+    margin-top: 10px;
+}
+
+.project-details-sub div, .finishing-info-sub div, .other-information-sub div {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .wishlist-custom form input[type="text"], .wishlist-custom form input[type="number"], .wishlist-custom form input[type="email"] {
+        width: 95%;
+        margin: 5px auto 0 auto;
+    }
+}
+
+
 /*About us*/
 
 .pr-main video {
@@ -321,8 +391,8 @@
 }
 
 /*.our-clients .inner {*/
-    /*position: absolute;*/
-.our-clients{
+/*position: absolute;*/
+.our-clients {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -461,7 +531,7 @@
     color: #fff;
 }
 
-#request-quote-btn:hover{
+#request-quote-btn:hover {
     color: #25bce9;
     background: #fff;
     outline: none;
@@ -470,53 +540,53 @@
 
 /*tr-icon*/
 
-.tr-icon1{
+.tr-icon1 {
     background: cyan;
 }
 
-.tr-icon2{
+.tr-icon2 {
     background: magenta;
 }
 
-.tr-icon3{
+.tr-icon3 {
     background: yellow;
 }
 
-.tr-icon4{
+.tr-icon4 {
     background: black;
 }
 
 
 /*SHOP*/
 
-.our-shop .container{
+.our-shop .container {
     display: flex;
     flex-flow: row wrap;
     margin: 30px 0;
 }
 
 /*HOW WE MAKE DESIGN EASY*/
-.print-txt{
+.print-txt {
     min-height: 80px;
 }
 
-@media(max-width: 768px) {
-    .print-txt{
+@media (max-width: 768px) {
+    .print-txt {
         min-height: 120px;
     }
 }
 
 
-.print-txt a{
+.print-txt a {
     color: #25bce9;
 }
 
-.print-txt a:hover{
+.print-txt a:hover {
     color: red;
 }
 
 
 /*validation error*/
-.error{
+.error {
     color: red;
 }
