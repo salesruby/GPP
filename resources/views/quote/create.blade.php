@@ -3,8 +3,8 @@
     <!--Main category : Begin-->
     <main id="main" class="account dashboard">
         <section class="header-page">
+            @include('layouts.message')
             <div class="container">
-                <div>@include('layouts.message')</div>
                 <div class="row">
                     <div class="col-sm-3 hidden-xs">
                         <h1 class="mh-title">Welcome to GPP</h1>
@@ -41,14 +41,71 @@
                                             <h4>Get Affordable Price For Quality Printing</h4>
                                             <p>We provide high quality business cards, postcards, flyers, brochures,
                                                 stationery and other premium online print products...</p>
-                                            <textarea aria-invalid="true" name="description"
-                                                      id="jform_contact_message"
-                                                      cols="50" rows="3" class="required invalid" required="required" placeholder="Describe you quote"
-                                                      aria-required="true"></textarea>
-                                            <div class="info">
-                                                    <input type="text" name="name" placeholder="Enter Name">
-                                                    <input type="text" name="phone" placeholder="Enter Phone Number">
-                                                    <input type="email" name="email" placeholder="Enter Email">
+                                            <div class="contact-info">
+                                                <h5>Contact Information</h5>
+                                                <input type="text" name="name" placeholder="Enter Name" required>
+                                                <input type="text" name="phone" placeholder="Enter Phone Number" required>
+                                                <input type="email" name="email" placeholder="Enter Email" required>
+                                                <input type="text" name="company" placeholder="Enter Company Name" >
+                                                <input type="text" name="address" placeholder="Enter Address" required>
+                                            </div>
+                                            <div class="project-details">
+                                                <h5>Project Details</h5>
+                                                <input type="number" name="num_of_cover_page" placeholder="Number of Cover Pages">
+                                                <input type="number" name="num_of_text_page" placeholder="Number of Text Pages">
+                                                <input type="text" name="cover_type" placeholder="Cover Type" required>
+                                                <input type="text" name="trim_size" placeholder="Trim Size">
+                                                <input type="text" name="qtty" placeholder="Quantity">
+                                                <h6>Colour Option</h6>
+                                                <label for="colour_option_cover">Cover</label>
+                                                <select class="custom-select" id="colour_option_cover" name="colour_option_cover" required>
+                                                    <option value="one colour">One Colour</option>
+                                                    <option value="two colour">Two Colour</option>
+                                                    <option value="three colour">Three Colour</option>
+                                                    <option value="four colour">Four Colour (CYMK)</option>
+                                                </select>
+
+                                                <label for="colour_option_inner">Inner</label>
+                                                <select class="custom-select" id="colour_option_inner"  name="colour_option_inner" required>
+                                                    <option value="one colour">One Colour</option>
+                                                    <option value="two colour">Two Colour</option>
+                                                    <option value="three colour">Three Colour</option>
+                                                    <option value="four colour">Four Colour (CYMK)</option>
+                                                </select>
+
+                                                <label for="colour_option_insert">Insert</label>
+                                                <select class="custom-select" id="colour_option_insert" name="colour_option_insert" required>
+                                                    <option value="one colour">One Colour</option>
+                                                    <option value="two colour">Two Colour</option>
+                                                    <option value="three colour">Three Colour</option>
+                                                    <option value="four colour">Four Colour (CYMK)</option>
+                                                </select>
+
+                                                <h6>Paper Stock</h6>
+                                                <label for="paper_stock_cover">Cover</label>
+                                                <select class="custom-select" id="paper_stock_cover" name="paper_stock_cover" required>
+                                                    <option value="one colour">One Colour</option>
+                                                    <option value="two colour">Two Colour</option>
+                                                    <option value="three colour">Three Colour</option>
+                                                    <option value="four colour">Four Colour (CYMK)</option>
+                                                </select>
+
+                                                <label for="paper_stock_inner">Inner</label>
+                                                <select class="custom-select" id="paper_stock_inner"  name="paper_stock_inner" required>
+                                                    <option value="one colour">One Colour</option>
+                                                    <option value="two colour">Two Colour</option>
+                                                    <option value="three colour">Three Colour</option>
+                                                    <option value="four colour">Four Colour (CYMK)</option>
+                                                </select>
+
+                                                <label for="paper_stock_insert">Insert</label>
+                                                <select class="custom-select" id="paper_stock_insert" name="paper_stock_insert" required>
+                                                    <option value="one colour">One Colour</option>
+                                                    <option value="two colour">Two Colour</option>
+                                                    <option value="three colour">Three Colour</option>
+                                                    <option value="four colour">Four Colour (CYMK)</option>
+                                                </select>
+                                                <input type="text" name="paper_stock_text" placeholder="Paper Stock Additional Info">
                                             </div>
                                         </div>
                                         <div style="display: flex; flex-flow:row wrap;" class="total submit-quote">
