@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Transaction;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -18,14 +19,16 @@ class PaymentController extends Controller
      */
     public function redirectToGateway()
     {
-        try{
+        try {
             return Paystack::getAuthorizationUrl()->redirectNow();
-        }catch(\Exception $e) {
-            return Redirect::back()->withMessage(['msg'=>'The paystack token has expired. Please refresh the page and try again.', 'type'=>'error']);
+        } catch (\Exception $e) {
+            return Redirect::back()->withMessage(['msg' => 'The paystack token has expired. Please refresh the page and try again.', 'type' => 'error']);
         }
     }
 
     /**
+     * @return \Illuminate\Http\RedirectResponse
+     *
      * Obtain Paystack payment information
      * @return void
      */
@@ -33,9 +36,22 @@ class PaymentController extends Controller
     {
         $paymentDetails = Paystack::getPaymentData();
 
-        dd($paymentDetails);
+//        dd($paymentDetails);
         // Now you have the payment details,
         // you can store the authorization_code in your db to allow for recurrent subscriptions
         // you can then redirect or do whatever you want
+        if ($paymentDetails['data']['status'] == 'success') {
+            Transaction::create([
+                'transaction_id' => $paymentDetails['data']['id'] ,
+                'name' => $paymentDetails['data']['metadata'][0],
+                'email' => $paymentDetails['data']['customer']['email'],
+                'phone' => $paymentDetails['data']['metadata'][1],
+                'service_id' => $paymentDetails['data']['metadata'][2],
+            ]);
+            $message =['success', 'Transaction completed, you will be contacted for delivery'];
+        }else{
+            $message = ['custom_error', 'Transaction failed, Try again later.'];
+        }
+        return redirect()->route('shop')->with($message);
     }
 }

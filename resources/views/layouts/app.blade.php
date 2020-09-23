@@ -130,6 +130,13 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('transactions.index')}}">
+                        <i class="mdi mdi-transit-connection menu-icon"></i>
+                        <span class="menu-title">Transactions</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('quote.index')}}">
                         <i class="mdi mdi-cart-arrow-right menu-icon"></i>
                         <span class="menu-title">Quotes Request</span>

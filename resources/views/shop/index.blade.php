@@ -23,6 +23,7 @@
             </div>
         </section>
         <section class="our-shop">
+            @include('layouts.message')
             <div class="container">
                 @foreach($services as $item)
                     <div class="col-md-3 col-sm-6 col-xs-6 or-block">

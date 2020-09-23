@@ -31,12 +31,10 @@
                         <div class="row db-content">
                             <form id="payment" action="{{route('pay')}}" method="POST">
                                 @csrf
-{{--                                <input type="hidden" name="email" value="otemuyiwa@gmail.com"> --}}{{-- required --}}
                                 <input type="hidden" name="orderID" value="345">
                                 <input type="hidden" name="amount" value="{{$item->price}}00"> {{-- required in kobo --}}
                                 <input type="hidden" name="quantity" value="1">
                                 <input type="hidden" name="currency" value="NGN">
-                                {{--                                <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > --}}{{-- For other necessary things you want to add to your payload. it is optional though --}}
                                 <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
                                 <div style="display: flex; flex-flow: row wrap;">
                                     <div class="img"><img
@@ -52,6 +50,8 @@
                                                 </div>
                                                 <div>
                                                     <input type="text" id="phone" name="metadata[]"  placeholder="Enter Phone Number"
+                                                           required>
+                                                    <input type="hidden" id="service_id" name="metadata[]"  value="{{$item->id}}"
                                                            required>
                                                 </div>
                                                 <div>

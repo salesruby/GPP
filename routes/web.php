@@ -67,6 +67,9 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace
     Route::get('quote/show/{id}', 'QuoteController@show')->name('quote.show');
     Route::post('quote/respond', 'QuoteController@respondToQuote')->name('quote.respond');
 
+    Route::get('/transactions', 'TransactionController@index')->name('transactions.index');
+    Route::post('/transactions/update', 'TransactionController@update')->name('transactions.update');
+
 
 });
 
