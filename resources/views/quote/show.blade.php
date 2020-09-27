@@ -127,7 +127,7 @@
                             </div>
                             <div class="profile-panel-footer">
                                 @if($quote->attachment !== null)
-                                    <a href="/new/gpp/public/store/{{$quote->attachment}}" download type="button"
+                                    <a href="/gpp/public/store/{{$quote->attachment}}" download type="button"
                                        class="btn btn-secondary" data-dismiss="modal">Download File</a>
                                 @endif
                                 <button type="button" class="btn btn-primary reply-btn" data-dismiss="modal"
@@ -145,7 +145,7 @@
                                 </div>
                                 @if($response->attachment !== null)
                                     <div class="profile-panel-footer">
-                                        <a href="/new/gpp/public/store/{{$response->attachment}}" download type="button"
+                                        <a href="/gpp/public/store/{{$response->attachment}}" download type="button"
                                            class="btn btn-secondary">Download File</a>
                                     </div>
                                 @endif

@@ -23,7 +23,10 @@
 							<span></span>
 							<i class="fa fa-star"></i>
 						</span>
-                        <span class="sub-title">Choose the design and we willl bring your imagination to reality</span>
+                        <span class="sub-title">Your print material is not just a piece of paper; it's your first impression.
+                            This is why at Global Plus Publishing, we always strive to bring global publishing standards to you.
+                            We  see each brief as an opportunity to form a mutually beneficial relationship.
+                        </span>
                     </div>
                     <div class="or-service-w">
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
@@ -102,30 +105,34 @@
                     <div class="col-md-3 col-sm-6 block-trust trust-col-quantity">
                         <div class="tr-icon tr-icon1"><i class="fa fa-thumbs-up"></i></div>
                         <div class="tr-text">
-                            <h3>Quality Printing</h3>
+                            <h3>Quality</h3>
                             <span class="tr-line"></span>
-                            <p>Bright inks. Thick Paper. Precise cuts. We believe that quality printing matters. That
-                                quality printing matters.</p>
+                            <p>An excellently executed contract is the best form of publicity, and this is why we pay
+                                attention to every detail and requirement to the letter. Our press was created as an
+                                answer to the need for quality print.</p>
                             {{--                            <a href="#" class="btn-readmore" title="Quality Printing">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-time-delivery">
                         <div class="tr-icon tr-icon2"><i class="fa fa-paper-plane"></i></div>
                         <div class="tr-text">
-                            <h3>Timely Delivery</h3>
+                            <h3>Professionalism</h3>
                             <span class="tr-line"></span>
-                            <p>No printer is faster. Order today by 8:00pm EST and you can even get it tomorrow.</p>
+                            <p>Our personnel are highly trained to maintain the highest level of professionalism at all
+                                times, giving you a hassle-free experience. We respect deadlines, deliver beyond
+                                expectation and offer counsel on the best options for your publishing needs.</p>
                             {{--                            <a href="#" class="btn-readmore" title="Timely Delivery">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-minded">
                         <div class="tr-icon tr-icon3"><i class="fa fa-leaf"></i></div>
                         <div class="tr-text">
-                            <h3>Capability</h3>
+                            <h3>Capacity</h3>
                             <span class="tr-line"></span>
                             <p>
-                                On a monthly basis we make 500 Thousand bindings, 5 Million stitches, and over 20
-                                Million impressions.
+                                With a combined press capacity of 203,000 impressions per hour, totaling about 24
+                                million books a year, we can boast of being one of Africa’s most efficient high-quality
+                                printing presses
                             </p>
                             {{--                            <a href="#" class="btn-readmore" title="Capability">Read more</a>--}}
                         </div>
@@ -136,8 +143,9 @@
                             <h3>Value Guaranteed</h3>
                             <span class="tr-line"></span>
                             <p>
-                                Most sellers work with buyers to quickly resolve issues, but if a solution isn't
-                                reached, we can help.
+                                At Global Plus Publishing, we go beyond print. We offer in-house proof-readers, art and
+                                graphics consultants, to ensure you get world-class printing services that exceed your
+                                expectations. It’s our “Plus” experience!
                             </p>
                             {{--                            <a href="#" class="btn-readmore" title="Eco-Minded">Read more</a>--}}
                         </div>
@@ -167,7 +175,7 @@
                                             @if(($key++ % 2) > 0)
                                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
                                                     <div class="inner">
-                                                        <img src="/new/gpp/public/store/{{$blog->attachment}}"
+                                                        <img src="/gpp/public/store/{{$blog->attachment}}"
                                                              alt="blog-{{$blog->id}}"/>
                                                         <div class="info">
                                                             <div class="title">
@@ -199,7 +207,7 @@
                                                                class="read-more">Read more</a>
                                                         </div>
 
-                                                        <img src="/new/gpp/public/store/{{$blog->attachment}}"
+                                                        <img src="/gpp/public/store/{{$blog->attachment}}"
                                                              alt="blog-01"/>
 
                                                     </div>

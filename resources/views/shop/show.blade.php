@@ -25,7 +25,7 @@
         <section id="aboutus" class="pr-main">
             <div class="container">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <img src="/new/gpp/public/store/{{$item->attachment}}">
+                    <img src="/gpp/public/store/{{$item->attachment}}">
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="top"><h2><span>{{$item->name}}</span></h2>

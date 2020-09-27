@@ -95,53 +95,15 @@
                             <h3>Hakeem Oyinloye</h3>
                             <h4>Head Finance</h4>
                             <p>
-                                {{--                                An astute entrepreneur, a prolific business leader and visionary strategist with apt--}}
-                                {{--                                experience in--}}
-                                {{--                                product development and business expansion.--}}
+                                He joined Global Plus Publishing in 2017 as the Head of Finance. He is a Professional
+                                Accountant and also a member of Chartered institute of loans and risk management of
+                                Nigeria.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        {{--        <section id="aboutbottom" class="pr-main">--}}
-        {{--            <div class="container">--}}
-        {{--                <h1>What others say about us</h1>--}}
-        {{--                <span class="line"></span>--}}
-        {{--                <div class="col-md-6 col-sm-6 col-xs-12 iteamleft top">--}}
-        {{--                    <img src="{{asset('template/images/abouts/1.png')}}">--}}
-        {{--                    <div class="data">--}}
-        {{--                        <p>Content not available.</p>--}}
-        {{--                        <p class="title">Martha M. Masters</p>--}}
-        {{--                        <p class="end">Marketing -<span> WikiTravel</span></p>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--                <div class="col-md-6 col-sm-6 col-xs-12 iteamright top">--}}
-        {{--                    <img src="{{asset('template/images/abouts/2.png')}}">--}}
-        {{--                    <div class="data">--}}
-        {{--                        <p>Content not available.</p>--}}
-        {{--                        <p class="title">Anna Vandana</p>--}}
-        {{--                        <p class="end">CEO -<span> images Wiki</span></p>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--                <div class="col-md-6 col-sm-6 col-xs-12 iteamleft">--}}
-        {{--                    <img src="{{asset('template/images/abouts/3.png')}}">--}}
-        {{--                    <div class="data">--}}
-        {{--                        <p>Content not available.</p>--}}
-        {{--                        <p class="title">Maxi Milli</p>--}}
-        {{--                        <p class="end">Public Relations -<span> Max Mobilcom</span></p>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--                <div class="col-md-6 col-sm-6 col-xs-12 iteamright">--}}
-        {{--                    <img src="{{asset('template/images/abouts/4.png')}}">--}}
-        {{--                    <div class="data">--}}
-        {{--                        <p>Content not available.</p>--}}
-        {{--                        <p class="title">Dr. Dosist</p>--}}
-        {{--                        <p class="end">Dean of Medicine - <span> Doom Inc</span></p>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--            </div>--}}
-        {{--        </section>--}}
     </main>
     <!--Main index : End-->
 @endsection
