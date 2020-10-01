@@ -28,6 +28,7 @@ class Quote extends Model
         "complete_job_finishing",
         "packaging",
         "other_packaging",
+        "finishing_info_text",
         "special_instruction",
         "delivery_instruction",
         "date",

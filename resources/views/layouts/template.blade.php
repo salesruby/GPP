@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <title>Printing theme - Home page</title>
+    <title>Global Plus Publishing - Home page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
     <meta name="description" content="Global Plus Publishing">
     <meta name="author" content="GPP">
@@ -12,6 +12,10 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:500,300,700,400' rel='stylesheet'
           type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+{{--    Animation css--}}
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
     <link rel="stylesheet" type="text/css" href="{{asset('template/css/style-main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('template/css/custom.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('dashboard/css/sweetalert2.min.css')}}">
@@ -58,10 +62,10 @@
                                         <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential Printing</a>
                                     </li>
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
+                                        <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
                                     </li>
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
+                                        <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
                                     </li>
                                 </ul>
                             </li>
@@ -110,7 +114,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-12 about-us footer-col">
-                    <h2>About Us</h2>
+                    <h2>Contact Us</h2>
                     <div class="footer-content">
                         <a href="{{route('welcome')}}" title="Cmsmart logo footer" class="logo-footer">
                             <img src="{{asset('template/images/logo.png')}}" alt="logo footer">
@@ -255,10 +259,10 @@
                     <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential Printing</a>
                 </li>
                 <li class="level1 nav-1-1 first item">
-                    <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
+                    <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
                 </li>
                 <li class="level1 nav-1-1 first item">
-                    <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
+                    <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
                 </li>
             </ul>
         </li>
@@ -299,12 +303,18 @@
 <script type="text/javascript" src="{{asset('template/js/theme-home.js')}}"></script>
 <script type="text/javascript" src="{{asset('dashboard/js/sweetalert2.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('dashboard/js/jquery.validator.js')}}"></script>
+{{--Animation--}}
+<script src="https://unpkg.com/aos@next/dist/aos.js" type="text/javascript"></script>
+
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
 <script src="{{asset('template/js/custom.js')}}" type="text/javascript"></script>
 <script type="text/javascript">
+
+    AOS.init();
+
     (function () {
         var options = {
             whatsapp: "+2348126604977", // WhatsApp number

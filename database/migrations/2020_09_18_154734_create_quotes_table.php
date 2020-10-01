@@ -38,6 +38,7 @@ class CreateQuotesTable extends Migration
             $table->string("other_packaging");
             $table->string("special_instruction")->nullable();
             $table->string("delivery_instruction")->nullable();
+            $table->string("finishing_info_text")->nullable();
             $table->string("date");
             $table->string("awareness");
             $table->integer('status')->default(0);

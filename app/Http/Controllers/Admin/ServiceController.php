@@ -59,16 +59,24 @@ class ServiceController extends Controller
 
 
     /**
-     * @param ServiceRequest $request
+     * @param Request $request
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
+     *
      */
-    public function update(ServiceRequest $request, $id){
+    public function update(Request $request, $id){
         $service = Service::findOrFail($id);
-        $input = $request->validated();
-        $attachmentName = time() . '.' . $input['attachment']->extension();
-        $input['attachment']->move(public_path('store'), $attachmentName);
-        $input['attachment'] = $attachmentName;
+        $input = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'price' => ['required', 'string', 'min:1'],
+            'attachment' => 'mimes:jpg,jpeg,png,svg,gif|max:96|dimensions:width=264,height=269'
+        ]);
+        if(isset($input['attachment'])){
+            $attachmentName = time() . '.' . $input['attachment']->extension();
+            $input['attachment']->move(public_path('store'), $attachmentName);
+            $input['attachment'] = $attachmentName;
+        }
         $service->update($input);
         return redirect()->route('services.index')->with('success', 'Update successfully');
     }

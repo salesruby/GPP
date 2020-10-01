@@ -69,7 +69,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <input type="file" class="form-control" name="attachment" value="{{$service->attachment}}"> <br/>
+                                        <input type="file" class="form-control" name="attachment"> <br/>
                                         <p class="text-danger">*Note: Image should not be more than 96Kb, and its dimension 264 * 269</p>
                                     </div>
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>

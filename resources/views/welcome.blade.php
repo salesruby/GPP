@@ -1,13 +1,12 @@
 @extends('layouts.template')
 @section('main')
-
     <!--Main index : Begin-->
     <main class="main index">
         <section id="background-section">
             <div id="background-video"></div>
             <div class="background-text">
-                <h4>Welcome to</h4>
-                <div>
+                <h4 data-aos="fade-down" data-aos-duration="3000">Welcome to</h4>
+                <div data-aos="fade-up" data-aos-duration="3000">
                     <div class="name">Global Plus Publishing</div>
                     <small class="mantra pull-right">Bring your imaginations to life...</small>
                 </div>
@@ -36,7 +35,7 @@
                                 </a>
                             </div>
                             <div class="or-title">
-                                <a href="{{url('/our-services#service_publication')}}">Books, Publication & Dairies</a>
+                                <a href="{{url('/our-services#service_publication')}}">Books and Publications</a>
                             </div>
                             <div class="text">
                                 <p>
@@ -72,7 +71,8 @@
                             </div>
                             <div class="text">
                                 <p>
-                                    Binding, Saddle Stitching, Embossing, Lamination, Foiling
+                                    {{--                                    Binding, Saddle Stitching, Embossing, Lamination, Foiling--}}
+                                    Binding, Saddle Stitching, Embossing, Lamination (UV, Matt, Gloss), Foiling
                                 </p>
                             </div>
                             <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
@@ -366,6 +366,14 @@
         <section class="home-testimonial">
             <div class="container">
                 <div class="row">
+                    <div class="block-title-w">
+                        <h2 class="block-title">clients testimonials</h2>
+                        <span class="icon-title">
+							<span></span>
+							<i class="fa fa-star"></i>
+						</span>
+                    </div>
+
                     <div class="tes-block" id="testimonial">
                         <div class="slider-inner">
                             <div class="wrap-item">
@@ -376,15 +384,14 @@
                                                  alt="terminal-01"/>
                                         </div>
                                         <div class="tes-name">
-                                            Mr Ali Okunade
+                                            Mr. Sunday Obiyinka
                                         </div>
                                         <div class="tes-job">
-                                            <span>Publisher, Atlantic Books</span>
+                                            <span>Managing  Director, Extension Publications</span>
                                         </div>
                                         <div class="tes-decs">
-                                            <p>The print quality by far surpasses my previous productions and I have
-                                                come to stay. I would absolutely recommend Global Plus Publishing to
-                                                other publishers.</p>
+                                            <p>It’s been a fantastic partnership with Global Plus Publishing. They have
+                                                a team of dedicated staff who deliver seamless and quality services.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -416,7 +423,7 @@
                                             Okey Bakassi
                                         </div>
                                         <div class="tes-job">
-                                            <span>Publisher, MEMORIES OF AN AFRICAN COMEDIAN</span>
+                                            <span>Publisher, Memoires of an African Comedian</span>
                                         </div>
                                         <div class="tes-decs">
                                             <p>I applaud the professionalism and detailed attention given to this book.
@@ -429,69 +436,80 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!--Our Clients : Begin -->
+        <section class="our-clients">
             <div class="container">
-                <div class="row" style="display: flex; flex-flow: row wrap;">
-                    <div id="our-clients">
-                        <div class="our-clients">
-                            <div class="inner">
-                                <ul class="our-clients-list">
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/1.png')}}" alt="brand-01"/>
-                                    </li>
+                <div class="row">
+                    <div class="block-title-w">
+                        <h2 class="block-title">you are in good hands</h2>
+                        <span class="icon-title">
+							<span></span>
+							<i class="fa fa-star"></i>
+						</span>
+                        <span class="sub-title">
+                            Our print services and solutions are trusted by these brands and 15,000 other businesses in Nigeria.
+                        </span>
+                    </div>
+                    <div class="our-clients-logo">
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/14.png')}}" alt="brand-14"/>
+                        </div>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/1.png')}}" alt="brand-01"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/2.png')}}" alt="brand-02"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/2.png')}}" alt="brand-02"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/3.png')}}" alt="brand-03"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/3.png')}}" alt="brand-03"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/4.png')}}" alt="brand-04"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/4.png')}}" alt="brand-04"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/5.png')}}" alt="brand-05"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/5.png')}}" alt="brand-05"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/6.png')}}" alt="brand-06"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/6.png')}}" alt="brand-06"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/7.png')}}" alt="brand-07"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/7.png')}}" alt="brand-07"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/8.png')}}" alt="brand-08"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/8.png')}}" alt="brand-08"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/9.png')}}" alt="brand-09"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/9.png')}}" alt="brand-09"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/10.png')}}" alt="brand-10"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/10.png')}}" alt="brand-10"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/11.png')}}" alt="brand-11"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/11.png')}}" alt="brand-11"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/12.png')}}" alt="brand-12"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/12.png')}}" alt="brand-12"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/13.jpg')}}" alt="brand-13"/>
-                                    </li>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/13.jpg')}}" alt="brand-13"/>
+                        </div>
 
-                                    <li class="list-item">
-                                        <img src="{{asset('template/images/brands/14.jpg')}}" alt="brand-14"/>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/15.png')}}" alt="brand-13"/>
                         </div>
                     </div>
                 </div>
@@ -508,7 +526,7 @@
         });
 
         $(document).ready(function () {
-            $('.background-text  .mantra').hide().fadeIn(5000);
+            // $('.background-text  .mantra').hide().fadeIn(5000);
             // $(window).scroll(function () {
             //     var hT = $('.our-service').offset().top,
             //         hH = $('.our-service').outerHeight(),

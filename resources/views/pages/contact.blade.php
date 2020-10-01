@@ -80,7 +80,7 @@
                                value="{{old('name')}}">
                         <input class="email" type="email" placeholder="Enter E-mail *" name="email" required
                                value="{{old('email')}}">
-                        <input class="message" type="text" placeholder="Enter Message Subject *" name="subject" required
+                        <input class="message" type="text" placeholder="Enter Message Subject" name="subject"
                                value="{{old('subject')}}">
                         <div class="button">
                             <input class="subject" type="checkbox" name="copy">

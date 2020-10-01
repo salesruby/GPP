@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Printing theme - Checkout Cart</title>
+	<title>Global Plus Publishing - Checkout Cart</title>
 	<meta name="description" content="Printing template">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
 	<meta name="author" content="Netbase">
 	<!--Add css lib-->
-	<link rel="stylesheet" type="text/css" href="css/style-main.css"> 
+	<link rel="stylesheet" type="text/css" href="css/style-main.css">
   	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
   	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 </head>
@@ -52,14 +52,14 @@
 							</li>
 							<li class="hidden-xs">
 								<a href="#">
-									<i class="fa fa-twitter"></i> 
+									<i class="fa fa-twitter"></i>
 								</a>
 							</li>
 							<li class="hidden-xs">
 								<a href="#">
-									<i class="fa fa-pinterest"></i> 
+									<i class="fa fa-pinterest"></i>
 								</a>
-							</li> 
+							</li>
 							<li class="hidden-xs">
 								<a href="#">
 									<i class="fa fa-linkedin"></i>
@@ -108,7 +108,7 @@
 									<li>
 										<a href="#" title="Select Japan language">
 											<span>Japan</span>
-										</a> 
+										</a>
 									</li>
 									<li>
 										<a href="#" title="Select France language">
@@ -116,11 +116,11 @@
 										</a>
 									</li>
 								</ul>
-							</div> 
+							</div>
 							<div class="th-hotline">
 								<i class="fa fa-phone"></i>
 								<span>1.866.614.8002</span>
-							</div> 
+							</div>
 						</div>
 					</div>
 				</div>
@@ -135,7 +135,7 @@
 							<a href="index.html">
 								<img src="images/logo.png" alt="printshop logo">
 							</a>
-						</div>	
+						</div>
 					</div>
 					<div class="col-lg-7 col-md-8 visible-md visible-lg">
 						<nav id="main-menu" class="main-menu clearfix">
@@ -208,7 +208,7 @@
 														</li>
 														<li>
 															<a href="detail.html" title="Brochures's Idea Design">Brochures's Idea Design</a>
-														</li>														
+														</li>
 														<li>
 															<a href="detail.html" title="Brochures's Foods">Brochures's Foods</a>
 														</li>
@@ -257,7 +257,7 @@
 														</li>
 														<li>
 															<a href="detail.html" title="Flyers Product">Flyers Product</a>
-														</li>														
+														</li>
 														<li>
 															<a href="detail.html" title="Brochures's Foods">Flyers Two Page</a>
 														</li>
@@ -306,7 +306,7 @@
 														</li>
 														<li>
 															<a href="detail.html" title="Flyers Two Page">Flyers Two Page</a>
-														</li>														
+														</li>
 														<li>
 															<a href="detail.html" title="Six Panels Brochures">Six Panels Brochures</a>
 														</li>
@@ -355,7 +355,7 @@
 														</li>
 														<li>
 															<a href="detail.html" title="Flyers Two Page">Flyers Two Page</a>
-														</li>														
+														</li>
 														<li>
 															<a href="detail.html" title="Six Panels Brochures">Six Panels Brochures</a>
 														</li>
@@ -401,7 +401,7 @@
 														</li>
 														<li>
 															<a href="detail.html" title="Flyers Two Page">Flyers Two Page</a>
-														</li>														
+														</li>
 														<li>
 															<a href="detail.html" title="Brochures">Brochures</a>
 														</li>
@@ -476,8 +476,8 @@
 										</li>
 										<li class="level1 nav-1-3 item">
 											<a href="category_grid.html" title="Die-Cut Business Cards">Die-Cut Business Cards</a>
-										</li> 
-									</ul> 
+										</li>
+									</ul>
 								</li>
 								 -->
 								<!-- <li class="level0 hd-pd" title="blog">
@@ -516,7 +516,7 @@
 										</li>
 									</ul>
 								</div>
-                                                            
+
                                 <div class="mcart-item-w clearfix">
 									<ul>
 										<li class="mcart-item iteam2">
@@ -576,7 +576,7 @@
 				</div>
 			</div>
 		</section><!--Main Header: End-->
-	</header><!--Header: End--> 
+	</header><!--Header: End-->
 	<!--Main category : Begin-->
 	<main id="main" class="cart">
 		<section class="header-page">
@@ -617,7 +617,7 @@
 					</div>
 					<div class="col-md-3 col-sm-2 continue-shopping">
 						<a href="#" title="Continue shopping">
-							Continue Shopping 
+							Continue Shopping
 							<i class="fa fa-arrow-circle-o-right"></i>
 						</a>
 					</div>
@@ -695,10 +695,10 @@
                                         <td class="product-price hidden-xs">
                                             <span>$ 24.99</span>
                                         </td>
-                                        <td class="product-quantity hidden-xs"> 
+                                        <td class="product-quantity hidden-xs">
                                         	<input type="text" value="1" name="qty" id="qty">
                                         </td>
-                                        <td class="product-discount hidden-xs"> 
+                                        <td class="product-discount hidden-xs">
                                             $ 00.00
                                         </td>
                                         <td class="product-wishlist hidden-xs checkbox-w">
@@ -767,10 +767,10 @@
                                         <td class="product-price hidden-xs">
                                             <span>$ 24.99</span>
                                         </td>
-                                        <td class="product-quantity hidden-xs"> 
+                                        <td class="product-quantity hidden-xs">
                                         	<input type="text" value="1" name="qty" id="qty">
                                         </td>
-                                         <td class="product-discount hidden-xs"> 
+                                         <td class="product-discount hidden-xs">
                                             $ 00.00
                                         </td>
                                         <td class="product-wishlist hidden-xs checkbox-w">
@@ -847,7 +847,7 @@
 									<li>
 										<span class="sub-title">Sub Total</span>
 										<span class="sub-value">$20.26</span>
-									</li> 
+									</li>
 									<li class="grand-total">
 										<span class="sub-title">Grand Total</span>
 										<span class="sub-value">$30.26</span>
@@ -866,7 +866,7 @@
 						</div>
 					</section><!--Cart right banner: End-->
 				</div>
-				
+
 			</div>
 		</section>
 	</main><!-- Main Category: End -->
@@ -1073,8 +1073,8 @@
 	</nav>
 	<!--Add js lib-->
 	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery/jquery-migrate-1.2.1.min.js"></script>  
-	<script type="text/javascript" src="js/theme-all.js"></script>  
+	<script type="text/javascript" src="js/jquery/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="js/theme-all.js"></script>
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   	<![endif]-->

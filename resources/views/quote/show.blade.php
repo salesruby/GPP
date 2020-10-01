@@ -98,6 +98,10 @@
                                             <td>{{$quote->complete_job_finishing}}</td>
                                         </tr>
                                         <tr>
+                                            <td>Addition Instruction on finishing</td>
+                                            <td>{{$quote->finishing_info_text}}</td>
+                                        </tr>
+                                        <tr>
                                             <td>packaging</td>
                                             <td>{{$quote->packaging}}</td>
                                         </tr>

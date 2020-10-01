@@ -56,8 +56,7 @@
                                                            placeholder="Enter Company Name">
                                                 </div>
                                                 <div>
-                                                    <input type="text" name="address" placeholder="Enter Address*"
-                                                           required>
+                                                    <input type="text" name="address" placeholder="Enter Address">
                                                 </div>
                                             </div>
 
@@ -88,6 +87,7 @@
                                                             <option value="two colour">Two Colour</option>
                                                             <option value="three colour">Three Colour</option>
                                                             <option value="four colour">Four Colour (CYMK)</option>
+                                                            <option value="Pantone">Pantone</option>
                                                         </select>
 
                                                         <label for="colour_option_inner">Inner</label>
@@ -97,6 +97,7 @@
                                                             <option value="two colour">Two Colour</option>
                                                             <option value="three colour">Three Colour</option>
                                                             <option value="four colour">Four Colour (CYMK)</option>
+                                                            <option value="Pantone">Pantone</option>
                                                         </select>
 
                                                         <label for="colour_option_insert">Insert</label>
@@ -106,6 +107,7 @@
                                                             <option value="two colour">Two Colour</option>
                                                             <option value="three colour">Three Colour</option>
                                                             <option value="four colour">Four Colour (CYMK)</option>
+                                                            <option value="Pantone">Pantone</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -115,28 +117,28 @@
                                                         <label for="paper_stock_cover">Cover</label>
                                                         <select class="custom-select" id="paper_stock_cover"
                                                                 name="paper_stock_cover" required>
-                                                            <option value="one colour">One Colour</option>
-                                                            <option value="two colour">Two Colour</option>
-                                                            <option value="three colour">Three Colour</option>
-                                                            <option value="four colour">Four Colour (CYMK)</option>
+                                                            <option value="70gsm bond">70gsm Bond</option>
+                                                            <option value="80gsm bond">80gsm Bond</option>
+                                                            <option value="100gsm bond">100gsm Bond</option>
+                                                            <option value="120gsm bond">120gsm Bond</option>
                                                         </select>
 
                                                         <label for="paper_stock_inner">Inner</label>
                                                         <select class="custom-select" id="paper_stock_inner"
                                                                 name="paper_stock_inner" required>
-                                                            <option value="one colour">One Colour</option>
-                                                            <option value="two colour">Two Colour</option>
-                                                            <option value="three colour">Three Colour</option>
-                                                            <option value="four colour">Four Colour (CYMK)</option>
+                                                            <option value="70gsm bond">70gsm Bond</option>
+                                                            <option value="80gsm bond">80gsm Bond</option>
+                                                            <option value="100gsm bond">100gsm Bond</option>
+                                                            <option value="120gsm bond">120gsm Bond</option>
                                                         </select>
 
                                                         <label for="paper_stock_insert">Insert</label>
                                                         <select class="custom-select" id="paper_stock_insert"
                                                                 name="paper_stock_insert" required>
-                                                            <option value="one colour">One Colour</option>
-                                                            <option value="two colour">Two Colour</option>
-                                                            <option value="three colour">Three Colour</option>
-                                                            <option value="four colour">Four Colour (CYMK)</option>
+                                                            <option value="70gsm bond">70gsm Bond</option>
+                                                            <option value="80gsm bond">80gsm Bond</option>
+                                                            <option value="100gsm bond">100gsm Bond</option>
+                                                            <option value="120gsm bond">120gsm Bond</option>
                                                         </select>
                                                     </div>
                                                     <div>
@@ -222,16 +224,16 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio"
                                                                name="packaging"
-                                                               id="heat_seal" value="Heat Seal" required>
-                                                        <label class="form-check-label" for="heat_seal">
-                                                            Heat Seal
+                                                               id="nylon_heat_seal" value="Nylon Heat Seal" required>
+                                                        <label class="form-check-label" for="nylon_heat_seal">
+                                                            Nylon Heat Seal
                                                         </label>
 
                                                         <input class="form-check-input" type="radio"
                                                                name="packaging"
-                                                               id="peal_seal" value="Peal Seal">
-                                                        <label class="form-check-label" for="peal_seal">
-                                                            Peal Seal
+                                                               id="nylon_peal_seal" value="Nylon Peal Seal">
+                                                        <label class="form-check-label" for="nylon_peal_seal">
+                                                            Nylon Peal Seal
                                                         </label>
                                                     </div>
                                                 </div>
@@ -255,6 +257,10 @@
                                                         </label>
                                                     </div>
                                                 </div>
+                                                <div>
+                                                    <input type="text" name="finishing_info_text"
+                                                           placeholder="Additional Finishing Info">
+                                                </div>
                                             </div>
 
 
@@ -267,7 +273,7 @@
                                                            placeholder="Delivery Instruction">
                                                 </div>
                                                 <div class="other-information-sub">
-                                                    <label for="date">Estimated Day of Job Completion*</label>
+                                                    <label for="date">Delivery Date*</label>
                                                     <input type="date" id="date" name="date" required>
                                                 </div>
                                                 <div class="other-information-sub">
