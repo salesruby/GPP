@@ -110,7 +110,6 @@
                             <p>An excellently executed contract is the best form of publicity, and this is why we pay
                                 attention to every detail and requirement to the letter. Our press was created as an
                                 answer to the need for quality print.</p>
-                            {{--                            <a href="#" class="btn-readmore" title="Quality Printing">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-time-delivery">
@@ -121,7 +120,6 @@
                             <p>Our personnel are highly trained to maintain the highest level of professionalism at all
                                 times, giving you a hassle-free experience. We respect deadlines, deliver beyond
                                 expectation and offer counsel on the best options for your publishing needs.</p>
-                            {{--                            <a href="#" class="btn-readmore" title="Timely Delivery">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-minded">
@@ -134,7 +132,6 @@
                                 million books a year, we can boast of being one of Africa’s most efficient high-quality
                                 printing presses
                             </p>
-                            {{--                            <a href="#" class="btn-readmore" title="Capability">Read more</a>--}}
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 block-trust trust-col-eco-money">
@@ -147,7 +144,6 @@
                                 graphics consultants, to ensure you get world-class printing services that exceed your
                                 expectations. It’s our “Plus” experience!
                             </p>
-                            {{--                            <a href="#" class="btn-readmore" title="Eco-Minded">Read more</a>--}}
                         </div>
                     </div>
                 </div>
@@ -288,10 +284,9 @@
                     </div>
                 </div>
             </div>
-            {{--        <div class="bg_make_print">--}}
-
-            {{--        </div>--}}
         </section>
+
+
         <!--Home capabilitie : Begin -->
         <section class="home-capabititie">
             <div class="container">

@@ -96,28 +96,32 @@
 .circle-one {
     background-color: #fd5b4e;
     color: #fd5b4e;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 
 .circle-two {
     background-color: #ffa63e;
     color: #ffa63e;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 
 .circle-three {
     background-color: #25bce9;
     color: #25bce9;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 
 .circle-four {
     background-color: green;
     color: green;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .cap-outter-circle {
@@ -540,4 +544,26 @@
 
 #place-order input::placeholder, #contact-form input::placeholder, #contact-form textarea::placeholder{
     color: #444444;
+}
+
+
+/*Block trust*/
+@media(min-width: 769px) {
+    .block-trust p {
+        height: 20px;
+        position: relative;
+        transition: height 0.5s;
+        -webkit-transition: height 0.5s;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: normal;
+        outline: 0 none;
+    }
+
+    .block-trust p:hover {
+        overflow: visible;
+        white-space: normal;
+        height: auto;
+    }
 }
