@@ -25,10 +25,10 @@
         <section id="aboutus" class="pr-main">
             <div class="container">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <video controls>
-                        <source src="{{asset('template/video/_gpp_Trim4.mp4')}}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hWz_BEYa3To" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="top"><h2><span>Welcome to Global Plus Publishing</span></h2>

@@ -121,6 +121,20 @@
                                                             <option value="80gsm bond">80gsm Bond</option>
                                                             <option value="100gsm bond">100gsm Bond</option>
                                                             <option value="120gsm bond">120gsm Bond</option>
+                                                            <option value="90gsm Art Card">90gsm Art Card</option>
+                                                            <option value="115gsm Art Card">115gsm Art Card</option>
+                                                            <option value="135gsm Art Card">135gsm Art Card</option>
+                                                            <option value="150gsm Art Card">150gsm Art Card</option>
+                                                            <option value="170gsm Art Card">170gsm Art Card</option>
+                                                            <option value="250 Art Card">250 Art Card</option>
+                                                            <option value="300 Art Card">300 Art Card</option>
+                                                            <option value="90gsm Matt Card">90gsm Matt Card</option>
+                                                            <option value="115gsm Matt Card">115gsm Matt Card</option>
+                                                            <option value="135gsm Matt Card">135gsm Matt Card</option>
+                                                            <option value="150gsm Matt Card">150gsm Matt Card</option>
+                                                            <option value="170gsm Matt Card">170gsm Matt Card</option>
+                                                            <option value="250 Matt Card">250 Matt Card</option>
+                                                            <option value="300 Matt Card">300 Matt Card</option>
                                                         </select>
 
                                                         <label for="paper_stock_inner">Inner</label>
@@ -130,6 +144,20 @@
                                                             <option value="80gsm bond">80gsm Bond</option>
                                                             <option value="100gsm bond">100gsm Bond</option>
                                                             <option value="120gsm bond">120gsm Bond</option>
+                                                            <option value="90gsm Art Card">90gsm Art Card</option>
+                                                            <option value="115gsm Art Card">115gsm Art Card</option>
+                                                            <option value="135gsm Art Card">135gsm Art Card</option>
+                                                            <option value="150gsm Art Card">150gsm Art Card</option>
+                                                            <option value="170gsm Art Card">170gsm Art Card</option>
+                                                            <option value="250 Art Card">250 Art Card</option>
+                                                            <option value="300 Art Card">300 Art Card</option>
+                                                            <option value="90gsm Matt Card">90gsm Matt Card</option>
+                                                            <option value="115gsm Matt Card">115gsm Matt Card</option>
+                                                            <option value="135gsm Matt Card">135gsm Matt Card</option>
+                                                            <option value="150gsm Matt Card">150gsm Matt Card</option>
+                                                            <option value="170gsm Matt Card">170gsm Matt Card</option>
+                                                            <option value="250 Matt Card">250 Matt Card</option>
+                                                            <option value="300 Matt Card">300 Matt Card</option>
                                                         </select>
 
                                                         <label for="paper_stock_insert">Insert</label>
@@ -139,6 +167,20 @@
                                                             <option value="80gsm bond">80gsm Bond</option>
                                                             <option value="100gsm bond">100gsm Bond</option>
                                                             <option value="120gsm bond">120gsm Bond</option>
+                                                            <option value="90gsm Art Card">90gsm Art Card</option>
+                                                            <option value="115gsm Art Card">115gsm Art Card</option>
+                                                            <option value="135gsm Art Card">135gsm Art Card</option>
+                                                            <option value="150gsm Art Card">150gsm Art Card</option>
+                                                            <option value="170gsm Art Card">170gsm Art Card</option>
+                                                            <option value="250 Art Card">250 Art Card</option>
+                                                            <option value="300 Art Card">300 Art Card</option>
+                                                            <option value="90gsm Matt Card">90gsm Matt Card</option>
+                                                            <option value="115gsm Matt Card">115gsm Matt Card</option>
+                                                            <option value="135gsm Matt Card">135gsm Matt Card</option>
+                                                            <option value="150gsm Matt Card">150gsm Matt Card</option>
+                                                            <option value="170gsm Matt Card">170gsm Matt Card</option>
+                                                            <option value="250 Matt Card">250 Matt Card</option>
+                                                            <option value="300 Matt Card">300 Matt Card</option>
                                                         </select>
                                                     </div>
                                                     <div>

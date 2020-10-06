@@ -29,7 +29,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                         <div class="or-image">
                             <a href="{{route('shop.show-item', $hashIds->encode($item->id))}}">
-                                <img src="/gpp/public/store/{{$item->attachment}}" alt="service-04"/>
+                                <img src="{{asset('/gpp/public/store/'.$item->attachment)}}" alt="service-04"/>
                             </a>
                         </div>
                         <div class="or-title">

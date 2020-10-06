@@ -27,7 +27,7 @@
                 <div class="row acc-dashboard wishlist-custom">
                     <section id="wishlist" class="account-main col-md-9 col-sm-9 col-xs-12 wishlist-custom"
                              style="padding: 0; margin:30px 0;">
-                        <h3 class="acc-title lg">Your paying for {{$item->name}}</h3>
+                        <h3 class="acc-title lg">You are paying for {{$item->name}}</h3>
                         <div class="row db-content">
                             <form id="payment" action="{{route('pay')}}" method="POST">
                                 @csrf

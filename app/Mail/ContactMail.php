@@ -29,6 +29,6 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->from('clientservice@globalplusonline.com')->view('layouts.mail');
+        return $this->from('clientservices@globalplusonline.com')->view('layouts.mail');
     }
 }

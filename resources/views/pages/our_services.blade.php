@@ -55,7 +55,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="or-image">
                         <a href="#">
-                            <img src="{{asset('template/images/our_service/big5.png')}}" alt="service-01"/>
+                            <img src="{{asset('template/images/our_service/big2.png')}}" alt="service-01"/>
                         </a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="or-image">
                         <a href="#">
-                            <img src="{{asset('template/images/our_service/big2.png')}}" alt="service-01"/>
+                            <img src="{{asset('template/images/our_service/big3.png')}}" alt="service-01"/>
                         </a>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="or-image">
                         <a href="#">
-                            <img src="{{asset('template/images/our_service/big6.png')}}" alt="service-01"/>
+                            <img src="{{asset('template/images/our_service/big4.png')}}" alt="service-01"/>
                         </a>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="or-image">
                         <a href="#">
-                            <img src="{{asset('template/images/our_service/big3.png')}}" alt="service-01"/>
+                            <img src="{{asset('template/images/our_service/big5.png')}}" alt="service-01"/>
                         </a>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="or-image">
                         <a href="#">
-                            <img src="{{asset('template/images/our_service/big4.png')}}" alt="service-01"/>
+                            <img src="{{asset('template/images/our_service/big6.png')}}" alt="service-01"/>
                         </a>
                     </div>
                 </div>

@@ -44,10 +44,28 @@
                             </div>
                             <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
                         </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-6 or-block">
+                            <div class="or-image">
+                                <a href="{{url('/our-services#service_periodical')}}">
+                                    <img src="{{asset('template/images/our_service/2.png')}}" alt="service-02"/>
+                                </a>
+                            </div>
+                            <div class="or-title">
+                                <a href="{{url('/our-services#service_periodical')}}">Periodicals</a>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    Magazines, devotionals, scholarly journals, newspapers and newsletters
+                                </p>
+                            </div>
+                            <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
+                        </div>
+
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                             <div class="or-image">
                                 <a href="{{url('/our-services#service_commercial')}}">
-                                    <img src="{{asset('template/images/our_service/2.png')}}" alt="service-02"/>
+                                    <img src="{{asset('template/images/our_service/3.png')}}" alt="service-03"/>
                                 </a>
                             </div>
                             <div class="or-title">
@@ -63,7 +81,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                             <div class="or-image">
                                 <a href="{{url('/our-services#service_finishing')}}">
-                                    <img src="{{asset('template/images/our_service/3.png')}}" alt="service-03"/>
+                                    <img src="{{asset('template/images/our_service/4.png')}}" alt="service-04"/>
                                 </a>
                             </div>
                             <div class="or-title">
@@ -73,22 +91,6 @@
                                 <p>
                                     {{--                                    Binding, Saddle Stitching, Embossing, Lamination, Foiling--}}
                                     Binding, Saddle Stitching, Embossing, Lamination (UV, Matt, Gloss), Foiling
-                                </p>
-                            </div>
-                            <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 or-block">
-                            <div class="or-image">
-                                <a href="{{url('/our-services#service_packaging')}}">
-                                    <img src="{{asset('template/images/our_service/4.png')}}" alt="service-04"/>
-                                </a>
-                            </div>
-                            <div class="or-title">
-                                <a href="{{url('/our-services#service_packaging')}}">Light Packaging</a>
-                            </div>
-                            <div class="text">
-                                <p>
-                                    Paper bags packaging, Box pack customization
                                 </p>
                             </div>
                             <a href="{{route('quote.create')}}" class="btn-readmore order-now">Request for quote</a>
@@ -171,7 +173,7 @@
                                             @if(($key++ % 2) > 0)
                                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 item">
                                                     <div class="inner">
-                                                        <img src="/gpp/public/store/{{$blog->attachment}}"
+                                                        <img src="{{asset('/gpp/public/store/'.$blog->attachment)}}"
                                                              alt="blog-{{$blog->id}}"/>
                                                         <div class="info">
                                                             <div class="title">
@@ -203,7 +205,7 @@
                                                                class="read-more">Read more</a>
                                                         </div>
 
-                                                        <img src="/gpp/public/store/{{$blog->attachment}}"
+                                                        <img src="{{asset('/gpp/public/store/'.$blog->attachment)}}"
                                                              alt="blog-01"/>
 
                                                     </div>
@@ -304,7 +306,7 @@
                             <div class="cap-circle circle-one">
                                 <div class="cap-outter-circle">
                                     <div class="cap-inner-circle circle-one">
-                                        70M+
+                                        <span>70</span>M+
                                     </div>
                                 </div>
                             </div>
@@ -317,7 +319,7 @@
                             <div class="cap-circle circle-two">
                                 <div class="cap-outter-circle">
                                     <div class="cap-inner-circle circle-two">
-                                        1000+
+                                        <span class="cap-counter">1000</span>+
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +332,7 @@
                             <div class="cap-circle circle-three">
                                 <div class="cap-outter-circle">
                                     <div class="cap-inner-circle circle-three">
-                                        97%
+                                        <span>97</span>%
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +345,7 @@
                             <div class="cap-circle circle-four">
                                 <div class="cap-outter-circle">
                                     <div class="cap-inner-circle circle-four">
-                                        98%
+                                        <span>98</span>%
                                     </div>
                                 </div>
                             </div>
@@ -452,6 +454,9 @@
                             <img src="{{asset('template/images/brands/14.png')}}" alt="brand-14"/>
                         </div>
                         <div class="list-item">
+                            <img src="{{asset('template/images/brands/15.png')}}" alt="brand-13"/>
+                        </div>
+                        <div class="list-item">
                             <img src="{{asset('template/images/brands/1.png')}}" alt="brand-01"/>
                         </div>
 
@@ -504,7 +509,7 @@
                         </div>
 
                         <div class="list-item">
-                            <img src="{{asset('template/images/brands/15.png')}}" alt="brand-13"/>
+                            <img src="{{asset('template/images/brands/16.png')}}" alt="brand-13"/>
                         </div>
                     </div>
                 </div>
@@ -520,17 +525,13 @@
             $('#background-video').load("{{url('/video')}}");
         });
 
-        $(document).ready(function () {
-            // $('.background-text  .mantra').hide().fadeIn(5000);
-            // $(window).scroll(function () {
-            //     var hT = $('.our-service').offset().top,
-            //         hH = $('.our-service').outerHeight(),
-            //         wH = $(window).height(),
-            //         wS = $(this).scrollTop();
-            //     if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
-            //         alert('Test 123456');
-            //     }
-            // });
-        })
+        // $(document).ready(function(){
+        //     // $('.block-capabititie-w').on('mouseover', function () {
+        //         $('.cap-counter').counterUp({
+        //             delay: 10,
+        //             time: 800
+        //         });
+        //     })
+        // });
     </script>
 @endsection

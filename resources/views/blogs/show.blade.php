@@ -25,13 +25,11 @@
         <section id="aboutus" class="pr-main">
             <div class="container">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <img src="/gpp/public/store/{{$blog->attachment}}">
+                    <img src="{{asset('/gpp/public/store/'.$blog->attachment)}}">
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-8 col-xs-12">
                     <div class="top"><h2><span>{{$blog->title}}</span></h2>
-                        <p>
-                            {{$blog->content}}
-                        </p>
+                            {!!$blog->content!!}
                     </div>
                     <div class="top">
                         <h2>

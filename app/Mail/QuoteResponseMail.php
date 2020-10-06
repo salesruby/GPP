@@ -29,7 +29,8 @@ class QuoteResponseMail extends Mailable
      */
     public function build()
     {
-        $email = $this->from('clientservice@globalplusonline.com')->view('quote.mail');
+        $email = $this->from('
+webservices@globalplusonline.com')->view('quote.mail');
         if (isset($this->data['attachment']) && !is_string($this->data['attachment'])) {
             $email->attach($this->data['attachment']->getRealPath(),
                 [

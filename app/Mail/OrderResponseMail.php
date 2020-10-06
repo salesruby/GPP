@@ -29,7 +29,8 @@ class OrderResponseMail extends Mailable
      */
     public function build()
     {
-        $email = $this->from('clientservice@globalplusonline.com')->view('order.mail');
+        $email = $this->from('
+webservices@globalplusonline.com')->view('order.mail');
         if (isset($this->data['attachment']) && !is_string($this->data['attachment'])) {
             $email->attach($this->data['attachment']->getRealPath(),
                 [

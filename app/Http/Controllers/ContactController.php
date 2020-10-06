@@ -30,7 +30,7 @@ class ContactController extends Controller
     {
         $input = $request->validated();
         $message = ['success' => 'Email sent successfully'];
-        $email = Mail::to('clientservice@globalplusonline.com');
+        $email = Mail::to('webservices@globalplusonline.com');
         if(isset($request->copy)){
             $email->bcc($input['email']);
         }

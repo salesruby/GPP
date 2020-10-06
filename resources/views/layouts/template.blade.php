@@ -50,7 +50,7 @@
                                 </a>
                                 <ul class="level0">
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publication</a>
+                                        <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publications</a>
                                     </li>
                                     <li class="level1 nav-1-6 item">
                                         <a href="{{url('/our-services#service_periodical')}}" title="Periodicals">Periodicals</a>
@@ -130,7 +130,7 @@
                             </li>
                             <li>
                                 <i class="fa fa-envelope-o"></i>
-                                <span><a href="mailto:clientservice@globalplusonline.com" title="send mail to GPP">clientservice@globalplusonline.com</a></span>
+                                <span><a href="mailto:webservices@globalplusonline.com" title="send mail to GPP">webservices@globalplusonline.com</a></span>
                             </li>
                         </ul>
                         <ul class="footer-social">
@@ -153,6 +153,12 @@
                             <li>
                                 <a href="https://www.linkedin.com/company/global-plus-publishing" title="Instagram">
                                     <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.youtube.com/embed/hWz_BEYa3To'" title="Youtube">
+                                    <i class="fa fa-youtube"></i>
                                 </a>
                             </li>
 
@@ -247,7 +253,7 @@
             </a>
             <ul class="level0">
                 <li class="level1 nav-1-1 first item">
-                    <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publication</a>
+                    <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publications</a>
                 </li>
                 <li class="level1 nav-1-6 item">
                     <a href="{{url('/our-services#service_periodical')}}" title="Periodicals">Periodicals</a>
@@ -311,6 +317,7 @@
 <![endif]-->
 
 <script src="{{asset('template/js/custom.js')}}" type="text/javascript"></script>
+
 <script type="text/javascript">
 
     AOS.init();

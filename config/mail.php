@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'clientservice@globalplusonline.com'),
-        'name' => env('MAIL_FROM_NAME', 'Client Service GPP'),
+        'address' => env('MAIL_FROM_ADDRESS', 'webservices@globalplusonline.com'),
+        'name' => env('MAIL_FROM_NAME', 'Web Service GPP'),
     ],
 
     /*

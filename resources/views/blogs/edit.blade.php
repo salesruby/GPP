@@ -47,15 +47,18 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <textarea aria-required="true" required class="form-control" rows="10"
+                                        <textarea aria-required="true" id="summernote" required class="form-control"
+                                                  rows="10"
                                                   cols="70%"
                                                   name="content" aria-invalid="true" placeholder="Enter Content*"
-                                                  >{{$blog->content}}</textarea>
+                                        >{{$blog->content}}</textarea>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="file" class="form-control" name="attachment" value="{{$blog->attachment}}"> <br/>
-                                        <p class="text-danger">*Note: Image should not be more than 96Kb, and its dimension 263 * 252</p>
+                                        <input type="file" class="form-control" name="attachment"
+                                               value="{{$blog->attachment}}"> <br/>
+                                        <p class="text-danger">*Note: Image should not be more than 96Kb, and its
+                                            dimension 263 * 252</p>
                                     </div>
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                     <button type="reset" class="btn btn-light">Cancel</button>
@@ -72,7 +75,8 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#blog-table').dataTable();
-        })
+        });
+        new FroalaEditor('textarea#summernote')
     </script>
 @endsection
 

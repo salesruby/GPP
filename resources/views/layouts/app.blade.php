@@ -15,9 +15,9 @@
     <!-- plugin css for this page -->
     <link rel="stylesheet" href="{{asset('dashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
     <!-- End plugin css for this page -->
-    <link rel="stylesheet" href="{{asset('dashboard/vendors/summernote/summernote.min.css')}}">
     <link rel="stylesheet" href="{{asset('dashboard/css/sweetalert2.min.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap-4.4.1-dist/css/bootstrap.min.css')}}">
+    <link href="{{asset('dashboard/vendors/froala_editor_3.2.2/css/froala_editor.min.css')}}" rel="stylesheet">
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('dashboard/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('dashboard/css/custom.css')}}">
@@ -201,12 +201,10 @@
 <!-- Custom js for this page-->
 <script src="{{asset('dashboard/js/dashboard.js')}}"></script>
 <script src="{{asset('dashboard/js/jquery.validator.js')}}"></script>
-{{--<script src="{{asset('dashboard/js/data-table.js')}}"></script>--}}
-{{--<script src="{{asset('dashboard/js/jquery.dataTables.js')}}"></script>--}}
 <script src="{{asset('dashboard/js/dataTables.bootstrap4.js')}}"></script>
 <script src="{{asset('dashboard/js/sweetalert2.min.js')}}"></script>
 <script src="{{asset('bootstrap-4.4.1-dist/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('dashboard/vendors/summernote/summernote.min.js')}}"></script>
+<script src="{{asset('dashboard/vendors/froala_editor_3.2.2/js/froala_editor.min.js')}}"></script>
 <!-- GetButton.io widget -->
 <!-- End custom js for this page-->
 @yield('script')

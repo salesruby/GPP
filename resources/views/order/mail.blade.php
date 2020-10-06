@@ -107,7 +107,7 @@
                             margin: 0;
                             margin-bottom: 50px;
                             "
-                                        ><img src="{{asset('template/images/mail/logo.png')}}" class="logo"
+                                        ><img src="https://globalplusonline.com/new/template/images/mail/logo.png" class="logo"
                                               style=" width: 150px;
                                             margin-left: auto;
                                             margin-right: auto;
@@ -211,19 +211,19 @@
                                 <a href="https://web.facebook.com/globalpluspub"
                                    style="
                     font-size: 12px;
-                    text-decoration: none;"><img src="{{asset('template/images/mail/facebook.svg')}}" class="facebook"
+                    text-decoration: none;"><img src="https://globalplusonline.com/new/template/images/mail/facebook.svg" class="facebook"
                                                  style=" width: 24px;"
                                     ></a>
                                 <a href="https://twitter.com/GlobalPlusPub/"
                                    style="
                     font-size: 12px;
-                    text-decoration: none;"><img src="{{asset('template/images/mail/twitter.svg')}}" class="twitter"
+                    text-decoration: none;"><img src="https://globalplusonline.com/new/template/images/mail/twitter.svg" class="twitter"
                                                  style=" width: 24px;"
                                     ></a>
 
                                 <a href="https://www.instagram.com/globalpluspub/"
                                    style="
-                    font-size: 12px;text-decoration: none;"><img src="{{asset('template/images/mail/instagram.svg')}}"
+                    font-size: 12px;text-decoration: none;"><img src="https://globalplusonline.com/new/template/images/mail/instagram.svg"
                                                                  class="instagram"
                                                                  style=" width: 24px; "
                                     ></a>

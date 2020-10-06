@@ -72,17 +72,24 @@ class BlogController extends Controller
     }
 
     /**
-     * @param BlogRequest $request
+     * @param Request $request
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(BlogRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $input = $request->validated();
+        $input = $request->validate([
+            'title' => 'required|max:23',
+            'summary' => 'required|max:105',
+            'content' => 'required',
+            'attachment' => 'mimes:jpg,jpeg,png,svg,gif|max:96|dimensions:width=264,height=269'
+        ]);
+        if(isset($input['attachment'])){
+            $attachmentName = time() . '.' . $input['attachment']->extension();
+            $input['attachment']->move(public_path('store'), $attachmentName);
+            $input['attachment'] = $attachmentName;
+        }
         $blog = Blog::findOrFail(self::$hashIds->decode($id)[0]);
-        $attachmentName = time() . '.' . $input['attachment']->extension();
-        $input['attachment']->move(public_path('store'), $attachmentName);
-        $input['attachment'] = $attachmentName;
         $blog->update($input);
         return redirect()->route('blogs.index')->with('success', 'Update successfully');
     }
