@@ -413,7 +413,7 @@
                                 <div class="item">
                                     <div class="inner">
                                         <div class="image">
-                                            <img src="{{asset('template/images/testimonials/3.jpg')}}"
+                                            <img src="{{asset('template/images/testimonials/3.png')}}"
                                                  alt="terminal-01"/>
                                         </div>
                                         <div class="tes-name">
@@ -451,12 +451,6 @@
                     </div>
                     <div class="our-clients-logo">
                         <div class="list-item">
-                            <img src="{{asset('template/images/brands/14.png')}}" alt="brand-14"/>
-                        </div>
-                        <div class="list-item">
-                            <img src="{{asset('template/images/brands/15.png')}}" alt="brand-13"/>
-                        </div>
-                        <div class="list-item">
                             <img src="{{asset('template/images/brands/1.png')}}" alt="brand-01"/>
                         </div>
 
@@ -468,9 +462,9 @@
                             <img src="{{asset('template/images/brands/3.png')}}" alt="brand-03"/>
                         </div>
 
-                        <div class="list-item">
-                            <img src="{{asset('template/images/brands/4.png')}}" alt="brand-04"/>
-                        </div>
+                        {{--<div class="list-item">--}}
+                        {{--<img src="{{asset('template/images/brands/4.png')}}" alt="brand-04"/>--}}
+                        {{--</div>--}}
 
                         <div class="list-item">
                             <img src="{{asset('template/images/brands/5.png')}}" alt="brand-05"/>
@@ -479,7 +473,10 @@
                         <div class="list-item">
                             <img src="{{asset('template/images/brands/6.png')}}" alt="brand-06"/>
                         </div>
+                    </div>
 
+
+                    <div class="our-clients-logo">
                         <div class="list-item">
                             <img src="{{asset('template/images/brands/7.png')}}" alt="brand-07"/>
                         </div>
@@ -499,7 +496,9 @@
                         <div class="list-item">
                             <img src="{{asset('template/images/brands/11.png')}}" alt="brand-11"/>
                         </div>
+                    </div>
 
+                    <div class="our-clients-logo">
                         <div class="list-item">
                             <img src="{{asset('template/images/brands/12.png')}}" alt="brand-12"/>
                         </div>
@@ -508,8 +507,41 @@
                             <img src="{{asset('template/images/brands/13.jpg')}}" alt="brand-13"/>
                         </div>
 
+                        {{--<div class="list-item">--}}
+                        {{--<img src="{{asset('template/images/brands/14.png')}}" alt="brand-14"/>--}}
+                        {{--</div>--}}
                         <div class="list-item">
-                            <img src="{{asset('template/images/brands/16.png')}}" alt="brand-13"/>
+                            <img src="{{asset('template/images/brands/15.png')}}" alt="brand-15"/>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/16.png')}}" alt="brand-16"/>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/17.png')}}" alt="brand-17"/>
+                        </div>
+                    </div>
+
+                    <div class="our-clients-logo">
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/18.png')}}" alt="brand-18"/>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/19.png')}}" alt="brand-19"/>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/20.png')}}" alt="brand-20"/>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/21.png')}}" alt="brand-21"/>
+                        </div>
+
+                        <div class="list-item">
+                            <img src="{{asset('template/images/brands/22.png')}}" alt="brand-22"/>
                         </div>
                     </div>
                 </div>

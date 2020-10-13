@@ -32,6 +32,7 @@ Route::get('/about-us', 'PageController@about')->name('about-us');
 Route::get('/our-services', 'PageController@service')->name('our-services');
 Route::get('/setup', 'SetupController@index');
 Route::get('blogs/show/{id}', 'Admin\BlogController@show')->name('blogs.show');
+Route::post('blogs/subscribe', 'Admin\BlogController@subscribe')->name('blogs.subscribe');
 Route::get('quote/create', 'Admin\QuoteController@create')->name('quote.create');
 Route::post('quote/store', 'Admin\QuoteController@store')->name('quote.store');
 Route::get('/shop', 'Admin\ServiceController@displayServices')->name('shop');

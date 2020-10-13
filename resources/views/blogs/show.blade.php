@@ -2,6 +2,7 @@
 @section('main')
     <!--Main index : End-->
     <main class="main">
+        @include('layouts.message')
         <section class="header-page">
             <div class="container">
                 <div class="row">
@@ -29,7 +30,7 @@
                 </div>
                 <div class="col-md-6 col-sm-8 col-xs-12">
                     <div class="top"><h2><span>{{$blog->title}}</span></h2>
-                            {!!$blog->content!!}
+                        {!!$blog->content!!}
                     </div>
                     <div class="top">
                         <h2>
@@ -40,6 +41,21 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="blog-subscription pr-main">
+            <div class="container">
+                <div class="block-title-w">
+                    <h2 class="block-title">Sign up for emails on new products and blog post</h2>
+                </div>
+                <div class="sub-title">Never miss an insight. We'll email you when new post is published</div>
+                <form method="POST" action="{{route('blogs.subscribe')}}">
+                    @csrf
+                    <div>
+                        <input class="form-control" name="email" placeholder="Email Address"/>
+                        <button class="form-control" type="submit">Subscribe</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>

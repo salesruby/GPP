@@ -436,17 +436,18 @@
     display: flex;
     flex-flow: row wrap;
     justify-content:center;
+    width: 100%;
 }
 
 .our-clients-logo .list-item{
-    width: 13%;
+    width: 15%;
     margin: 0 0 30px 0;
     padding: 0 3%;
 }
 
 @media(max-width: 425px){
     .our-clients-logo .list-item{
-        width: 15%;
+        width: 20%;
     }
 }
 
@@ -542,11 +543,11 @@
 /*tr-icon*/
 
 .tr-icon1 {
-    background: cyan;
+    background: #01A9E9;
 }
 
 .tr-icon2 {
-    background: magenta;
+    background: #F733BF;
 }
 
 .tr-icon3 {
@@ -618,3 +619,59 @@
         height: auto;
     }
 }
+
+.blog-subscription{
+    background-color: #25bce9;
+    color: white !important;
+}
+
+
+.blog-subscription .container{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-subscription .block-title-w{
+    margin-bottom: 0;
+}
+
+
+.blog-subscription .block-title-w .block-title{
+    color: white !important;
+
+}
+
+.blog-subscription .sub-title{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.blog-subscription form div{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+
+.blog-subscription form input{
+    width: 70%;
+    border-radius: 0 ;
+    border-right: none;
+}
+
+.blog-subscription form button{
+    width: 30%;
+    border-radius: 0;
+    color: #25bce9;
+}
+
+.blog-subscription form button:hover{
+    background-color: #EEEEEE;
+}
+
+

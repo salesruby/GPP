@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\BlogSubscription;
 use App\Help;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
+use App\Http\Requests\BlogSubscriptionRequest;
+use App\Http\Requests\SubscribeEmailRequest;
 use App\Mail\ResponseMail;
 use App\Response;
 use Hashids\Hashids;
 use Illuminate\Http\Request;
 use App\Blog;
 use Illuminate\Support\Facades\Mail;
+
 
 
 class BlogController extends Controller
@@ -57,7 +61,7 @@ class BlogController extends Controller
 
     public function show($id)
     {
-        $blog = Blog::findOrFail(self::$hashIds->decode($id)[0]);
+        $blog = Blog::find(self::$hashIds->decode($id)[0]);
         return view('blogs.show', compact('blog'));
     }
 
@@ -67,7 +71,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog = Blog::findOrFail(self::$hashIds->decode($id)[0]);
+        $blog = Blog::find(self::$hashIds->decode($id)[0]);
         return view('blogs.edit', compact('blog'));
     }
 
@@ -89,7 +93,7 @@ class BlogController extends Controller
             $input['attachment']->move(public_path('store'), $attachmentName);
             $input['attachment'] = $attachmentName;
         }
-        $blog = Blog::findOrFail(self::$hashIds->decode($id)[0]);
+        $blog = Blog::find(self::$hashIds->decode($id)[0]);
         $blog->update($input);
         return redirect()->route('blogs.index')->with('success', 'Update successfully');
     }
@@ -99,9 +103,18 @@ class BlogController extends Controller
      */
     public function destroy(Request $request)
     {
-        $service = Blog::findOrFail($request->id);
+        $service = Blog::find($request->id);
         $service->delete();
         return redirect()->route('services.index')->with('success', 'Blog deleted successfully');
+    }
+
+    /**
+     * @param BlogSubscriptionRequest $request
+     * @return mixed
+     */
+    public function subscribe(BlogSubscriptionRequest $request){
+        BlogSubscription::create(['email' => $request->email]);
+        return redirect()->back()->with(['success' => 'Subscription successful']);
     }
 
 }
