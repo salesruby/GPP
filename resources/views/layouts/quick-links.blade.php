@@ -11,5 +11,10 @@
             Create Post
         </button>
     </a>
-{{--    <button class="btn btn-primary mt-2 mt-xl-0">Generate report</button>--}}
+
+    <a href="{{route('jobs.create')}}" title="Post a Job">
+        <button type="button" class="btn btn-light bg-white  mt-2 mt-xl-0" style="margin-right: 5px;">
+            Create Job
+        </button>
+    </a>
 </div>

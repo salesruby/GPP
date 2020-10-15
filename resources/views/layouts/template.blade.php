@@ -173,9 +173,9 @@
                             <li>
                                 <a href="{{route('about-us')}}" title="About us">About</a>
                             </li>
-{{--                            <li>--}}
-{{--                                <a href="#" title="Afiliates">Afiliates</a>--}}
-{{--                            </li>--}}
+                            <li>
+                                <a href="{{route('career')}}" title="Career">Career</a>
+                            </li>
 {{--                            <li>--}}
 {{--                                <a href="#" title="Terms of Service">Terms of Service</a>--}}
 {{--                            </li>--}}

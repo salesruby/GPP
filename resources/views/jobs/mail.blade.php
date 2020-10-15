@@ -132,7 +132,7 @@
                             font-weight: normal;
                             margin: 0;
                             margin-bottom: 15px;">Hope you are having a good day, kindly visit <a
-                                                    href="{{url('blogs/show/'.$hashIds->encode($data->id))}}"
+                                                    href="{{url('jobs/show/'.$hashIds->encode($data->id))}}"
                                                     rel="noreferrer">globalplusonline.com</a>
                                             to view this post.</p>
                                         <p style="font-family: Verdana;

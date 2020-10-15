@@ -164,6 +164,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('jobs.index')}}">
+                        <i class="mdi mdi-briefcase menu-icon"></i>
+                        <span class="menu-title">Jobs</span>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- partial -->

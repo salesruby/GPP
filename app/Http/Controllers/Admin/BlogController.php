@@ -13,7 +13,6 @@ use App\Response;
 use Hashids\Hashids;
 use Illuminate\Http\Request;
 use App\Blog;
-use Illuminate\Support\Facades\Mail;
 
 
 

@@ -674,4 +674,90 @@
     background-color: #EEEEEE;
 }
 
+/*Career*/
 
+.benefits{
+    background-color: #EEEEEE;
+    border-radius: 5px 50px 50px 5px;
+    font-weight: bold;
+    font-size: 1.3em;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    /*align-items: center;*/
+}
+
+.benefits .icon{
+    border-radius: 50%;
+    /*background-color: #25bce9;*/
+    background-color: #FFFFFF;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits .icon img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-self: center;
+}
+
+.benefits .spacer{
+    flex-grow: 1;
+}
+
+.benefits-title{
+    align-self: center;
+}
+
+
+/*JOBS*/
+
+.job-section-content{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.job-section h1{
+    /*border-top: 1px solid #e1e1e1;*/
+    /*margin-top: 40px;*/
+    /*padding-top: 50px;*/
+    font-size: 24px;
+    color: #333333;
+    padding-bottom: 20px;
+}
+
+.job-section h2{
+    font-size: 18px;
+    color: #333333;
+    padding-bottom: 20px;
+}
+
+.job{
+    display:flex;
+    flex-flow: column wrap;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.job div{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 20px 10px 20px;
+}
+
+.job .spacer{
+    flex-grow: 1;
+}
+
+.job .status{
+    color: #28a745;
+}
+
+.job-details{
+    border-top: 1px solid #e1e1e1;
+}

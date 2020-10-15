@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Builder::defaultStringLength(191); // Update defaultStringLength
         View::composer(['*'], 'App\Http\View\Composers\Statistics');
-        View::composer(['services.*', 'blogs.*', 'welcome', 'shop.*'], 'App\Http\View\Composers\HashId');
+        View::composer(['services.*', 'blogs.*', 'welcome', 'shop.*', 'jobs.*'], 'App\Http\View\Composers\HashId');
 
 
     }

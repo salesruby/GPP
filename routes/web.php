@@ -30,8 +30,11 @@ Route::get('/contact-us', 'PageController@contact')->name('contact-us');
 Route::resource('contacts', 'ContactController');
 Route::get('/about-us', 'PageController@about')->name('about-us');
 Route::get('/our-services', 'PageController@service')->name('our-services');
+Route::get('career', 'PageController@career')->name('career');
+
 Route::get('/setup', 'SetupController@index');
 Route::get('blogs/show/{id}', 'Admin\BlogController@show')->name('blogs.show');
+Route::get('jobs/show/{id}', 'Admin\JobController@show')->name('jobs.show');
 Route::post('blogs/subscribe', 'Admin\BlogController@subscribe')->name('blogs.subscribe');
 Route::get('quote/create', 'Admin\QuoteController@create')->name('quote.create');
 Route::post('quote/store', 'Admin\QuoteController@store')->name('quote.store');
@@ -62,6 +65,12 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace
     Route::post('blogs/store', 'BlogController@store')->name('blogs.store');
     Route::put('blogs/update/{id}', 'BlogController@update')->name('blogs.update');
 
+    Route::get('jobs', 'JobController@index')->name('jobs.index');
+    Route::get('jobs/create', 'JobController@create')->name('jobs.create');
+    Route::get('jobs/destroy', 'JobController@destroy')->name('jobs.destroy');
+    Route::get('jobs/edit/{id}', 'JobController@edit')->name('jobs.edit');
+    Route::post('jobs/store', 'JobController@store')->name('jobs.store');
+    Route::put('jobs/update/{id}', 'JobController@update')->name('jobs.update');
 
     Route::get('quote', 'QuoteController@index')->name('quote.index');
     Route::get('quote/destroy/{id}', 'QuoteController@destroy')->name('quote.destroy');
