@@ -44,18 +44,15 @@
                                 <tr class="">
                                     <th>Order #</th>
                                     <th class="th_hidden"><span class="nobr">Order Title</span></th>
-                                    <th>Date</th>
-                                    <th class="th_hidden"><span class="nobr">Order Status</span></th>
+                                    <th>Order Status</th>
+                                    <th class="th_hidden"><span class="nobr">Date</span></th>
                                     <th>Download Invoice</th>
                                 </tr>
                                 @foreach($orders as $order)
                                     <tr class="">
                                         <td>{{++$i}}</td>
-                                        <td>Global Plus</td>
-                                        <td><span
-                                                class="nobr">{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('M d Y H:i')}}</span>
-                                        </td>
-                                        <td class="th_hidden">
+                                        <td class="th_hidden">Global Plus</td>
+                                        <td>
                                             @if($order->status)
                                                 <span class="badge badge-success"
                                                       style="background: green;">Processed</span>
@@ -63,6 +60,9 @@
                                                 <span class="badge badge-warning"
                                                       style="background: goldenrod;">Pending</span>
                                             @endif
+                                        </td>
+                                        <td><span
+                                                class="nobr">{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('M d Y H:i')}}</span>
                                         </td>
                                         <td class="th_hidden a-center last">
                                             @if($order->status)
@@ -73,6 +73,44 @@
                                                 </span>
                                             @endif
                                         </td>
+                                    </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </section><!-- Cart main content : End -->
+
+
+
+                    <section class="account-main col-md-9 col-sm-8 col-xs-12">
+                        <h3 class="acc-title lg">My Shop Transactions</h3>
+                        <div class="form-edit-info">
+                            <table class="data-table" id="my-shop-table">
+                                <tr class="">
+                                    <th>Transaction Id</th>
+                                    <th class="th_hidden"><span class="nobr">Item</span></th>
+                                    <th>Status</th>
+                                    <th class="th_hidden"><span class="nobr">Date</span></th>
+                                </tr>
+
+                                @foreach($shoppedItems as $item)
+                                    <tr class="">
+                                        <td>{{$item->transaction_id}}</td>
+                                        <td>{{$item->name}}</td>
+                                        <td>
+                                            @if($item->status)
+                                                <span class="badge badge-success"
+                                                      style="background: green;">Processed</span>
+                                            @else
+                                                <span class="badge badge-warning"
+                                                      style="background: goldenrod;">Pending</span>
+                                            @endif
+                                        </td>
+                                        <td><span
+                                                    class="nobr">{{\Carbon\Carbon::parse($item->created_at)->addHour()->format('M d Y H:i')}}</span>
+                                        </td>
+                                        {{--<td class="th_hidden a-center last">--}}
+
+                                        {{--</td>--}}
                                     </tr>
                                 @endforeach
                             </table>

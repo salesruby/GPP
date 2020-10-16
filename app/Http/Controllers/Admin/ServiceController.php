@@ -31,7 +31,7 @@ class ServiceController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id){
-        $item = Service::findOrFail(self::$hashIds->decode($id)[0]);
+        $item = Service::find(self::$hashIds->decode($id)[0]);
         return view('shop.show', compact('item'));
     }
 
@@ -53,7 +53,7 @@ class ServiceController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id){
-        $service = Service::findOrFail($id);
+        $service = Service::find($id);
         return view('services.edit', compact('service'));
     }
 
@@ -65,7 +65,7 @@ class ServiceController extends Controller
      *
      */
     public function update(Request $request, $id){
-        $service = Service::findOrFail($id);
+        $service = Service::find($id);
         $input = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
@@ -86,22 +86,10 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Request $request){
-        $service = Service::findOrFail($request->id);
+        $service = Service::find($request->id);
         $service->delete();
         return redirect()->route('services.index')->with('success', 'Service deleted successfully');
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
 
-    public function displayServices(){
-        $services = Service::all();
-        return view('shop.index', compact('services'));
-    }
-
-    public function payInfo($id){
-        $item = Service::findOrFail(self::$hashIds->decode($id)[0]);
-        return view('shop.pay', compact('item'));
-    }
 }

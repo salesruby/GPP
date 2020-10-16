@@ -31,8 +31,8 @@
         <div class="navbar-brand-wrapper d-flex justify-content-center">
             <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
                 <a class="navbar-brand brand-logo" href="{{url('/')}}"><img
-                        src="{{asset('dashboard/images/logo.png')}}"
-                        alt="logo"/></a>
+                            src="{{asset('dashboard/images/logo.png')}}"
+                            alt="logo"/></a>
                 <a class="navbar-brand brand-logo-mini" href="{{url('/')}}">GP</a>
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                     <span class="mdi mdi-sort-variant"></span>
@@ -80,6 +80,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+
                     </div>
                 </li>
             </ul>
@@ -150,12 +151,20 @@
                     </a>
                 </li>
 
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{route('users.index')}}">--}}
+                {{--<i class="mdi mdi-account-multiple menu-icon"></i>--}}
+                {{--<span class="menu-title">Users</span>--}}
+                {{--</a>--}}
+                {{--</li>--}}
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('users.index')}}">
-                        <i class="mdi mdi-account-multiple menu-icon"></i>
-                        <span class="menu-title">Users</span>
+                        <i class="mdi mdi-google-photos menu-icon"></i>
+                        <span class="menu-title">Gallery</span>
                     </a>
                 </li>
+
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('blogs.index')}}">
@@ -179,8 +188,9 @@
         <!-- partial:partials/_footer.html -->
             <footer class="footer">
                 <div class="d-sm-flex justify-content-center">
-                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © {{\Carbon\Carbon::now()->year}} <a
-                            href="https://www.rocketpay.cc/" target="_blank">Global Plus Publishing</a>. All rights reserved.</span>
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © {{\Carbon\Carbon::now()->year}}
+                        <a
+                                href="https://www.rocketpay.cc/" target="_blank">Global Plus Publishing</a>. All rights reserved.</span>
                 </div>
             </footer>
             <!-- partial -->

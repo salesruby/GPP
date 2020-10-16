@@ -76,7 +76,7 @@
                                 <a href="{{route('contact-us')}}">Contact Us</a>
                             </li>
                             <li class="level0 hd-pd" title="Shop">
-                                <a href="{{route('shop')}}">Shop</a>
+                                <a href="{{route('shop.index')}}">Shop</a>
                             </li>
 
 {{--                            <li class="level0 hd-pd" title="Login">--}}
@@ -176,9 +176,9 @@
                             <li>
                                 <a href="{{route('career')}}" title="Career">Career</a>
                             </li>
-{{--                            <li>--}}
-{{--                                <a href="#" title="Terms of Service">Terms of Service</a>--}}
-{{--                            </li>--}}
+                            <li>
+                                <a href="{{route('gallery.index')}}" title="Gallery">Gallery</a>
+                            </li>
 {{--                            <li>--}}
 {{--                                <a href="#" title="Privacy Policy">Privacy Policy</a>--}}
 {{--                            </li>--}}
@@ -281,7 +281,7 @@
         </li>
 
         <li class="level0 hd-pd" title="Shop">
-            <a href="{{route('shop')}}">Shop</a>
+            <a href="{{route('shop.index')}}">Shop</a>
         </li>
 
 {{--        <li class="level0 hd-pd" title="Login">--}}

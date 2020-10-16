@@ -35,23 +35,22 @@ class PaymentController extends Controller
     public function handleGatewayCallback()
     {
         $paymentDetails = Paystack::getPaymentData();
-
-//        dd($paymentDetails);
         // Now you have the payment details,
         // you can store the authorization_code in your db to allow for recurrent subscriptions
         // you can then redirect or do whatever you want
         if ($paymentDetails['data']['status'] == 'success') {
             Transaction::create([
                 'transaction_id' => $paymentDetails['data']['id'] ,
-                'name' => $paymentDetails['data']['metadata'][0],
+                'name' => $paymentDetails['data']['metadata']['name'],
                 'email' => $paymentDetails['data']['customer']['email'],
-                'phone' => $paymentDetails['data']['metadata'][1],
-                'service_id' => $paymentDetails['data']['metadata'][2],
+                'phone' => $paymentDetails['data']['metadata']['phone'],
+                'service_id' => $paymentDetails['data']['metadata']['item_id'],
+                'user_id' => $paymentDetails['data']['metadata']['user_id'],
             ]);
             $message =['success', 'Transaction completed, you will be contacted for delivery'];
         }else{
             $message = ['custom_error', 'Transaction failed, Try again later.'];
         }
-        return redirect()->route('shop')->with($message);
+        return redirect()->route('home')->with($message);
     }
 }

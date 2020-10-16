@@ -28,7 +28,7 @@
                     <h1 class="ct-header">Login</h1>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <h4>Returning Customers</h4>
-                        <p>If you have an account with us, please log in.</p>
+                        <p>If you have an account with us, please log in. </p>
                         <form id="login-form" class="form-validate form-horizontal" method="POST" action="{{ route('login') }}">
                             @csrf
                             <p>Email Address <span class="star">*</span></p>
@@ -52,6 +52,7 @@
                                     </span>
                             @enderror
                             <a href="{{url('password/reset')}}"><span class="re">Forgotten Password?</span></a>
+                            | <a href="{{route('register')}}"><span class="re">Create Account</span></a>
                             <button type="submit" class="login">Login</button>
                         </form>
                     </div>

@@ -57,7 +57,8 @@ class ClientController extends Controller
 
     public function transaction(){
         $orders = auth()->user()->order;
-        return  view('client.transaction', compact('orders'))
+        $shoppedItems = auth()->user()->transaction;
+        return  view('client.transaction', compact('orders', 'shoppedItems'))
             ->with('i', (\request()->input('page', 1)-1)*10);
     }
 

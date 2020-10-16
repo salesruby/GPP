@@ -76,7 +76,7 @@ class RegisterController extends Controller
         $user->role()->attach($role, ['created_at' => now(), 'updated_at' =>now()]);
         Address::create([
             'user_id' => $user->id,
-            'phone' => 'nil',
+            'phone' => $data['phone'],
             'address' => 'nil'
         ]);
         return $user;

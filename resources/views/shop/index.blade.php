@@ -28,19 +28,19 @@
                 @foreach($services as $item)
                     <div class="col-md-3 col-sm-6 col-xs-6 or-block">
                         <div class="or-image">
-                            <a href="{{route('shop.show-item', $hashIds->encode($item->id))}}">
+                            <a href="{{route('shop.show', $hashIds->encode($item->id))}}">
                                 <img src="{{asset('/gpp/public/store/'.$item->attachment)}}" alt="service-04"/>
                             </a>
                         </div>
                         <div class="or-title">
-                            <a href="{{route('shop.show-item', $hashIds->encode($item->id))}}">{{$item->name}}</a>
+                            <a href="{{route('shop.show', $hashIds->encode($item->id))}}">{{$item->name}}</a>
                         </div>
                         <div class="text">
                             <p>
                                 {{$item->description}}
                             </p>
                         </div>
-                        <a href="{{route('pay.info', $hashIds->encode($item->id))}}" class="btn-readmore order-now">Purchase</a>
+                        <a href="{{route('shop.cart', $hashIds->encode($item->id))}}" class="btn-readmore order-now">Purchase</a>
                     </div>
                 @endforeach
             </div>

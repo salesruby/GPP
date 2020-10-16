@@ -58,4 +58,8 @@ class User extends Authenticatable
             ->with('response');
     }
 
+    public function transaction(){
+        return $this->hasMany(Transaction::class);
+    }
+
 }

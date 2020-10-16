@@ -27,7 +27,7 @@
                 <div class="col-md-9 col-sm-9 col-xs-12">
                     <div class="col-md-6 col-sm-6 col-xs-12 left">
                         <h1>Create an Account</h1>
-                        <h4>Personal Information</h4>
+                        {{--<h4>Personal Information</h4>--}}
                         <form id="register-form" class="form-validate form-horizontal" method="POST" action="{{ route('register') }}">
                             @csrf
                             <p>Full Name <span class="star">*</span></p>
@@ -46,6 +46,14 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
+                            <p>Phone Number <span class="star">*</span></p>
+                            <input id="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Phone">
+
+                            @error('phone')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                             <p>Create a password  <span class="star">*</span></p>
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
 
@@ -59,40 +67,12 @@
                             <div>
                                 <input type="checkbox" value="yes" class="inputbox" name="remember" id="remember"><span class="re">Agree to Conditions</span>
                                 <br/>
+                                Already have an account? <a href="{{route('login')}}"><span class="re">Login</span></a>
                                 <button type="submit" class="register">Register</button>
                             </div>
                         </form>
                     </div>
 
-                    <div class="col-md-6 col-sm-6 col-xs-12 right">
-                        <h1>Login</h1>
-                        <h4>Returning Customers</h4>
-                        <p>If you have an account with us, please log in.</p>
-                        <form id="login-form" class="form-validate form-horizontal" method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <p>Email Address <span class="star">*</span></p>
-                            <input id="email" type="email"
-                                   class="form-control @error('email') is-invalid @enderror" name="email"
-                                   value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
-                            <p>Password <span class="star">*</span></p>
-                            <input id="password" type="password"
-                                   class="form-control @error('password') is-invalid @enderror" name="password"
-                                   required autocomplete="current-password">
-
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
-                            <button type="submit" class="login">Login</button>
-                        </form>
-                    </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <img src="{{asset('template/images/banner-wishlist.png')}}" />

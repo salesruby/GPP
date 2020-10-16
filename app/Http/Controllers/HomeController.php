@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $newOrder = Order::whereDate('created_at', Carbon::today())->where('status', 0 )->get();
         $newContact = Contact::whereDate('created_at', Carbon::today())->get();
-        if(!auth()->user()->hasAnyRoles(['Admin', 'User'])){
+        if(!auth()->user()->hasRole('Admin')){
             return  view('client.home');
         };
         return view('home', compact('newOrder', 'newContact'));

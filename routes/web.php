@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $blogs = \App\Blog::get()->take(4);
+    $blogs = \App\Blog::latest()->get()->take(4);
     return view('welcome', compact('blogs'));
 })->name('welcome');
 
@@ -25,12 +25,14 @@ Route::get('/video', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/contact-us', 'PageController@contact')->name('contact-us');
+Route::get('home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('contact-us', 'PageController@contact')->name('contact-us');
 Route::resource('contacts', 'ContactController');
-Route::get('/about-us', 'PageController@about')->name('about-us');
-Route::get('/our-services', 'PageController@service')->name('our-services');
+Route::get('about-us', 'PageController@about')->name('about-us');
+Route::get('our-services', 'PageController@service')->name('our-services');
 Route::get('career', 'PageController@career')->name('career');
+Route::get('gallery', 'Admin\GalleryController@index')->name('gallery.index');
+
 
 Route::get('/setup', 'SetupController@index');
 Route::get('blogs/show/{id}', 'Admin\BlogController@show')->name('blogs.show');
@@ -38,12 +40,21 @@ Route::get('jobs/show/{id}', 'Admin\JobController@show')->name('jobs.show');
 Route::post('blogs/subscribe', 'Admin\BlogController@subscribe')->name('blogs.subscribe');
 Route::get('quote/create', 'Admin\QuoteController@create')->name('quote.create');
 Route::post('quote/store', 'Admin\QuoteController@store')->name('quote.store');
-Route::get('/shop', 'Admin\ServiceController@displayServices')->name('shop');
-Route::get('/shop/item/{id}', 'Admin\ServiceController@show')->name('shop.show-item');
-Route::get('/shop/pay-info/{id}', 'Admin\ServiceController@payInfo')->name('pay.info');
+
+
+//Shop
+Route::get('/shop', 'ShopController@index')->name('shop.index');
+Route::get('/shop/show/{id}', 'ShopController@show')->name('shop.show');
+
 // Laravel 5.1.17 and above
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
+
+//callback
+//http://globalplusonline.com/new/payment/callback
+
+//webhook
+//https://globalplusonline.com/new/pay
 
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
@@ -95,6 +106,13 @@ Route::group(['middleware' => ['auth', 'client'], 'prefix' => 'client'], functio
     Route::get('transaction', 'ClientController@transaction')->name('client.transaction');
     Route::get('cart', 'ClientController@cart')->name('client.cart');
     Route::post('store-order', 'ClientController@storeOrder')->name('store.order');
+
+
+//    shop
+
+    Route::post('/shop/pay-info/{id}', 'ShopController@pay')->name('shop.pay');
+    Route::get('/shop/cart/{id}', 'ShopController@cart')->name('shop.cart');
+
 });
 
 

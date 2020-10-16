@@ -761,3 +761,49 @@
 .job-details{
     border-top: 1px solid #e1e1e1;
 }
+
+
+/*login*/
+
+a .re:hover{
+    color: #25bce9;
+}
+
+
+
+/*shop table*/
+
+.info table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.info td, .info th {
+    border: 1px solid #dddddd;
+    text-align: left !important;
+    padding: 8px !important;
+}
+
+.info tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+#my-shop-table{
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid #cecece;
+}
+#my-shop-table th{
+    padding: 5px  0px;
+    text-align: center;
+    border-bottom: 1px solid #cecece;
+    font-weight: bold;
+}
+#my-shop-table td{
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #cecece;
+}

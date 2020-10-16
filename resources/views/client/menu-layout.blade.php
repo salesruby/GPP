@@ -10,6 +10,9 @@
         <li class="{{(request()->is('client/cart') ? 'active':'')}}">
             <a href="{{route('client.cart')}}" title="Place Order">Place Order</a>
         </li>
+        <li class="{{(request()->is('/shop') ? 'active':'')}}">
+            <a href="{{route('shop.index')}}" title="Shop">Shop</a>
+        </li>
         <li>
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
