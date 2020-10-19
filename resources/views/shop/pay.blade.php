@@ -39,7 +39,8 @@
                                 <input type="hidden" name="currency" value="NGN">
                                 <input type="hidden" name="metadata"
                                        value="{{ json_encode($array = ['name' => auth()->user()->name,
-                                       'phone'=> auth()->user()->address->phone, 'item_id'=> $item->id, 'user_id'=>auth()->user()->id]) }}"> {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                                       'phone'=> auth()->user()->address->phone, 'item_id'=> $item->id, 'user_id'=>auth()->user()->id,
+                                       'qtty' => $quantity]) }}"> {{-- For other necessary things you want to add to your payload. it is optional though --}}
                                 <input type="hidden" name="reference"
                                        value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
 

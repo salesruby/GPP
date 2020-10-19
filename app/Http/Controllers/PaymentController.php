@@ -46,11 +46,13 @@ class PaymentController extends Controller
                 'phone' => $paymentDetails['data']['metadata']['phone'],
                 'service_id' => $paymentDetails['data']['metadata']['item_id'],
                 'user_id' => $paymentDetails['data']['metadata']['user_id'],
+                'amount' => ($paymentDetails['data']['amount'])/100,
+                'quantity' => $paymentDetails['data']['metadata']['qtty']
             ]);
             $message =['success', 'Transaction completed, you will be contacted for delivery'];
         }else{
             $message = ['custom_error', 'Transaction failed, Try again later.'];
         }
-        return redirect()->route('home')->with($message);
+        return redirect()->route('client.transaction')->with($message);
     }
 }

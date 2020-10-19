@@ -22,6 +22,8 @@ class CreateTransactionsTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->integer('status')->default(0);
+            $table->integer('quantity');
+            $table->integer('amount');
             $table->timestamps();
         });
     }
