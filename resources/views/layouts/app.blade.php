@@ -159,7 +159,7 @@
                 {{--</li>--}}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('users.index')}}">
+                    <a class="nav-link" href="{{route('photo.create')}}">
                         <i class="mdi mdi-google-photos menu-icon"></i>
                         <span class="menu-title">Gallery</span>
                     </a>

@@ -805,3 +805,40 @@ a .re:hover{
     text-align: center;
     border-bottom: 1px solid #cecece;
 }
+
+
+/*Gallery*/
+
+.gallery .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.gallery-category{
+    padding: 10px;
+    /*margin: 5px;*/
+    width: 50%;
+    position: relative;
+}
+
+@media(max-width: 425px) {
+    .gallery-category{
+        width: 90%;
+    }
+}
+
+.gallery-category a{
+
+}
+
+.gallery-category a:hover{
+    background-color: #333333;
+}
+
+/*.gallery-category div{*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*right: 50%;*/
+    /*left: 50%;*/
+/*}*/

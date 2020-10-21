@@ -23,20 +23,15 @@
                 </div>
             </div>
         </section>
-        <section id="aboutus" class="pr-main">
+        <section id="aboutus" class="pr-main gallery">
             <div class="container">
-                <div class="col-xs-6">
-                    <img src="{{asset('template/images/career/1.png')}}" alt="Career Image"/>
-                </div>
-                <div class="col-xs-6">
-                    <img src="{{asset('template/images/career/1.png')}}" alt="Career Image"/>
-                </div>
-                <div class="col-xs-6">
-                    <img src="{{asset('template/images/career/1.png')}}" alt="Career Image"/>
-                </div>
-                <div class="col-xs-6">
-                    <img src="{{asset('template/images/career/1.png')}}" alt="Career Image"/>
-                </div>
+                @foreach($categories as $category)
+                    <div class="gallery-category or-image">
+                        <a href="{{route('photo.index', $hashIds->encode($category->id))}}"><img src="{{asset('template/images/gallery/'.$category->id.'.png')}}"
+                                         alt="Category Image"/></a>
+                        <div>{{$category->title}}</div>
+                    </div>
+                @endforeach
             </div>
         </section>
     </main>

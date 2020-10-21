@@ -32,6 +32,8 @@ Route::get('about-us', 'PageController@about')->name('about-us');
 Route::get('our-services', 'PageController@service')->name('our-services');
 Route::get('career', 'PageController@career')->name('career');
 Route::get('gallery', 'Admin\GalleryController@index')->name('gallery.index');
+Route::get('photos/{id}', 'Admin\GalleryController@photo')->name('photo.index');
+
 
 
 Route::get('/setup', 'SetupController@index');
@@ -91,7 +93,11 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace
     Route::get('/transactions', 'TransactionController@index')->name('transactions.index');
     Route::post('/transactions/update', 'TransactionController@update')->name('transactions.update');
 
-
+    Route::get('photo/create', 'GalleryController@create')->name('photo.create');
+    Route::get('photo/destroy', 'GalleryController@destroy')->name('photo.destroy');
+    Route::get('photo/edit/{id}', 'GalleryController@edit')->name('photo.edit');
+    Route::post('photo/store', 'GalleryController@store')->name('photo.store');
+    Route::put('photo/update/{id}', 'GalleryController@update')->name('photo.update');
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {

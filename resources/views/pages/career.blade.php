@@ -115,18 +115,20 @@
                     <p>We’re passionate about print, but what does that mean for you? It’s a promise that you’ll always
                         receive </p>
                     <p>print created on a press that sits at the very forefront of printing technology.</p>
-                    @foreach($jobs as $job)
-                        <div class="col-xs-12 job">
-                            <div>
-                                <h2>{{$job->title}}</h2>
-                                <div class="spacer"></div>
-                                <h2 class="status">Open</h2>
+                    @if(!$jobs->isEmpty())
+                        @foreach($jobs as $job)
+                            <div class="col-xs-12 job">
+                                <div>
+                                    <h2>{{$job->title}}</h2>
+                                    <div class="spacer"></div>
+                                    <h2 class="status">Open</h2>
+                                </div>
+                                <div class="job-details">
+                                    {{$job->role}}
+                                </div>
                             </div>
-                            <div class="job-details">
-                                {{$job->role}}
-                            </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </section>
