@@ -119,7 +119,7 @@
                         @foreach($jobs as $job)
                             <div class="col-xs-12 job">
                                 <div>
-                                    <h2>{{$job->title}}</h2>
+                                    <h2><a href="{{route('jobs.show', $hashIds->encode($job->id))}}">{{$job->title}}</a></h2>
                                     <div class="spacer"></div>
                                     <h2 class="status">Open</h2>
                                 </div>

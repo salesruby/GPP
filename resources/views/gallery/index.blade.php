@@ -26,8 +26,8 @@
         <section id="aboutus" class="pr-main gallery">
             <div class="container">
                 @foreach($photos->photo as $photo)
-                    <div class="gallery-category-pix or-image">
-                        <img src="{{asset('/store/'.$photo->attachment.'.png')}}" alt="Career Image"/>
+                    <div class="gallery-category-pix">
+                        <img src="{{asset('gpp/public/store/'.$photo->attachment)}}" alt="Career Image"/>
                         <div>{{ucfirst($photo->name)}}</div>
                     </div>
                 @endforeach

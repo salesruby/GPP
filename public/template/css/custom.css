@@ -822,6 +822,11 @@ a .re:hover{
     position: relative;
 }
 
+.gallery-category-pix{
+    padding: 10px;
+}
+
+
 @media(max-width: 425px) {
     .gallery-category{
         width: 90%;
