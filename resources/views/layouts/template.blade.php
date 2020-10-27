@@ -44,7 +44,7 @@
                                 <a href="{{route('welcome')}}">Home</a>
                             </li>
                             <li class="level0 parent col1 hd-pd">
-                                <a href="javascript:void(0)" title="Services">
+                                <a href=javascript:void(0) title="Services">
                                     Services
                                     <i class="fa fa-chevron-down"></i>
                                 </a>
@@ -69,8 +69,22 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level0 hd-pd {{(request()->is('about-us'))?'active':''}}" title="About Us">
-                                <a href="{{route('about-us')}}">About Us</a>
+                            <li class="level0 parent col1 hd-pd">
+                                <a href=javascript:void(0) title="About Us">
+                                    About Us
+                                    <i class="fa fa-chevron-down"></i>
+                                </a>
+                                <ul class="level0">
+                                    <li class="level1 nav-1-1 first item">
+                                        <a href="{{route('about-us')}}" title="Vision">Awards & Vision</a>
+                                    </li>
+                                    <li class="level1 nav-1-6 item">
+                                        <a href="{{route('career')}}" title="Career">Career</a>
+                                    </li>
+                                    <li class="level1 nav-1-8 item">
+                                        <a href="{{route('gallery.index')}}" title="Gallery">Gallery</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="level0 hd-pd" title="Contact Us">
                                 <a href="{{route('contact-us')}}">Contact Us</a>
@@ -161,8 +175,6 @@
                                     <i class="fa fa-youtube"></i>
                                 </a>
                             </li>
-
-
                         </ul>
                     </div>
                 </div>
@@ -272,10 +284,23 @@
                 </li>
             </ul>
         </li>
-        <li class="level0 hd-pd {{(request()->is('about-us'))?'active':''}}" title="About Us">
-            <a href="{{route('about-us')}}">About Us</a>
+        <li class="level0 parent col1 hd-pd">
+            <a href=javascript:void(0) title="About Us">
+                About Us
+                <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="level0">
+                <li class="level1 nav-1-1 first item">
+                    <a href="{{route('about-us')}}" title="Vision">Awards & Vision</a>
+                </li>
+                <li class="level1 nav-1-6 item">
+                    <a href="{{route('career')}}" title="Career">Career</a>
+                </li>
+                <li class="level1 nav-1-8 item">
+                    <a href="{{route('gallery.index')}}" title="Gallery">Gallery</a>
+                </li>
+            </ul>
         </li>
-
         <li class="level0 hd-pd" title="Contact Us">
             <a href="{{route('contact-us')}}">Contact Us</a>
         </li>

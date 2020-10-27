@@ -67,7 +67,7 @@
                             <div>
                                 <input type="checkbox" value="yes" class="inputbox" name="remember" id="remember"><span class="re">Agree to Conditions</span>
                                 <br/>
-                                Already have an account? <a href="{{route('login')}}"><span class="re">Login</span></a>
+                                Already have an account? <a href="{{route('login')}}"><span class="login">Login</span></a>
                                 <button type="submit" class="register">Register</button>
                             </div>
                         </form>

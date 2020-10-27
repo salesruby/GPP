@@ -35,6 +35,7 @@
                                     <th>Phone</th>
                                     <th>Transaction ID</th>
                                     <th>Item</th>
+                                    <th>Quantity</th>
                                     <th>Amount</th>
                                     <th>Date</th>
                                     <th>Status</th>
@@ -49,7 +50,8 @@
                                         <td>{{$transaction->phone}}</td>
                                         <td>{{$transaction->transaction_id}}</td>
                                         <td>{{$transaction->service->name}}</td>
-                                        <td>{{$transaction->service->price}}</td>
+                                        <td>{{number_format($transaction->quantity)}}</td>
+                                        <td>{{$transaction->amount}}</td>
                                         <td>{{\Carbon\Carbon::parse($transaction->created_at)->addHour()->format('M d Y H:i')}}</td>
                                         <td>@if($transaction->status == 1)
                                                 <span class="badge badge-success">Delivered</span>
@@ -89,7 +91,7 @@
                                             </li>
                                             <li>
                                                 <strong>{{$transaction->service->name}}</strong>
-                                                <span>Amount - {{$transaction->service->price}}</span>
+                                                <span>#{{number_format($transaction->amount)}} for {{$transaction->quantity}}</span>
                                             </li>
                                             <li>
                                                 <strong>Trans-ID - {{$transaction->transaction_id}}</strong>

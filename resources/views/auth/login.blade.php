@@ -52,7 +52,7 @@
                                     </span>
                             @enderror
                             <a href="{{url('password/reset')}}"><span class="re">Forgotten Password?</span></a>
-                            | <a href="{{route('register')}}"><span class="re">Create Account</span></a>
+                            | <a href="{{route('register')}}"><span class="create-account">Create Account</span></a>
                             <button type="submit" class="login">Login</button>
                         </form>
                     </div>

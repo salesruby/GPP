@@ -543,11 +543,13 @@
 /*tr-icon*/
 
 .tr-icon1 {
-    background: #01A9E9;
+    /*background: #01A9E9;*/
+    background-color: #01A9E9;
 }
 
 .tr-icon2 {
-    background: #F733BF;
+    /*background: #F733BF;*/
+    background-color: #F733BF;
 }
 
 .tr-icon3 {
@@ -847,3 +849,12 @@ a .re:hover{
     /*right: 50%;*/
     /*left: 50%;*/
 /*}*/
+
+/*LOGIN LINK*/
+#pr-login .create-account, #pr-register .login{
+    color: #25bce9 !important;
+}
+
+#pr-login .create-account:hover, #pr-login .re:hover, #pr-register .login:hover{
+    color: #fbc443 !important;
+}
