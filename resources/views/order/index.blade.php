@@ -46,7 +46,7 @@
                                         <td><a class="btn btn-primary view-order"
                                                href="{{route('orders.show', $order->id)}}">View
                                                 Order</a></td>
-                                        <td><a class="btn btn-link" href="/gpp/public/store/{{$quote->attachment}}" download>Download
+                                        <td><a class="btn btn-link" href="{{url('gpp/public/store/'.$response->attachment)}}" download>Download
                                                 File</a></td>
                                         <td>{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('M d Y H:i')}}</td>
                                         <td>
@@ -83,7 +83,7 @@
                                                 <span>{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('d M Y H:i')}}</span>
                                             </li>
                                             <li>
-                                                <strong><a class="btn btn-link" href="/gpp/public/store/{{$quote->attachment}}"
+                                                <strong><a class="btn btn-link" href="{{url('gpp/public/store/'.$response->attachment)}}"
                                                            download>Download
                                                         File</a></strong>
                                                 <span>{!!(!$order->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}</span>

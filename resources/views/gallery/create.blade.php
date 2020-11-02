@@ -20,6 +20,7 @@
             </div>
         </div>
         @include('layouts.statistics')
+        @include('layouts.message')
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">

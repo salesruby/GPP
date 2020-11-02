@@ -31,7 +31,7 @@
         <div class="container" >
             <div class="row">
                 <div class="col-lg-4 col-md-2 col-sm-4 col-xs-5 w-logo">
-                    <div class="logo hd-pd ">
+                    <div class="logo hd-pd">
                         <a href="{{route('welcome')}}">
                             <img src="{{asset('template/images/logo.png')}}" alt="printshop logo">
                         </a>

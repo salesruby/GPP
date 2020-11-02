@@ -11,7 +11,7 @@
             @csrf
             <textarea aria-invalid="true" name="description"
                       id="description"
-                      cols="50" rows="3" class="form-control" required="required" placeholder="Enter Message"
+                      cols="50" rows="3" class="form-control" required placeholder="Enter Message"
                       aria-required="true"></textarea>
             <input type="file" name="attachment" class="form-control">
             <span>*Note: Document should not be more than 2Mb</span>

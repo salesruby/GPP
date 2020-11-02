@@ -7,10 +7,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class OrderResponseMail extends Mailable
+class JobApplicationMail extends Mailable
 {
-    use Queueable, SerializesModels;
-
     /**
      * Create a new message instance.
      *
@@ -30,12 +28,13 @@ class OrderResponseMail extends Mailable
      */
     public function build()
     {
-        $email = $this->from('webservices@globalplusonline.com')->view('order.mail');
-        if (isset($this->data['attachment']) && !is_string($this->data['attachment'])) {
-            $email->attach($this->data['attachment']->getRealPath(),
+        $email = $this->subject($this->data['subject'])->from('webservices@globalplusonline.com')
+            ->view('jobs.mail');
+        if (isset($this->data['cv']) && !is_string($this->data['cv'])) {
+            $email->attach($this->data['cv']->getRealPath(),
                 [
-                    'as' => $this->data['attachment']->getClientOriginalName(),
-                    'mime' => $this->data['attachment']->getClientMimeType()
+                    'as' => $this->data['cv']->getClientOriginalName(),
+                    'mime' => $this->data['cv']->getClientMimeType()
                 ]);
         }
         return $email;

@@ -34,29 +34,30 @@
                                 @csrf
                                 <div class="quote-info">
                                     <div class="img"><img
-                                            src="{{asset('template/images/img-wishlist.png')}}"/></div>
+                                                src="{{asset('template/images/img-wishlist.png')}}"/></div>
                                     <div class="data">
                                         <div>
                                             <h4>Get Affordable Price For Quality Printing</h4>
-                                            <p>We provide high quality business cards, postcards, flyers, brochures,
+                                            <p>We provide high quality business cards, flyers, brochures,
                                                 stationery and other premium online print products...</p>
                                             <div class="quote-section">
                                                 <h5>Contact Information</h5>
                                                 <div>
                                                     <input type="text" name="name" placeholder="Enter Name*"
-                                                           required>
+                                                           value="{{old('name')}}" required>
                                                     <input type="text" name="phone"
                                                            placeholder="Enter Phone Number*"
-                                                           required>
+                                                           value="{{old('phone')}}" required>
                                                 </div>
                                                 <div>
                                                     <input type="email" name="email" placeholder="Enter Email*"
-                                                           required>
+                                                           value="{{old('email')}}" required>
                                                     <input type="text" name="company"
-                                                           placeholder="Enter Company Name">
+                                                           value="{{old('company')}}" placeholder="Enter Company Name">
                                                 </div>
                                                 <div>
-                                                    <input type="text" name="address" placeholder="Enter Address">
+                                                    <input type="text" name="address" value="{{old('address')}}"
+                                                           placeholder="Enter Address">
                                                 </div>
                                             </div>
 
@@ -64,51 +65,73 @@
                                             <div class="quote-section">
                                                 <h5>Project Details</h5>
                                                 <div>
-                                                    <input type="number" name="num_of_cover_page"
-                                                           placeholder="Number of Cover Pages">
                                                     <input type="number" name="num_of_text_page"
+                                                           value="{{old('num_of_text_page')}}"
                                                            placeholder="Number of Text Pages">
+                                                    <input type="text" name="trim_size" value="{{old('trim_size')}}"
+                                                           placeholder="Trim Size">
+                                                </div>
+
+                                                <div class="project-details-select">
+                                                    <div>
+                                                        <label for="num_of_cover_page">Number of Cover Pages</label>
+                                                        <select id="num_of_cover_page" name="num_of_cover_page"
+                                                                required>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['numberOfCoverPages'] as $numberOfCoverPage)
+                                                                <option value="{{$numberOfCoverPage}}" @php echo(old('num_of_cover_page') == $numberOfCoverPage)? 'selected':'';@endphp>{{$numberOfCoverPage}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <div class="cover_type_div">
+                                                        <label for="cover_type">Cover
+                                                            Type</label>
+                                                        <select id="cover_type" name="cover_type" required>
+                                                            <option value="">Select Cover Type</option>
+                                                            @foreach($data['coverTypes'] as $coverType)
+                                                                <option value="{{$coverType}}" @php echo(old('cover_type') == $coverType)? 'selected':'';@endphp>{{$coverType}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div>
-                                                    <input type="text" name="cover_type" placeholder="Cover Type"
-                                                           required>
-                                                    <input type="text" name="trim_size" placeholder="Trim Size">
+                                                    <textarea name="qtty"
+                                                              placeholder="Quantity">{{old('qtty')}}</textarea>
                                                 </div>
-                                                <div>
-                                                    <input type="number" name="qtty" placeholder="Quantity">
-                                                </div>
+
                                                 <div class="project-details-sub">
                                                     <h6>Colour Option</h6>
                                                     <div>
                                                         <label for="colour_option_cover">Cover</label>
                                                         <select class="custom-select" id="colour_option_cover"
                                                                 name="colour_option_cover" required>
-                                                            <option value="one colour">One Colour</option>
-                                                            <option value="two colour">Two Colour</option>
-                                                            <option value="three colour">Three Colour</option>
-                                                            <option value="four colour">Four Colour (CYMK)</option>
-                                                            <option value="Pantone">Pantone</option>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['colourOptions'] as $colourOption)
+                                                                <option value="{{$colourOption}}" @php echo(old('colour_option_cover') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
+                                                            @endforeach
                                                         </select>
 
                                                         <label for="colour_option_inner">Inner</label>
                                                         <select class="custom-select" id="colour_option_inner"
                                                                 name="colour_option_inner" required>
-                                                            <option value="one colour">One Colour</option>
-                                                            <option value="two colour">Two Colour</option>
-                                                            <option value="three colour">Three Colour</option>
-                                                            <option value="four colour">Four Colour (CYMK)</option>
-                                                            <option value="Pantone">Pantone</option>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['colourOptions'] as $colourOption)
+                                                                <option value="{{$colourOption}}" @php echo(old('colour_option_inner') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
+                                                            @endforeach
                                                         </select>
 
                                                         <label for="colour_option_insert">Insert</label>
                                                         <select class="custom-select" id="colour_option_insert"
                                                                 name="colour_option_insert" required>
-                                                            <option value="one colour">One Colour</option>
-                                                            <option value="two colour">Two Colour</option>
-                                                            <option value="three colour">Three Colour</option>
-                                                            <option value="four colour">Four Colour (CYMK)</option>
-                                                            <option value="Pantone">Pantone</option>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['colourOptions'] as $colourOption)
+                                                                <option value="{{$colourOption}}" @php echo(old('colour_option_insert') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
+                                                            @endforeach
                                                         </select>
+                                                    </div>
+                                                    <div>
+                                                        <textarea name="colour_option_text"
+                                                                  placeholder="Specify pantone number if your colour choice is pantone">{{old('colour_option_text')}}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="project-details-sub">
@@ -117,190 +140,111 @@
                                                         <label for="paper_stock_cover">Cover</label>
                                                         <select class="custom-select" id="paper_stock_cover"
                                                                 name="paper_stock_cover" required>
-                                                            <option value="70gsm bond">70gsm Bond</option>
-                                                            <option value="80gsm bond">80gsm Bond</option>
-                                                            <option value="100gsm bond">100gsm Bond</option>
-                                                            <option value="120gsm bond">120gsm Bond</option>
-                                                            <option value="90gsm Art Card">90gsm Art Card</option>
-                                                            <option value="115gsm Art Card">115gsm Art Card</option>
-                                                            <option value="135gsm Art Card">135gsm Art Card</option>
-                                                            <option value="150gsm Art Card">150gsm Art Card</option>
-                                                            <option value="170gsm Art Card">170gsm Art Card</option>
-                                                            <option value="250 Art Card">250 Art Card</option>
-                                                            <option value="300 Art Card">300 Art Card</option>
-                                                            <option value="90gsm Matt Card">90gsm Matt Card</option>
-                                                            <option value="115gsm Matt Card">115gsm Matt Card</option>
-                                                            <option value="135gsm Matt Card">135gsm Matt Card</option>
-                                                            <option value="150gsm Matt Card">150gsm Matt Card</option>
-                                                            <option value="170gsm Matt Card">170gsm Matt Card</option>
-                                                            <option value="250 Matt Card">250 Matt Card</option>
-                                                            <option value="300 Matt Card">300 Matt Card</option>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['paperStocks'] as $paperStock)
+                                                                <option value="{{$paperStock}}" @php echo(old('paper_stock_cover') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
+                                                            @endforeach
                                                         </select>
 
                                                         <label for="paper_stock_inner">Inner</label>
                                                         <select class="custom-select" id="paper_stock_inner"
                                                                 name="paper_stock_inner" required>
-                                                            <option value="70gsm bond">70gsm Bond</option>
-                                                            <option value="80gsm bond">80gsm Bond</option>
-                                                            <option value="100gsm bond">100gsm Bond</option>
-                                                            <option value="120gsm bond">120gsm Bond</option>
-                                                            <option value="90gsm Art Card">90gsm Art Card</option>
-                                                            <option value="115gsm Art Card">115gsm Art Card</option>
-                                                            <option value="135gsm Art Card">135gsm Art Card</option>
-                                                            <option value="150gsm Art Card">150gsm Art Card</option>
-                                                            <option value="170gsm Art Card">170gsm Art Card</option>
-                                                            <option value="250 Art Card">250 Art Card</option>
-                                                            <option value="300 Art Card">300 Art Card</option>
-                                                            <option value="90gsm Matt Card">90gsm Matt Card</option>
-                                                            <option value="115gsm Matt Card">115gsm Matt Card</option>
-                                                            <option value="135gsm Matt Card">135gsm Matt Card</option>
-                                                            <option value="150gsm Matt Card">150gsm Matt Card</option>
-                                                            <option value="170gsm Matt Card">170gsm Matt Card</option>
-                                                            <option value="250 Matt Card">250 Matt Card</option>
-                                                            <option value="300 Matt Card">300 Matt Card</option>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['paperStocks'] as $paperStock)
+                                                                <option value="{{$paperStock}}" @php echo(old('paper_stock_inner') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
+                                                            @endforeach
                                                         </select>
 
                                                         <label for="paper_stock_insert">Insert</label>
                                                         <select class="custom-select" id="paper_stock_insert"
                                                                 name="paper_stock_insert" required>
-                                                            <option value="70gsm bond">70gsm Bond</option>
-                                                            <option value="80gsm bond">80gsm Bond</option>
-                                                            <option value="100gsm bond">100gsm Bond</option>
-                                                            <option value="120gsm bond">120gsm Bond</option>
-                                                            <option value="90gsm Art Card">90gsm Art Card</option>
-                                                            <option value="115gsm Art Card">115gsm Art Card</option>
-                                                            <option value="135gsm Art Card">135gsm Art Card</option>
-                                                            <option value="150gsm Art Card">150gsm Art Card</option>
-                                                            <option value="170gsm Art Card">170gsm Art Card</option>
-                                                            <option value="250 Art Card">250 Art Card</option>
-                                                            <option value="300 Art Card">300 Art Card</option>
-                                                            <option value="90gsm Matt Card">90gsm Matt Card</option>
-                                                            <option value="115gsm Matt Card">115gsm Matt Card</option>
-                                                            <option value="135gsm Matt Card">135gsm Matt Card</option>
-                                                            <option value="150gsm Matt Card">150gsm Matt Card</option>
-                                                            <option value="170gsm Matt Card">170gsm Matt Card</option>
-                                                            <option value="250 Matt Card">250 Matt Card</option>
-                                                            <option value="300 Matt Card">300 Matt Card</option>
+                                                            <option value="">Select an option</option>
+                                                            @foreach($data['paperStocks'] as $paperStock)
+                                                                <option value="{{$paperStock}}" @php echo(old('paper_stock_insert') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
+
                                                     <div>
-                                                        <input type="text" name="paper_stock_text"
-                                                               placeholder="Paper Stock Additional Info">
+                                                        <textarea name="paper_stock_text"
+                                                                  placeholder="Paper Stock Additional Information. Also specify if your option is others*">{{old('paper_stock_text')}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
 
 
-
                                             <div class="quote-section">
                                                 <h5>Finishing Info</h5>
                                                 <div class="finishing-info-sub">
-                                                    <h6>Cover Finish*</h6>
+                                                    <h6>Cover Finishing*</h6>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="cover_finishing"
-                                                               id="glossy_lamination" value="Glossy Lamination"
-                                                               required>
-                                                        <label class="form-check-label" for="glossy_lamination">
-                                                            Glossy Lamination
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="cover_finishing"
-                                                               id="matt_lamination" value="Matt Lamination">
-                                                        <label class="form-check-label" for="matt_lamination">
-                                                            Matt Lamination
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="cover_finishing"
-                                                               id="spot_lamination" value="Spot Lamination">
-                                                        <label class="form-check-label" for="spot_lamination">
-                                                            Spot Lamination
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="cover_finishing"
-                                                               id="vanish" value="Vanish">
-                                                        <label class="form-check-label" for="vanish">
-                                                            Vanish
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="cover_finishing"
-                                                               id="uv" value="UV">
-                                                        <label class="form-check-label" for="uv">
-                                                            UV
-                                                        </label>
+                                                        @foreach($data['coverFinishes'] as $key => $coverFinish)
+                                                            <div>
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="cover_finishing"
+                                                                       id="{{$key}}" value="{{$coverFinish}}"
+                                                                       required @php echo(old('cover_finishing') == $coverFinish)? 'checked':'';@endphp>
+                                                                <label class="form-check-label" for="{{$key}}">
+                                                                    {{$coverFinish}}
+                                                                </label>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
 
                                                 <div class="finishing-info-sub">
                                                     <h6>Complete Job Finishing*</h6>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="complete_job_finishing"
-                                                               id="perfect_bind" value="Perfect Bind" required>
-                                                        <label class="form-check-label" for="perfect_bind">
-                                                            Perfect Bind
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="complete_job_finishing"
-                                                               id="saddle_stitched" value="Saddle Stitched">
-                                                        <label class="form-check-label" for="saddle_stitched">
-                                                            Saddle Stitched
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="complete_job_finishing"
-                                                               id="spiral_wire_o" value="Spiral Wire-O">
-                                                        <label class="form-check-label" for="spiral_wire_o">
-                                                            Spiral Wire-O
-                                                        </label>
+                                                        @foreach($data['completeJobFinishes'] as $key => $completeJobFinish)
+                                                            <div>
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="complete_job_finishing"
+                                                                       id="{{$key}}" value="{{$completeJobFinish}}"
+                                                                       required @php echo(old('complete_job_finishing') == $completeJobFinish)? 'checked':'';@endphp>
+                                                                <label class="form-check-label" for="{{$key}}">
+                                                                    {{$completeJobFinish}}
+                                                                </label>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
 
                                                 <div class="finishing-info-sub">
                                                     <h6>Packaging*</h6>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="packaging"
-                                                               id="nylon_heat_seal" value="Nylon Heat Seal" required>
-                                                        <label class="form-check-label" for="nylon_heat_seal">
-                                                            Nylon Heat Seal
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="packaging"
-                                                               id="nylon_peal_seal" value="Nylon Peal Seal">
-                                                        <label class="form-check-label" for="nylon_peal_seal">
-                                                            Nylon Peal Seal
-                                                        </label>
+                                                        @foreach($data['packaging'] as $key => $packaging)
+                                                            <div>
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="packaging"
+                                                                       id="{{$key}}" value="{{$packaging}}"
+                                                                       required @php echo(old('packaging') == $packaging)? 'checked':'';@endphp>
+                                                                <label class="form-check-label" for="{{$key}}">
+                                                                    {{$packaging}}
+                                                                </label>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
-
 
                                                 <div class="finishing-info-sub">
                                                     <h6>Other Packaging*</h6>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="other_packaging"
-                                                               id="boxed" value="Boxed" required>
-                                                        <label class="form-check-label" for="boxed">
-                                                            Boxed
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="other_packaging"
-                                                               id="wrapped" value="Wrapped">
-                                                        <label class="form-check-label" for="wrapped">
-                                                            Wrapped
-                                                        </label>
+                                                        @foreach($data['otherPackaging'] as $key => $packaging)
+                                                            <div>
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="other_packaging"
+                                                                       id="{{$key}}" value="{{$packaging}}"
+                                                                       required @php echo(old('other_packaging') == $packaging)? 'checked':'';@endphp>
+                                                                <label class="form-check-label" for="{{$key}}">
+                                                                    {{$packaging}}
+                                                                </label>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <input type="text" name="finishing_info_text"
+                                                           value="{{old('finishing_info_text')}}"
                                                            placeholder="Additional Finishing Info">
                                                 </div>
                                             </div>
@@ -310,44 +254,36 @@
                                                 <h5>Project Details</h5>
                                                 <div class="other-information-sub">
                                                     <input type="text" name="special_instruction"
+                                                           value="{{old('special_instruction')}}"
                                                            placeholder="Special Note & Instruction">
-                                                    <input type="text" name="delivery_instruction"
-                                                           placeholder="Delivery Instruction">
+
+                                                    <label for="delivery_instruction"> Means of Delivery</label>
+                                                    <select name="delivery_instruction" id="delivery_instruction">
+                                                        <option value="">Select Delivery Option</option>
+                                                        @foreach($data['delivery'] as $delivery)
+                                                            <option value="{{$delivery}}" @php echo($delivery == old('delivery_instruction'))?'selected':''; @endphp  >{{$delivery}}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                                 <div class="other-information-sub">
-                                                    <label for="date">Delivery Date*</label>
-                                                    <input type="date" id="date" name="date" required>
+                                                    <label for="date">Expected Delivery Date*</label>
+                                                    <input type="date" id="date" name="date" value="{{old('date')}}"
+                                                           required>
                                                 </div>
                                                 <div class="other-information-sub">
                                                     <h6>How did you get to know/hear about GPP?</h6>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="awareness"
-                                                               id="media" value="Media">
-                                                        <label class="form-check-label" for="media">
-                                                            Media
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="awareness"
-                                                               id="friend" value="Friends">
-                                                        <label class="form-check-label" for="friend">
-                                                            Friend
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="awareness"
-                                                               id="advert" value="Advert">
-                                                        <label class="form-check-label" for="advert">
-                                                            Advert Publication
-                                                        </label>
-
-                                                        <input class="form-check-input" type="radio"
-                                                               name="awareness"
-                                                               id="other_medium" value="Vanish">
-                                                        <label class="form-check-label" for="other_medium">
-                                                            Other
-                                                        </label>
+                                                        @foreach($data['awareness'] as $key => $medium)
+                                                            <div>
+                                                                <input class="form-check-input" type="radio"
+                                                                       name="awareness"
+                                                                       id="{{$key}}" value="{{$medium}}"
+                                                                       required @php echo(old('awareness') == $medium)? 'checked':'';@endphp>
+                                                                <label class="form-check-label" for="{{$key}}">
+                                                                    {{$medium}}
+                                                                </label>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>

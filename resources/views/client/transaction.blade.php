@@ -68,7 +68,7 @@
                                             @if($order->status)
                                                 <span class="nobr">
                                                     @foreach($order->response as $response)
-                                                        <a href="/gpp/public/store/{{$response->attachment}}" rel="noreferrer noopener" target="_blank">Invoice No.{{$response->id}}</a>
+                                                        <a href="{{url('gpp/public/store/'.$response->attachment)}}" rel="noreferrer noopener" target="_blank">Invoice No.{{$response->id}}</a>
                                                     @endforeach
                                                 </span>
                                             @endif

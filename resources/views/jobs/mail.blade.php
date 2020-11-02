@@ -121,20 +121,17 @@
                             font-size: 14px;
                             font-weight: bold;
                             margin: 0;
-                            margin-bottom: 15px;">{{$data->title}}</h4>
+                            margin-bottom: 15px;">Application for the Position of {{$data['subject']}}</h4>
                                         <p style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: normal;
                             margin: 0;
-                            margin-bottom: 15px;">Hello,</p>
+                            margin-bottom: 15px;">Hello Sir/Ma,</p>
                                         <p style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: normal;
                             margin: 0;
-                            margin-bottom: 15px;">Hope you are having a good day, kindly visit <a
-                                                    href="{{url('jobs/show/'.$hashIds->encode($data->id))}}"
-                                                    rel="noreferrer">globalplusonline.com</a>
-                                            to view this post.</p>
+                            margin-bottom: 15px;">The attached document is a copy of my curriculum vitae.</p>
                                         <p style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: normal;

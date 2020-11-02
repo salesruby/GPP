@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\JobApplicationRequest;
 use App\Http\Requests\JobRequest;
+use App\Mail\JobApplicationMail;
 use Hashids\Hashids;
 use Illuminate\Http\Request;
 use App\Job;
-
+use Illuminate\Support\Facades\Mail;
 
 
 class JobController extends Controller
@@ -86,4 +88,9 @@ class JobController extends Controller
         return redirect()->route('services.index')->with('success', 'Job deleted successfully');
     }
 
+    public function apply(JobApplicationRequest $request){
+        $email =  Mail::to('recruitments@globalplusonline.com');
+        $email->send(new JobApplicationMail($request->all()));
+        return redirect()->back()->with('success', 'Application Successful');
+    }
 }

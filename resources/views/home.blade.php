@@ -41,7 +41,7 @@
                                                 <span>{{\Carbon\Carbon::parse($order->created_at)->addHour()->format('d M Y H:i')}}</span>
                                             </li>
                                             <li>
-                                                <strong><a class="btn btn-link" href="/store/{{$order->attachment}}"
+                                                <strong><a class="btn btn-link" href="{{url('gpp/public/store/'.$response->attachment)}}"
                                                            download>Download
                                                         File</a></strong>
                                                 <span>{!!(!$order->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}</span>

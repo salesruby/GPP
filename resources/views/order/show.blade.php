@@ -56,7 +56,7 @@
                                 </div>
                                 @if($response->attachment !== null)
                                     <div class="profile-panel-footer">
-                                        <a href="/gpp/public/store/{{$quote->attachment}}" download type="button"
+                                        <a href="/gpp/public/store/{{$response->attachment}}" download type="button"
                                            class="btn btn-secondary">Download File</a>
                                     </div>
                                 @endif
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    @include('quote.response')
+    @include('order.response')
 @endsection
 @section('script')
     <script type="text/javascript">

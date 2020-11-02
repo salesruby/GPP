@@ -1,6 +1,18 @@
 /**{*/
 /*    font-family:"Raleway sans-serif";*/
 /*}*/
+@media(max-width: 425px) {
+    .logo img{
+        width: 60% !important;
+    }
+}
+
+@media(min-width:426px) and (max-width: 768px) {
+    .logo img{
+        width: 40% !important;
+    }
+}
+
 .active a {
     color: #65d5f7;
 }
@@ -376,7 +388,7 @@
     font-weight: bold;
     color: #fff;
     background-color:#25bce9;
-    padding: 10px 0;
+    padding: 10px 10px;
 }
 
 .quote-section h6{
@@ -388,16 +400,27 @@
     padding: 1px 10px;
 }
 
+
+
 .quote-section label{
     padding-right: 10px;
     font-weight: normal;
 }
 
-.wishlist-custom form input[type="text"], .wishlist-custom form input[type="number"], .wishlist-custom form input[type="email"], .wishlist-custom form input[type="date"] {
+.wishlist-custom form input[type="text"], .wishlist-custom form input[type="number"], .wishlist-custom form input[type="email"],
+.wishlist-custom form input[type="date"]{
     width: 47.5%;
     margin: 5px auto 0 auto;
 }
 
+.wishlist-custom form textarea{
+    width: 95% !important;
+    min-height: 80px !important;
+}
+
+.project-details-sub textarea{
+
+}
 /*.wishlist-custom select option{*/
 /*    border: thin solid #eee !important; */
 /*}*/
@@ -411,10 +434,36 @@
     margin-top: 10px;
 }
 
+.project-details-select{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.project-details-select div{
+    padding: 0;
+}
+
+.cover_type_div{
+    margin-left: 10px;
+}
+
+.form-check{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
 @media (max-width: 768px) {
-    .wishlist-custom form input[type="text"], .wishlist-custom form input[type="number"], .wishlist-custom form input[type="email"] {
+    .wishlist-custom form input[type="text"], .wishlist-custom form input[type="number"],
+    .wishlist-custom form input[type="email"]{
         width: 95%;
         margin: 5px auto 0 auto;
+    }
+
+    .cover_type_div{
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
 
@@ -596,7 +645,8 @@
 }
 
 
-#place-order input::placeholder, #contact-form input::placeholder, #contact-form textarea::placeholder{
+#place-order input::placeholder, #contact-form input::placeholder,
+#contact-form textarea::placeholder, .wishlist-custom form textarea::placeholder{
     color: #444444;
 }
 
@@ -857,4 +907,8 @@ a .re:hover{
 
 #pr-login .create-account:hover, #pr-login .re:hover, #pr-register .login:hover{
     color: #fbc443 !important;
+}
+
+.pr-main .quote-section h5{
+    padding-left: 10px;
 }

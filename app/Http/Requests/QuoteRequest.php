@@ -37,6 +37,7 @@ class QuoteRequest extends FormRequest
             "colour_option_cover" => "required|string",
             "colour_option_inner" => "required|string",
             "colour_option_insert" => "required|string",
+            "colour_option_text" => 'string',
             "paper_stock_cover" => "required|string",
             "paper_stock_inner" => "required|string",
             "paper_stock_insert" => "required|string",

@@ -23,7 +23,7 @@
 							<i class="fa fa-star"></i>
 						</span>
                         <span class="sub-title">Your print material is not just a piece of paper; it's your first impression.
-                            This is why at Global Plus Publishing, we always strive to bring global publishing standards to you.
+                            This is why at Global Plus Publishing, we always strive to bring global printing standards to you.
                             We  see each brief as an opportunity to form a mutually beneficial relationship.
                         </span>
                     </div>

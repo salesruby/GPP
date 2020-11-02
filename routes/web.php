@@ -34,14 +34,13 @@ Route::get('career', 'PageController@career')->name('career');
 Route::get('gallery', 'Admin\GalleryController@index')->name('gallery.index');
 Route::get('photos/{id}', 'Admin\GalleryController@photo')->name('photo.index');
 
-
-
 Route::get('/setup', 'SetupController@index');
 Route::get('blogs/show/{id}', 'Admin\BlogController@show')->name('blogs.show');
-Route::get('jobs/show/{id}', 'Admin\JobController@show')->name('jobs.show');
 Route::post('blogs/subscribe', 'Admin\BlogController@subscribe')->name('blogs.subscribe');
 Route::get('quote/create', 'Admin\QuoteController@create')->name('quote.create');
 Route::post('quote/store', 'Admin\QuoteController@store')->name('quote.store');
+Route::get('jobs/show/{id}', 'Admin\JobController@show')->name('jobs.show');
+Route::post('jobs/apply', 'Admin\JobController@apply')->name('jobs.apply');
 
 
 //Shop

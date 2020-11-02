@@ -20,6 +20,7 @@ class Quote extends Model
         "colour_option_cover",
         "colour_option_inner",
         "colour_option_insert",
+        "colour_option_text",
         "paper_stock_cover",
         "paper_stock_inner",
         "paper_stock_insert",

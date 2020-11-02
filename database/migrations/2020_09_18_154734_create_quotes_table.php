@@ -28,6 +28,7 @@ class CreateQuotesTable extends Migration
             $table->string("colour_option_cover");
             $table->string("colour_option_inner");
             $table->string("colour_option_insert");
+            $table->string('colour_option_text');
             $table->string("paper_stock_cover");
             $table->string("paper_stock_inner");
             $table->string("paper_stock_insert");

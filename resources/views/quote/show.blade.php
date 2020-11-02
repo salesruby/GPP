@@ -74,6 +74,10 @@
                                             <td> {{$quote->colour_option_insert}}</td>
                                         </tr>
                                         <tr>
+                                            <td>Colour option text</td>
+                                            <td> {{$quote->colour_option_text}}</td>
+                                        </tr>
+                                        <tr>
                                             <td>Paper stock cover</td>
                                             <td> {{$quote->paper_stock_cover}}</td>
                                         </tr>

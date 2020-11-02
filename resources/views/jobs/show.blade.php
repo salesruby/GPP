@@ -40,6 +40,22 @@
                             {{$job->role}}
                         </div>
                     </div>
+
+                    <div class="quote-section">
+                        <form method="POST" action="{{route('jobs.apply')}}" enctype="multipart/form-data">
+                            @csrf
+                            <h5>Apply for this position</h5>
+                            <div class="other-information-sub">
+                                <label for="cv">Upload your CV *</label>
+                                <input type="file" id="cv" name="cv" required>
+                                <input type="hidden" name="subject" value="{{$job->title}}">
+                            </div>
+                            <div style="display: flex; flex-flow:row wrap;" class="total submit-quote">
+                                <div style="flex-grow: 1;"></div>
+                                <button type="submit" class="addcart">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
