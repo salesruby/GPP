@@ -191,9 +191,9 @@
                             <li>
                                 <a href="{{route('gallery.index')}}" title="Gallery">Gallery</a>
                             </li>
-{{--                            <li>--}}
-{{--                                <a href="#" title="Privacy Policy">Privacy Policy</a>--}}
-{{--                            </li>--}}
+                            <li>
+                                <a href="{{route('policy')}}" title="Privacy Policy">Privacy Policy</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

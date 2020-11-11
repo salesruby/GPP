@@ -63,7 +63,7 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="benefits">
-                            <div class="benefits-title">Health insurance</div>
+                            <div class="benefits-title">HMO</div>
                             <div class="spacer"></div>
                             <div class="icon"><img src="{{asset('template/images/career/heart.png')}}" alt="icon"></div>
                         </div>
@@ -71,7 +71,7 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="benefits">
-                            <div class="benefits-title">MacBook</div>
+                            <div class="benefits-title">Laptop</div>
                             <div class="spacer"></div>
                             <div class="icon"><img src="{{asset('template/images/career/laptop.png')}}" alt="icon">
                             </div>
@@ -96,9 +96,9 @@
 
                     <div class="col-md-4 col-sm-4 col-xs-12 ">
                         <div class="benefits">
-                            <div class="benefits-title">Gym membership</div>
+                            <div class="benefits-title">Teamwork</div>
                             <div class="spacer"></div>
-                            <div class="icon"><img src="{{asset('template/images/career/barbell.png')}}" alt="icon">
+                            <div class="icon"><img src="{{asset('template/images/career/teamwork.png')}}" alt="icon">
                             </div>
                         </div>
                     </div>

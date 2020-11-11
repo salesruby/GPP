@@ -3,13 +3,15 @@
 /*}*/
 @media(max-width: 425px) {
     .logo img{
-        width: 60% !important;
+        /*width: 60% !important;*/
     }
 }
 
 @media(min-width:426px) and (max-width: 768px) {
     .logo img{
-        width: 40% !important;
+        /*width: 40% !important;*/
+        width: 60% !important;
+
     }
 }
 
@@ -912,3 +914,15 @@ a .re:hover{
 .pr-main .quote-section h5{
     padding-left: 10px;
 }
+
+.policy h3{
+    color: #444444;
+    font-weight: bold;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.policy ul{
+    margin-left: 15px;
+}
+

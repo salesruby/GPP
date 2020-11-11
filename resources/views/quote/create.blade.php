@@ -86,7 +86,7 @@
                                                     <div class="cover_type_div">
                                                         <label for="cover_type">Cover
                                                             Type</label>
-                                                        <select id="cover_type" name="cover_type" required>
+                                                        <select id="cover_type" name="cover_type">
                                                             <option value="">Select Cover Type</option>
                                                             @foreach($data['coverTypes'] as $coverType)
                                                                 <option value="{{$coverType}}" @php echo(old('cover_type') == $coverType)? 'selected':'';@endphp>{{$coverType}}</option>
@@ -101,33 +101,39 @@
 
                                                 <div class="project-details-sub">
                                                     <h6>Colour Option</h6>
-                                                    <div>
-                                                        <label for="colour_option_cover">Cover</label>
-                                                        <select class="custom-select" id="colour_option_cover"
-                                                                name="colour_option_cover" required>
-                                                            <option value="">Select an option</option>
-                                                            @foreach($data['colourOptions'] as $colourOption)
-                                                                <option value="{{$colourOption}}" @php echo(old('colour_option_cover') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
-                                                            @endforeach
-                                                        </select>
+                                                    <div class="form-check">
+                                                        <div>
+                                                            <label for="colour_option_cover">Cover</label>
+                                                            <select class="custom-select" id="colour_option_cover"
+                                                                    name="colour_option_cover" required>
+                                                                <option value="">Select an option</option>
+                                                                @foreach($data['colourOptions'] as $colourOption)
+                                                                    <option value="{{$colourOption}}" @php echo(old('colour_option_cover') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
 
-                                                        <label for="colour_option_inner">Inner</label>
-                                                        <select class="custom-select" id="colour_option_inner"
-                                                                name="colour_option_inner" required>
-                                                            <option value="">Select an option</option>
-                                                            @foreach($data['colourOptions'] as $colourOption)
-                                                                <option value="{{$colourOption}}" @php echo(old('colour_option_inner') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <div>
+                                                            <label for="colour_option_inner">Inner</label>
+                                                            <select class="custom-select" id="colour_option_inner"
+                                                                    name="colour_option_inner" required>
+                                                                <option value="">Select an option</option>
+                                                                @foreach($data['colourOptions'] as $colourOption)
+                                                                    <option value="{{$colourOption}}" @php echo(old('colour_option_inner') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
 
-                                                        <label for="colour_option_insert">Insert</label>
-                                                        <select class="custom-select" id="colour_option_insert"
-                                                                name="colour_option_insert" required>
-                                                            <option value="">Select an option</option>
-                                                            @foreach($data['colourOptions'] as $colourOption)
-                                                                <option value="{{$colourOption}}" @php echo(old('colour_option_insert') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <div>
+                                                            <label for="colour_option_insert">Insert</label>
+                                                            <select class="custom-select" id="colour_option_insert"
+                                                                    name="colour_option_insert">
+                                                                <option value="">Select an option</option>
+                                                                @foreach($data['colourOptions'] as $colourOption)
+                                                                    <option value="{{$colourOption}}" @php echo(old('colour_option_insert') == $colourOption)? 'selected':'';@endphp>{{$colourOption}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                     <div>
                                                         <textarea name="colour_option_text"
@@ -136,33 +142,39 @@
                                                 </div>
                                                 <div class="project-details-sub">
                                                     <h6>Paper Stock</h6>
-                                                    <div>
-                                                        <label for="paper_stock_cover">Cover</label>
-                                                        <select class="custom-select" id="paper_stock_cover"
-                                                                name="paper_stock_cover" required>
-                                                            <option value="">Select an option</option>
-                                                            @foreach($data['paperStocks'] as $paperStock)
-                                                                <option value="{{$paperStock}}" @php echo(old('paper_stock_cover') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
-                                                            @endforeach
-                                                        </select>
+                                                    <div class="form-check">
+                                                        <div>
+                                                            <label for="paper_stock_cover">Cover</label>
+                                                            <select class="custom-select" id="paper_stock_cover"
+                                                                    name="paper_stock_cover" required>
+                                                                <option value="">Select an option</option>
+                                                                @foreach($data['paperStocks'] as $paperStock)
+                                                                    <option value="{{$paperStock}}" @php echo(old('paper_stock_cover') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
 
-                                                        <label for="paper_stock_inner">Inner</label>
-                                                        <select class="custom-select" id="paper_stock_inner"
-                                                                name="paper_stock_inner" required>
-                                                            <option value="">Select an option</option>
-                                                            @foreach($data['paperStocks'] as $paperStock)
-                                                                <option value="{{$paperStock}}" @php echo(old('paper_stock_inner') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <div>
+                                                            <label for="paper_stock_inner">Inner</label>
+                                                            <select class="custom-select" id="paper_stock_inner"
+                                                                    name="paper_stock_inner" required>
+                                                                <option value="">Select an option</option>
+                                                                @foreach($data['paperStocks'] as $paperStock)
+                                                                    <option value="{{$paperStock}}" @php echo(old('paper_stock_inner') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
 
-                                                        <label for="paper_stock_insert">Insert</label>
-                                                        <select class="custom-select" id="paper_stock_insert"
-                                                                name="paper_stock_insert" required>
-                                                            <option value="">Select an option</option>
-                                                            @foreach($data['paperStocks'] as $paperStock)
-                                                                <option value="{{$paperStock}}" @php echo(old('paper_stock_insert') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <div>
+                                                            <label for="paper_stock_insert">Insert</label>
+                                                            <select class="custom-select" id="paper_stock_insert"
+                                                                    name="paper_stock_insert">
+                                                                <option value="">Select an option</option>
+                                                                @foreach($data['paperStocks'] as $paperStock)
+                                                                    <option value="{{$paperStock}}" @php echo(old('paper_stock_insert') == $paperStock)? 'selected':'';@endphp>{{$paperStock}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
                                                     </div>
 
                                                     <div>
@@ -183,7 +195,7 @@
                                                                 <input class="form-check-input" type="radio"
                                                                        name="cover_finishing"
                                                                        id="{{$key}}" value="{{$coverFinish}}"
-                                                                       required @php echo(old('cover_finishing') == $coverFinish)? 'checked':'';@endphp>
+                                                                        @php echo(old('cover_finishing') == $coverFinish)? 'checked':'';@endphp>
                                                                 <label class="form-check-label" for="{{$key}}">
                                                                     {{$coverFinish}}
                                                                 </label>
@@ -217,7 +229,7 @@
                                                                 <input class="form-check-input" type="radio"
                                                                        name="packaging"
                                                                        id="{{$key}}" value="{{$packaging}}"
-                                                                       required @php echo(old('packaging') == $packaging)? 'checked':'';@endphp>
+                                                                        @php echo(old('packaging') == $packaging)? 'checked':'';@endphp>
                                                                 <label class="form-check-label" for="{{$key}}">
                                                                     {{$packaging}}
                                                                 </label>
@@ -261,7 +273,7 @@
                                                     <select name="delivery_instruction" id="delivery_instruction">
                                                         <option value="">Select Delivery Option</option>
                                                         @foreach($data['delivery'] as $delivery)
-                                                            <option value="{{$delivery}}" @php echo($delivery == old('delivery_instruction'))?'selected':''; @endphp  >{{$delivery}}</option>
+                                                            <option value="{{$delivery}}" @php echo($delivery == old('delivery_instruction'))?'selected':''; @endphp >{{$delivery}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>

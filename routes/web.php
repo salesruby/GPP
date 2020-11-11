@@ -31,6 +31,7 @@ Route::resource('contacts', 'ContactController');
 Route::get('about-us', 'PageController@about')->name('about-us');
 Route::get('our-services', 'PageController@service')->name('our-services');
 Route::get('career', 'PageController@career')->name('career');
+Route::get('policy', 'PageController@policy')->name('policy');
 Route::get('gallery', 'Admin\GalleryController@index')->name('gallery.index');
 Route::get('photos/{id}', 'Admin\GalleryController@photo')->name('photo.index');
 

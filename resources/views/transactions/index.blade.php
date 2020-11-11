@@ -49,7 +49,9 @@
                                         <td>{{$transaction->email}}</td>
                                         <td>{{$transaction->phone}}</td>
                                         <td>{{$transaction->transaction_id}}</td>
-                                        <td>{{$transaction->service->name}}</td>
+                                        <td>
+                                                {{(isset($transaction->service->name))?$transaction->service->name:'Deleted'}}
+                                        </td>
                                         <td>{{number_format($transaction->quantity)}}</td>
                                         <td>{{$transaction->amount}}</td>
                                         <td>{{\Carbon\Carbon::parse($transaction->created_at)->addHour()->format('M d Y H:i')}}</td>
@@ -90,7 +92,7 @@
                                                 <span>Phone - {{$transaction->phone}}</span>
                                             </li>
                                             <li>
-                                                <strong>{{$transaction->service->name}}</strong>
+                                                <strong>{{(isset($transaction->service->name))?$transaction->service->name:'Deleted'}}</strong>
                                                 <span>#{{number_format($transaction->amount)}} for {{$transaction->quantity}}</span>
                                             </li>
                                             <li>

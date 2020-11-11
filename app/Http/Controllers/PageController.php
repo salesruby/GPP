@@ -23,4 +23,8 @@ class PageController extends Controller
         $jobs = Job::where('status', 0)->get();
         return view('pages.career', compact('jobs'));
     }
+
+    public function policy(){
+        return view('pages.policy');
+    }
 }
