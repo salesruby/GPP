@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $blogs = \App\Blog::latest()->get()->take(4);
-    return view('welcome', compact('blogs'));
+    $services = \App\Service::inRandomOrder()->take(4)->get();
+    return view('welcome', compact('blogs', 'services'));
 })->name('welcome');
 
 

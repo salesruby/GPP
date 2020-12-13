@@ -620,12 +620,23 @@
     margin: 30px 0;
 }
 
+.our-shop .or-block {
+    padding: 30px;
+}
+
+
 /*HOW WE MAKE DESIGN EASY*/
 .print-txt {
     min-height: 80px;
 }
 
 @media (max-width: 768px) {
+
+    .our-shop .or-block {
+        padding: 20px;
+    }
+
+
     .print-txt {
         min-height: 120px;
     }
@@ -841,6 +852,7 @@ a .re:hover{
 
 .info tr:nth-child(even) {
     background-color: #dddddd;
+    width:100%;
 }
 
 #my-shop-table{

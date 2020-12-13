@@ -48,7 +48,7 @@
                                     <div class="img"><img
                                                 src="{{asset('template/images/img-wishlist.png')}}"/></div>
                                     <div class="data">
-                                        <div style="display: flex; flex-flow: column wrap">
+                                        <div style="display: flex; flex-flow: column;">
                                             <h4>Amount ₦{{number_format($item->price*$quantity, 2)}} </h4>
                                             <p>We provide high quality business cards, postcards, flyers, brochures,
                                                 stationery and other premium online print products...</p>
@@ -63,15 +63,15 @@
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <td>{{$item->name}}</td>
-                                                        <td>₦{{number_format($item->price)}}</td>
-                                                        <td>{{$quantity}}</td>
-                                                        <td>₦{{number_format($totalPrice)}}</td>
+                                                        <th>{{$item->name}}</th>
+                                                        <th>₦{{number_format($item->price)}}</th>
+                                                        <th>{{$quantity}}</th>
+                                                        <th>₦{{number_format($totalPrice)}}</th>
                                                     </tr>
                                                 </table>
                                             </div>
                                         </div>
-                                        <div style="display: flex; flex-flow:row wrap;" class="total submit-quote">
+                                        <div style="display: flex; flex-flow:row;" class="total submit-quote">
                                             <div style="flex-grow: 1;"></div>
                                             <button type="submit" class="addcart">Pay Now</button>
                                         </div>

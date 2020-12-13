@@ -100,7 +100,47 @@
             </div>
         </section>
 
-        <!--Home Trust : Begin-->
+        {{--STORE--}}
+        @if(isset($services) && !empty($services))
+            <section class="our-service">
+                <div class="container">
+                    <div class="row">
+                        <div class="block-title-w">
+                            <h2 class="block-title">shop now</h2>
+                            <span class="icon-title">
+							<span></span>
+							<i class="fa fa-star"></i>
+						</span>
+                            <span class="sub-title">
+                            Get quality and affordable items from our store today.
+                        </span>
+                        </div>
+                        <div class="or-service-w">
+                            @foreach($services as $item)
+                                <div class="col-md-3 col-sm-6 col-xs-6 or-block">
+                                    <div class="or-image">
+                                        <a href="{{route('shop.show', $hashIds->encode($item->id))}}">
+                                            <img src="{{asset('/gpp/public/store/'.$item->attachment)}}" alt="service-{{$item->id}}"/>
+                                        </a>
+                                    </div>
+                                    <div class="or-title">
+                                        <a href="{{route('shop.show', $hashIds->encode($item->id))}}">{{$item->name}}</a>
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            {{$item->description}}
+                                        </p>
+                                    </div>
+                                    <a href="{{route('shop.cart', $hashIds->encode($item->id))}}" class="btn-readmore order-now">Purchase</a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
+
+    <!--Home Trust : Begin-->
         <section class="trust-w hidden-xs">
             <div class="container">
                 <div class="row">

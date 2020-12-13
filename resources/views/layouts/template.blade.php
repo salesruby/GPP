@@ -2,7 +2,29 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <title>Global Plus Publishing - Home page</title>
+    <!--SEO-->
+    <!-- Primary Meta Tags -->
+    <title>Global Plus Publishing: Printing and Publishing Company in Lagos, Nigeria.</title>
+    <meta name="title" content="Global Plus Publishing: Printing and Publishing Company in Lagos, Nigeria.">
+    <meta name="description"
+          content="We are a printing and publishing company based in Lagos delivering top-notch quality magazines,other periodicals to books, calendars, annual reports, journals, brochures and promotional materials like posters, fliers, leaflets.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://globalplusonline.com/">
+    <meta property="og:title" content="Global Plus Publishing: Printing and Publishing Company in Lagos, Nigeria.">
+    <meta property="og:description"
+          content="We are a printing and publishing company based in Lagos delivering top-notch quality magazines,other periodicals to books, calendars, annual reports, journals, brochures and promotional materials like posters, fliers, leaflets.">
+    <meta property="og:image" content="https://globalplusonline.com/template/images/logo.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://globalplusonline.com/">
+    <meta property="twitter:title" content="Global Plus Publishing: Printing and Publishing Company in Lagos, Nigeria.">
+    <meta property="twitter:description"
+          content="We are a printing and publishing company based in Lagos delivering top-notch quality magazines,other periodicals to books, calendars, annual reports, journals, brochures and promotional materials like posters, fliers, leaflets.">
+    <meta property="twitter:image" content="https://globalplusonline.com/template/images/logo.png">
+
+    <!--END SEO-->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
     <meta name="description" content="Global Plus Publishing">
     <meta name="author" content="GPP">
@@ -12,7 +34,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:500,300,700,400' rel='stylesheet'
           type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-{{--    Animation css--}}
+    {{--    Animation css--}}
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
@@ -21,14 +43,35 @@
     <link rel="stylesheet" type="text/css" href="{{asset('dashboard/css/sweetalert2.min.css')}}">
     <link rel="shortcut icon" href="{{asset('dashboard/images/favicon.png')}}"/>
 
+    <!-- SEO SCRIPT-->
+    <script type='application/ld+json' defer>
+        {
+          "@context": "http://www.schema.org",
+          "@type": "Organization",
+          "name": "Global Plus Publishing Ltd.",
+          "url": "http://www.globalplusonline.com/",
+          "logo": "https://globalplusonline.com/template/images/logo.png",
+          "image": "https://globalplusonline.com/template/images/logo.png",
+          "description": "Global Plus Publishing (GPP) is a printing and publishing company based in Lagos, Nigeria.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lagos",
+            "addressRegion": "Lagos",
+            "addressCountry": "Nigeria"
+          },
+          "openingHours": "Mo, Tu, We, Th, Fr 08:00-05:00"
+        }
+    </script>
+
+
 </head>
 <body>
 <!--Header: Begin-->
 <header>
-    @include('layouts.social_links')
-    <!--Main Header: Begin-->
-    <section class="main-header" >
-        <div class="container" >
+@include('layouts.social_links')
+<!--Main Header: Begin-->
+    <section class="main-header">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-2 col-sm-4 col-xs-5 w-logo">
                     <div class="logo hd-pd">
@@ -38,7 +81,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-10 visible-md visible-lg">
-                    <nav id="main-menu" class="main-menu clearfix" >
+                    <nav id="main-menu" class="main-menu clearfix">
                         <ul>
                             <li class="level0 parent col1 all-product hd-pd {{(request()->is('/'))?'active':''}}">
                                 <a href="{{route('welcome')}}">Home</a>
@@ -50,22 +93,27 @@
                                 </a>
                                 <ul class="level0">
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publications</a>
+                                        <a href="{{url('/our-services#service_publication')}}"
+                                           title="Books & Publications">Books & Publications</a>
                                     </li>
                                     <li class="level1 nav-1-6 item">
                                         <a href="{{url('/our-services#service_periodical')}}" title="Periodicals">Periodicals</a>
                                     </li>
                                     <li class="level1 nav-1-8 item">
-                                        <a href="{{url('/our-services#service_commerial')}}" title="Commercial Products">Commercial Products</a>
+                                        <a href="{{url('/our-services#service_commerial')}}"
+                                           title="Commercial Products">Commercial Products</a>
                                     </li>
                                     <li class="level1 nav-1-9 last item">
-                                        <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential Printing</a>
+                                        <a href="{{url('/our-services#service_confidential')}}"
+                                           title="Confidential Printing">Confidential Printing</a>
                                     </li>
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
+                                        <a href="{{url('/our-services#service_finishing')}}"
+                                           title="Specialized Finishing">Specialized Finishing</a>
                                     </li>
                                     <li class="level1 nav-1-1 first item">
-                                        <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
+                                        <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light
+                                            Packaging</a>
                                     </li>
                                 </ul>
                             </li>
@@ -93,15 +141,17 @@
                                 <a href="{{route('shop.index')}}">Shop</a>
                             </li>
 
-{{--                            <li class="level0 hd-pd" title="Login">--}}
-{{--                                <a href="{{route('login')}}">Login</a>--}}
-{{--                            </li>--}}
+                            {{--                            <li class="level0 hd-pd" title="Login">--}}
+                            {{--                                <a href="{{route('login')}}">Login</a>--}}
+                            {{--                            </li>--}}
 
-{{--                            <li class="level0 hd-pd" title="Register">--}}
-{{--                                <a href="{{route('register')}}">Register</a>--}}
-{{--                            </li>--}}
-                            <li class="level0 hd-pd"  title="Request for Quote">
-                                <a  href="{{route('quote.create')}}"><button class="btn" id="request-quote-btn">Request for Quote</button></a>
+                            {{--                            <li class="level0 hd-pd" title="Register">--}}
+                            {{--                                <a href="{{route('register')}}">Register</a>--}}
+                            {{--                            </li>--}}
+                            <li class="level0 hd-pd" title="Request for Quote">
+                                <a href="{{route('quote.create')}}">
+                                    <button class="btn" id="request-quote-btn">Request for Quote</button>
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -204,12 +254,12 @@
                             <li>
                                 <a href="{{route('login')}}" title="My Account">My Account</a>
                             </li>
-{{--                            <li>--}}
-{{--                                <a href="#" title="FAQ">FAQ</a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="#" title="Design Service">Design Services</a>--}}
-{{--                            </li>--}}
+                            {{--                            <li>--}}
+                            {{--                                <a href="#" title="FAQ">FAQ</a>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li>--}}
+                            {{--                                <a href="#" title="Design Service">Design Services</a>--}}
+                            {{--                            </li>--}}
                             <li>
                                 <a href="{{route('contact-us')}}" title="Contact Us">Contact Us</a>
                             </li>
@@ -235,7 +285,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="copy-right text-center">Copyright © {{\Carbon\Carbon::now()->year}} <a
-                            href="{{url('https://globalplusonline.com/')}}" title="Cmsmart - Magento theme">globalplusonline.com</a>.
+                                href="{{url('https://globalplusonline.com/')}}" title="Cmsmart - Magento theme">globalplusonline.com</a>.
                         All Rights Reserved</p>
                     <a href="#" id="back-to-top">
                         <i class="fa fa-chevron-up"></i>
@@ -265,19 +315,23 @@
             </a>
             <ul class="level0">
                 <li class="level1 nav-1-1 first item">
-                    <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books & Publications</a>
+                    <a href="{{url('/our-services#service_publication')}}" title="Books & Publications">Books &
+                        Publications</a>
                 </li>
                 <li class="level1 nav-1-6 item">
                     <a href="{{url('/our-services#service_periodical')}}" title="Periodicals">Periodicals</a>
                 </li>
                 <li class="level1 nav-1-8 item">
-                    <a href="{{url('/our-services#service_commerial')}}" title="Commercial Products">Commercial Products</a>
+                    <a href="{{url('/our-services#service_commerial')}}" title="Commercial Products">Commercial
+                        Products</a>
                 </li>
                 <li class="level1 nav-1-9 last item">
-                    <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential Printing</a>
+                    <a href="{{url('/our-services#service_confidential')}}" title="Confidential Printing">Confidential
+                        Printing</a>
                 </li>
                 <li class="level1 nav-1-1 first item">
-                    <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized Finishing</a>
+                    <a href="{{url('/our-services#service_finishing')}}" title="Specialized Finishing">Specialized
+                        Finishing</a>
                 </li>
                 <li class="level1 nav-1-1 first item">
                     <a href="{{url('/our-services#service_packaging')}}" title="Light Packaging">Light Packaging</a>
@@ -309,13 +363,13 @@
             <a href="{{route('shop.index')}}">Shop</a>
         </li>
 
-{{--        <li class="level0 hd-pd" title="Login">--}}
-{{--            <a href="{{route('login')}}">Login</a>--}}
-{{--        </li>--}}
+        {{--        <li class="level0 hd-pd" title="Login">--}}
+        {{--            <a href="{{route('login')}}">Login</a>--}}
+        {{--        </li>--}}
 
-{{--        <li class="level0 hd-pd" title="Register">--}}
-{{--            <a href="{{route('register')}}">Register</a>--}}
-{{--        </li>--}}
+        {{--        <li class="level0 hd-pd" title="Register">--}}
+        {{--            <a href="{{route('register')}}">Register</a>--}}
+        {{--        </li>--}}
 
         <li class="level0 hd-pd" title="Request for Quote">
             <a href="{{route('quote.create')}}">Request for Quote</a>
