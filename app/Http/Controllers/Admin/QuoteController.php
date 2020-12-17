@@ -37,8 +37,7 @@ class QuoteController extends Controller
      */
     public function store(QuoteRequest $request)
     {
-        $input = $request->validated();
-        Quote::create($input);
+        Quote::create($request->all());
         return redirect()->back()->with('success', 'An invoice on your Quote will be generated and sent immediately');
     }
 

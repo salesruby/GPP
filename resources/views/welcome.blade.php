@@ -136,6 +136,9 @@
                             @endforeach
                         </div>
                     </div>
+                    <div class="explore-more">
+                        <a href="{{route('shop.index')}}" class="btn-explore-more order-now">Explore More Items</a>
+                    </div>
                 </div>
             </section>
         @endif

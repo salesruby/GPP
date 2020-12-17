@@ -34,6 +34,7 @@
                                             <th>S/N</th>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Phone</th>
                                             <th>Created On</th>
                                             <th>Action</th>
                                         </tr>
@@ -42,11 +43,12 @@
                                         @foreach($clients as $client)
                                             <tr>
                                                 <td>{{++$i}}</td>
-                                                <td>{{$client['name']}}</td>
-                                                <td>{{$client['email']}}</td>
-                                                <td>{{\Carbon\Carbon::parse($client['created_at'])->format('M d Y H:i')}}</td>
+                                                <td>{{$client->name}}</td>
+                                                <td>{{$client->email}}</td>
+                                                <td>{{$client->address->phone}}</td>
+                                                <td>{{\Carbon\Carbon::parse($client->created_at)->format('M d Y H:i')}}</td>
                                                 <td><a class="btn btn-primary view-contact-message"
-                                                       href="{{route('clients.show',  $client['id'])}}">View Transactions</a></td>
+                                                       href="{{route('clients.show',  $client->id)}}">View Transactions</a></td>
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -72,16 +74,17 @@
                                 <div class="col-md-3 sale-box wow fadeInUp" data-wow-iteration="1">
                                     <div class="sale-box-inner">
                                         <div class="sale-box-head">
-                                            <h4>{{$client['name']}}</h4>
+                                            <h4>{{$client->name}}</h4>
                                         </div>
                                         <ul class="sale-box-desc">
                                             <li>
-                                                <strong>{{$client['email']}}</strong>
-                                                <span>{{\Carbon\Carbon::parse($client['created_at'])->addHour()->format('d M Y H:i')}}</span>
+                                                <strong>{{$client->email}}</strong>
+                                                <span>{{\Carbon\Carbon::parse($client->created_at)->addHour()->format('d M Y H:i')}}</span>
                                             </li>
                                             <li>
+                                                <strong>{{$client->address->phone}}</strong>
                                                 <span><a class="btn btn-primary view-contact-message"
-                                                             href="{{route('clients.show',  $client['id'])}}">View Transactions</a></span>
+                                                             href="{{route('clients.show',  $client->id)}}">View Transactions</a></span>
                                             </li>
                                         </ul>
                                     </div>

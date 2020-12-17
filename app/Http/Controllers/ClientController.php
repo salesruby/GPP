@@ -17,10 +17,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $roles = Role::where('name', 'Client')->get();
-        foreach ($roles as $role) {
-            $clients = $role->users->toArray();
-        }
+        $clientRole = Role::where('name', 'Client')->first();
+        $clients = $clientRole->users;
         return view('client.index', compact('clients'))
             ->with('i', (\request()->input('page', 1) - 1) * 10);
     }

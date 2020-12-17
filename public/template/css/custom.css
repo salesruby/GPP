@@ -938,3 +938,29 @@ a .re:hover{
     margin-left: 15px;
 }
 
+
+/*WELCOME PAGE SHOP */
+
+.explore-more{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn-explore-more{
+    border: 1px solid #25bce9;
+    border-radius: 3px;
+    color: #fff;
+    display:inline-block;
+    font-weight: 400;
+    /*padding: 9px 15px;*/
+    padding: 14px 20px;
+    text-transform: uppercase;
+    /*font-size:12px;*/
+    font-size: 15px;
+    background-color: #25bce9;
+}
+.btn-explore-more:hover{
+    background:#fff;
+    color:#25bce9;
+}

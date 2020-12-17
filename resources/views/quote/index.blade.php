@@ -34,6 +34,7 @@
                                     <th>Client Name</th>
                                     <th>Quote</th>
                                     <th>Email</th>
+                                    <th>Phone</th>
                                     <th>Placement Date</th>
                                     <th>Status</th>
                                 </tr>
@@ -47,6 +48,7 @@
                                                href="{{route('quote.show', $quote->id)}}">View
                                                 Quote</a></td>
                                         <td>{{$quote->email}}</td>
+                                        <td>{{$quote->phone}}</td>
                                         <td>{{\Carbon\Carbon::parse($quote->created_at)->addHour()->format('M d Y H:i')}}</td>
                                         <td>
                                             {!!(!$quote->status == 1)?"<span class='text-danger'>New</span>":"<span class='text-success'>Processed</span>"!!}
@@ -77,8 +79,11 @@
                                         <ul class="sale-box-desc">
                                             <li>
                                                 <strong>{{$quote->email}}</strong>
+                                                <span>{{$quote->phone}}</span>
+                                            </li>
+                                            <li>
                                                 <span><a class="btn btn-primary view-quote" style="padding: 10px;"
-                                                           href="{{route('quote.show', $quote->id)}}">View
+                                                         href="{{route('quote.show', $quote->id)}}">View
                                                         Quote</a></span>
                                             </li>
                                             <li>
