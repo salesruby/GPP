@@ -42,6 +42,9 @@
                                             <div class="info">
                                                 <div>
                                                     <input type="number" name="quantity"  placeholder="Enter Quantity" required>
+                                                    <input type="text" name="full_name"  placeholder="Enter Full Name" required>
+                                                    <input type="email" name="email"  placeholder="Enter Email" required>
+                                                    <input type="text" name="phone"  placeholder="Phone Number" required>
                                                 </div>
                                             </div>
                                         </div>

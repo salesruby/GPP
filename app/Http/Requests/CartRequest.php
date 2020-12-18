@@ -24,7 +24,10 @@ class CartRequest extends FormRequest
     public function rules()
     {
         return [
-            'quantity' => 'required|integer'
+            'quantity' => 'required|integer',
+            'email' => 'required|email',
+            'full_name' => 'required|string',
+            'phone'=>'required'
         ];
     }
 }

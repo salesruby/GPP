@@ -31,15 +31,20 @@
                         <div class="row db-content">
                             <form id="payment" action="{{route('pay')}}" method="POST">
                                 @csrf
-                                <input type="hidden" name="email" value="{{auth()->user()->email}}"> {{-- required --}}
-                                {{--<input type="hidden" name="orderID" value="345">--}}
+                                {{--<input type="hidden" name="email" value="{{auth()->user()->email}}"> --}}{{-- required --}}
+                                <input type="hidden" name="email" value={{$email}}> {{-- required --}}
+
                                 <input type="hidden" name="amount"
                                        value="{{$item->price}}00"> {{-- required in kobo --}}
                                 <input type="hidden" name="quantity" value="{{$quantity}}">
                                 <input type="hidden" name="currency" value="NGN">
+                                {{--<input type="hidden" name="metadata"--}}
+                                       {{--value="{{ json_encode($array = ['name' => auth()->user()->name,--}}
+                                       {{--'phone'=> auth()->user()->address->phone, 'item_id'=> $item->id, 'user_id'=>auth()->user()->id,--}}
+                                       {{--'qtty' => $quantity]) }}"> --}}{{-- For other necessary things you want to add to your payload. it is optional though --}}
                                 <input type="hidden" name="metadata"
-                                       value="{{ json_encode($array = ['name' => auth()->user()->name,
-                                       'phone'=> auth()->user()->address->phone, 'item_id'=> $item->id, 'user_id'=>auth()->user()->id,
+                                       value="{{ json_encode($array = ['name' => $fullName,
+                                       'phone'=>$phone, 'item_id'=> $item->id, 'user_id'=>0,
                                        'qtty' => $quantity]) }}"> {{-- For other necessary things you want to add to your payload. it is optional though --}}
                                 <input type="hidden" name="reference"
                                        value="{{ Paystack::genTranxRef() }}"> {{-- required --}}

@@ -49,6 +49,10 @@ Route::post('jobs/apply', 'Admin\JobController@apply')->name('jobs.apply');
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/show/{id}', 'ShopController@show')->name('shop.show');
 
+//    shop
+
+Route::post('/shop/pay-info/{id}', 'ShopController@pay')->name('shop.pay');
+Route::get('/shop/cart/{id}', 'ShopController@cart')->name('shop.cart');
 // Laravel 5.1.17 and above
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
@@ -114,11 +118,6 @@ Route::group(['middleware' => ['auth', 'client'], 'prefix' => 'client'], functio
     Route::get('cart', 'ClientController@cart')->name('client.cart');
     Route::post('store-order', 'ClientController@storeOrder')->name('store.order');
 
-
-//    shop
-
-    Route::post('/shop/pay-info/{id}', 'ShopController@pay')->name('shop.pay');
-    Route::get('/shop/cart/{id}', 'ShopController@cart')->name('shop.cart');
 
 });
 

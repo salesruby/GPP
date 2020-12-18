@@ -53,6 +53,8 @@ class PaymentController extends Controller
         }else{
             $message = ['custom_error', 'Transaction failed, Try again later.'];
         }
-        return redirect()->route('client.transaction')->with($message);
+//        return redirect()->route('client.transaction')->with($message);
+        return redirect()->route('shop.index')->with($message);
+
     }
 }

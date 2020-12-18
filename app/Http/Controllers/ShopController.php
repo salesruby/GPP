@@ -48,6 +48,9 @@ class ShopController extends Controller
         $item = Service::find(self::$hashIds->decode($id)[0]);
         $quantity = (int)$request->quantity;
         $totalPrice = $quantity * $item->price; //in kobo
-        return view('shop.pay', compact('item', 'quantity', 'totalPrice'));
+        $fullName = $request->full_name;
+        $email = $request->email;
+        $phone = $request->phone;
+        return view('shop.pay', compact('item', 'quantity', 'totalPrice', 'fullName', 'email', 'phone'));
     }
 }
